@@ -1,0 +1,7 @@
+{
+  "ipms": [{
+    "id": 1,
+    "name": "ipm01",
+    "cluster": 1
+  }]
+}

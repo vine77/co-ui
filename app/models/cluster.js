@@ -10,7 +10,7 @@ export default DS.Model.extend({
   grouping: DS.attr('string'),
 
   // Relationships
-  fuelNodes: DS.hasMany('fuelNode'),
-  ipms: DS.hasMany('ipm')
+  fuelNodes: DS.hasMany('fuelNode', {async: true}),
+  ipms: DS.hasMany('ipm', {async: true})
 
 });
