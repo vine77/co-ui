@@ -1,0 +1,94 @@
+[
+  {
+    "operating_system": "CentOS",
+    "description": "This option will install the OpenStack Havana packages using a CentOS based operating system. With high availability features built in, you are getting a robust, enterprise-grade OpenStack deployment.",
+    "roles": [
+      "controller",
+      "compute",
+      "cinder",
+      "ceph-osd"
+    ],
+    "state": "available",
+    "version": "2013.2.2",
+    "roles_metadata": {
+      "cinder": {
+        "name": "Storage - Cinder LVM",
+        "description": "Cinder LVM provides block storage over iSCSI. Block storage can be used for database storage, expandable file systems, or providing a server with access to raw block level devices."
+      },
+      "controller": {
+        "conflicts": [
+          "compute"
+        ],
+        "name": "Controller",
+        "description": "The controller initiates orchestration activities and provides an external API.  Other components like Glance (image storage), Keystone (identity management), Horizon (OpenStack dashboard) and Nova-Scheduler are installed on the controller as well."
+      },
+      "compute": {
+        "conflicts": [
+          "controller"
+        ],
+        "name": "Compute",
+        "description": "A compute node creates, manages and terminates virtual machine instances."
+      },
+      "ceph-osd": {
+        "name": "Storage - Ceph OSD",
+        "description": "Ceph storage can be configured to provide storage for block volumes (Cinder), images (Glance) and ephemeral instance storage (Nova). It can also provide object storage through the S3 and Swift API (See settings to enable each)."
+      }
+    },
+    "modes_metadata": {
+      "ha_compact": {
+        "description": "This configuration requires multiple OpenStack controllers (3+) and provides high availability for all OpenStack components, including MySQL/Galera, RabbitMQ, and Cinder, as well as OpenStack API services. Select this configuration if you want to build a production-grade OpenStack cloud with 6 nodes or more."
+      },
+      "multinode": {
+        "description": "In this configuration the OpenStack controller is deployed separately from the compute and cinder nodes. This mode assumes the presence of 1 controller node and 1 or more compute/cinder nodes. You can add more nodes to scale your cloud later."
+      }
+    },
+    "id": 1,
+    "name": "Havana on CentOS 6.4"
+  },
+  {
+    "operating_system": "Ubuntu",
+    "description": "This option will install the OpenStack Havana packages using Ubuntu as a base operating system. With high availability features built in, you are getting a robust, enterprise-grade OpenStack deployment.",
+    "roles": [
+      "controller",
+      "compute",
+      "cinder",
+      "ceph-osd"
+    ],
+    "state": "available",
+    "version": "2013.2.2",
+    "roles_metadata": {
+      "cinder": {
+        "name": "Storage - Cinder LVM",
+        "description": "Cinder LVM provides block storage over iSCSI. Block storage can be used for database storage, expandable file systems, or providing a server with access to raw block level devices."
+      },
+      "controller": {
+        "conflicts": [
+          "compute"
+        ],
+        "name": "Controller",
+        "description": "The controller initiates orchestration activities and provides an external API.  Other components like Glance (image storage), Keystone (identity management), Horizon (OpenStack dashboard) and Nova-Scheduler are installed on the controller as well."
+      },
+      "compute": {
+        "conflicts": [
+          "controller"
+        ],
+        "name": "Compute",
+        "description": "A compute node creates, manages and terminates virtual machine instances."
+      },
+      "ceph-osd": {
+        "name": "Storage - Ceph OSD",
+        "description": "Ceph storage can be configured to provide storage for block volumes (Cinder), images (Glance) and ephemeral instance storage (Nova). It can also provide object storage through the S3 and Swift API (See settings to enable each)."
+      }
+    },
+    "modes_metadata": {
+      "ha_compact": {
+        "description": "This configuration requires multiple OpenStack controllers (3+) and provides high availability for all OpenStack components, including MySQL/Galera, RabbitMQ, and Cinder, as well as OpenStack API services. Select this configuration if you want to build a production-grade OpenStack cloud with 6 nodes or more."
+      },
+      "multinode": {
+        "description": "In this configuration the OpenStack controller is deployed separately from the compute and cinder nodes. This mode assumes the presence of 1 controller node and 1 or more compute/cinder nodes. You can add more nodes to scale your cloud later."
+      }
+    },
+    "id": 2,
+    "name": "Havana on Ubuntu 12.04"
+  }
+]

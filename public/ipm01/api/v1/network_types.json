@@ -1,0 +1,10 @@
+{
+  "network_types": [
+    {
+      "setting": 1,
+      "id": "current",
+      "version": 1,
+      "description": "quantum/neutron"
+    }
+  ]
+}

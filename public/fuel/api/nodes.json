@@ -1,0 +1,5475 @@
+[
+  {
+    "status": "ready",
+    "name": "node-11 (BA:48)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.12",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-11.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.11/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.11/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.11/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "PowerEdge R620",
+    "cluster": 1,
+    "mac": "6a:f6:ca:e8:be:43",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 34359738368,
+        "maximum_capacity": 1649267441664,
+        "devices": [
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "B8:CA:3A:6B:BA:49",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "B8:CA:3A:6B:BA:4B",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "B8:CA:3A:6B:BA:48",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        },
+        {
+          "mac": "B8:CA:3A:6B:BA:4A",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x6c81f660e10cf2001a750f2515718597",
+            "disk/by-id/scsi-36c81f660e10cf2001a750f2515718597"
+          ],
+          "removable": "0",
+          "model": "PERC H310",
+          "disk": "disk/by-path/pci-0000:02:00.0-scsi-0:2:0:0",
+          "size": 299439751168
+        }
+      ],
+      "system": {
+        "product": "PowerEdge R620",
+        "fqdn": "node-11",
+        "serial": "C59ZDZ1",
+        "manufacturer": "Dell Inc."
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": false,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 11,
+    "manufacturer": "Dell Inc."
+  },
+  {
+    "status": "ready",
+    "name": "node-1 (BF:AC)",
+    "roles": [
+      "ceph-osd",
+      "compute"
+    ],
+    "ip": "10.20.0.3",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-1.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.2/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.2/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.2/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "f2:1a:80:a7:99:43",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:94:BF:AF",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:94:BF:AE",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:94:BF:AD",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:94:BF:AC",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x600508e0000000000fc3a253ef1c9f0c",
+            "disk/by-id/scsi-3600508e0000000000fc3a253ef1c9f0c"
+          ],
+          "removable": "0",
+          "model": "Logical Volume",
+          "disk": "disk/by-path/pci-0000:03:00.0-scsi-0:1:0:0",
+          "size": 298999349248
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-1",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 1,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-12 (8B:80)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.13",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-12.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.12/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.12/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.12/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "76:cf:cd:3e:53:4b",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C9:8B:83",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C9:8B:82",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C9:8B:81",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:C9:8B:80",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f2d607",
+            "disk/by-id/scsi-35000c50059f2d607"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f2d605-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-12",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 12,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-20 (39:DE)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.21",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-20.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.20/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.20/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.20/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB",
+    "cluster": 1,
+    "mac": "6e:4d:c2:c8:30:4f",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 25769803776,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:34:39:DF",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:34:39:DE",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c5002d77325e",
+            "disk/by-id/scsi-SATA_ST9250610NS_9XE005E3",
+            "disk/by-id/ata-ST9250610NS_9XE005E3"
+          ],
+          "removable": "0",
+          "model": "ST9250610NS",
+          "disk": "disk/by-path/pci-0000:05:00.0-sas-0xffffffffffffffff-lun-0",
+          "size": 250059350016
+        }
+      ],
+      "system": {
+        "product": "S2400BB",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-20",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 20,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-21 (61:08)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.22",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-21.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.21/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.21/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.21/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2600WTT",
+    "cluster": 1,
+    "mac": "e6:ad:c4:60:d3:4a",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 8589934592,
+        "maximum_capacity": 824633720832,
+        "devices": [
+          {
+            "frequency": 2134,
+            "type": "<OUT OF SPEC>",
+            "size": 4294967296
+          },
+          {
+            "frequency": 2134,
+            "type": "<OUT OF SPEC>",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:94:61:09",
+          "max_speed": 10000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:94:61:08",
+          "max_speed": 10000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c500641c4274",
+            "disk/by-id/scsi-SATA_ST9500620NS_9XF2BN57",
+            "disk/by-id/ata-ST9500620NS_9XF2BN57"
+          ],
+          "removable": "0",
+          "model": "ST9500620NS",
+          "disk": "disk/by-path/pci-0000:00:11.4-scsi-0:0:0:0",
+          "size": 500107862016
+        }
+      ],
+      "system": {
+        "product": "S2600WTT",
+        "family": "Family",
+        "fqdn": "node-21",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 56,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2201
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": false,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 21,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-19 (8B:9C)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.20",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-19.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.19/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.19/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.19/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "22:9c:f7:10:12:40",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C9:8B:9F",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C9:8B:9E",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C9:8B:9D",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:C9:8B:9C",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f13c47",
+            "disk/by-id/scsi-35000c50059f13c47"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f13c45-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-19",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 19,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-2 (A4:90)",
+    "roles": [
+      "controller"
+    ],
+    "ip": "10.20.0.4",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-2.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.3/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.3/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.3/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB",
+    "cluster": 1,
+    "mac": "62:0f:57:1a:c7:41",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 42949672960,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:32:A4:93",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:32:A4:92",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:32:A4:91",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:32:A4:90",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sdb",
+          "extra": [
+            "disk/by-id/wwn-0x500000e042d91da0",
+            "disk/by-id/scsi-SATA_FUJITSU_MHZ2250_K831T8A256N6",
+            "disk/by-id/ata-FUJITSU_MHZ2250BK_G2_K831T8A256N6"
+          ],
+          "removable": "0",
+          "model": "FUJITSU MHZ2250B",
+          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6732a474003-lun-0",
+          "size": 250059350016
+        },
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c5001e850547",
+            "disk/by-id/scsi-SATA_ST9250410AS_5VG2EE1A",
+            "disk/by-id/ata-ST9250410AS_5VG2EE1A"
+          ],
+          "removable": "0",
+          "model": "ST9250410AS",
+          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6732a474000-lun-0",
+          "size": 250059350016
+        }
+      ],
+      "system": {
+        "product": "S2400BB",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-2",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 24,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2430L 0 @ 2.00GHz",
+            "frequency": 2001
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 2,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-18 (8D:24)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.19",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-18.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.18/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.18/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.18/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "ba:1e:4f:23:d4:45",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C9:8D:27",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C9:8D:26",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C9:8D:25",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:C9:8D:24",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f18b1b",
+            "disk/by-id/scsi-35000c50059f18b1b"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f18b19-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-18",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 18,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-3 (A5:E1)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.5",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-3.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.4/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.4/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.4/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB ..........",
+    "cluster": 1,
+    "mac": "82:f5:7b:f3:88:4a",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 51539607552,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:50:A5:E4",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:50:A5:E3",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:50:A5:E2",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:50:A5:E1",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c5001e6c3cc8",
+            "disk/by-id/scsi-SATA_ST9250410AS_5VG286DF",
+            "disk/by-id/ata-ST9250410AS_5VG286DF"
+          ],
+          "removable": "0",
+          "model": "ST9250410AS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5001e6750a5e1001-lun-0",
+          "size": 250059350016
+        }
+      ],
+      "system": {
+        "product": "S2400BB ..........",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-3",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2450 0 @ 2.10GHz",
+            "frequency": 2101
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 3,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-4 (3B:C1)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.6",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-4.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.5/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.5/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.5/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB",
+    "cluster": 1,
+    "mac": "5e:5a:1a:19:25:48",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 21474836480,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:34:3B:C1",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        },
+        {
+          "mac": "00:1E:67:34:3B:C2",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:34:3B:C3",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:34:3B:C4",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-SATA_GB0160EAFJE_9RXKLPJS",
+            "disk/by-id/ata-GB0160EAFJE_9RXKLPJS"
+          ],
+          "removable": "0",
+          "model": "GB0160EAFJE",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5001e67343bc1000-lun-0",
+          "size": 160041885696
+        }
+      ],
+      "system": {
+        "product": "S2400BB",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-4",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 4,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-17 (B7:6C)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.18",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-17.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.17/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.17/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.17/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "PowerEdge R620",
+    "cluster": 1,
+    "mac": "4a:34:2e:0f:19:42",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 34359738368,
+        "maximum_capacity": 1649267441664,
+        "devices": [
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "B8:CA:3A:6B:B7:6F",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "B8:CA:3A:6B:B7:6E",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "B8:CA:3A:6B:B7:6D",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "B8:CA:3A:6B:B7:6C",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x6c81f660e10f74001a7511f116ccf3a8",
+            "disk/by-id/scsi-36c81f660e10f74001a7511f116ccf3a8"
+          ],
+          "removable": "0",
+          "model": "PERC H310",
+          "disk": "disk/by-path/pci-0000:02:00.0-scsi-0:2:0:0",
+          "size": 299439751168
+        }
+      ],
+      "system": {
+        "product": "PowerEdge R620",
+        "fqdn": "node-17",
+        "serial": "C571FZ1",
+        "manufacturer": "Dell Inc."
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2600
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 17,
+    "manufacturer": "Dell Inc."
+  },
+  {
+    "status": "ready",
+    "name": "node-16 (43:4B)",
+    "roles": [
+      "ceph-osd",
+      "compute"
+    ],
+    "ip": "10.20.0.17",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-16.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.16/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.16/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.16/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2600GZ",
+    "cluster": 1,
+    "mac": "7a:ee:7a:0f:dd:4f",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 68719476736,
+        "maximum_capacity": 824633720832,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:31:43:4C",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:31:43:4D",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:31:43:4E",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:31:43:4B",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sdc",
+          "extra": [
+            "disk/by-id/wwn-0x5001517bb28139ee",
+            "disk/by-id/scsi-SATA_INTEL_SSDSA2BW3CVPR2035024T300EGN",
+            "disk/by-id/ata-INTEL_SSDSA2BW300G3_CVPR2035024T300EGN"
+          ],
+          "removable": "0",
+          "model": "INTEL SSDSA2BW30",
+          "disk": "disk/by-path/pci-0000:08:00.0-sas-0x5001e6731434b002-lun-0",
+          "size": 300069052416
+        },
+        {
+          "name": "sdb",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50025ab94d7",
+            "disk/by-id/scsi-35000c50025ab94d7"
+          ],
+          "removable": "0",
+          "model": "ST9500430SS",
+          "disk": "disk/by-path/pci-0000:08:00.0-sas-0x5000c50025ab94d5-lun-0",
+          "size": 500107862016
+        },
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50025ab9047",
+            "disk/by-id/scsi-35000c50025ab9047"
+          ],
+          "removable": "0",
+          "model": "ST9500430SS",
+          "disk": "disk/by-path/pci-0000:08:00.0-sas-0x5000c50025ab9045-lun-0",
+          "size": 500107862016
+        }
+      ],
+      "system": {
+        "product": "S2600GZ",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-16",
+        "version": "....................",
+        "serial": "Product S#",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 16,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-6 (DC:F4)",
+    "roles": [
+      "compute",
+      "ceph-osd"
+    ],
+    "ip": "10.20.0.7",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-6.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.6/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.6/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.6/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "PowerEdge R620",
+    "cluster": 1,
+    "mac": "8e:4d:fd:f4:8f:4a",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 34359738368,
+        "maximum_capacity": 1649267441664,
+        "devices": [
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "B8:CA:3A:6B:DC:F6",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "B8:CA:3A:6B:DC:F7",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "B8:CA:3A:6B:DC:F4",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        },
+        {
+          "mac": "B8:CA:3A:6B:DC:F5",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x6c81f660e10f90001a7520fc166f8b8f",
+            "disk/by-id/scsi-36c81f660e10f90001a7520fc166f8b8f"
+          ],
+          "removable": "0",
+          "model": "PERC H310",
+          "disk": "disk/by-path/pci-0000:02:00.0-scsi-0:2:0:0",
+          "size": 299439751168
+        }
+      ],
+      "system": {
+        "product": "PowerEdge R620",
+        "fqdn": "node-6",
+        "serial": "C58ZDZ1",
+        "manufacturer": "Dell Inc."
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 6,
+    "manufacturer": "Dell Inc."
+  },
+  {
+    "status": "ready",
+    "name": "node-7 (11:CC)",
+    "roles": [
+      "compute",
+      "ceph-osd"
+    ],
+    "ip": "10.20.0.8",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-7.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.7/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.7/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.7/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2600GZ",
+    "cluster": 1,
+    "mac": "06:ac:3e:3e:9a:4e",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 34359738368,
+        "maximum_capacity": 824633720832,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:5B:11:CF",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:5B:11:CE",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:5B:11:CD",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:5B:11:CC",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c5002640bed7",
+            "disk/by-id/scsi-SATA_ST3500514NS_9WJ04PP0",
+            "disk/by-id/ata-ST3500514NS_9WJ04PP0"
+          ],
+          "removable": "0",
+          "model": "ST3500514NS",
+          "disk": "disk/by-path/pci-0000:08:00.0-sas-0x5001e675b11cc000-lun-0",
+          "size": 500107862016
+        }
+      ],
+      "system": {
+        "product": "S2600GZ",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-7",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 7,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-15 (D3:C4)",
+    "roles": [
+      "ceph-osd",
+      "compute"
+    ],
+    "ip": "10.20.0.16",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-15.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.15/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.15/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.15/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB ..........",
+    "cluster": 1,
+    "mac": "9a:1f:cc:aa:29:4b",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 38654705664,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:49:D3:C7",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:49:D3:C6",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:49:D3:C5",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:49:D3:C4",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x50014ee0acc1d498",
+            "disk/by-id/scsi-SATA_WDC_WD2003FYYS-_WD-WMAUR0229603",
+            "disk/by-id/ata-WDC_WD2003FYYS-01T8B0_WD-WMAUR0229603"
+          ],
+          "removable": "0",
+          "model": "WDC WD2003FYYS-0",
+          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6749d3c4000-lun-0",
+          "size": 2000398934016
+        }
+      ],
+      "system": {
+        "product": "S2400BB ..........",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-15",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 15,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-8 (0E:F2)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.9",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-8.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.8/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.8/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.8/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2600GZ",
+    "cluster": 1,
+    "mac": "3a:5d:71:0f:5c:4a",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 38654705664,
+        "maximum_capacity": 824633720832,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:31:0E:F2",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        },
+        {
+          "mac": "00:1E:67:31:0E:F4",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:31:0E:F3",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:31:0E:F5",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x500000e044444bd6",
+            "disk/by-id/scsi-SATA_FUJITSU_MHZ2160_K82ZT9C2564F",
+            "disk/by-id/ata-FUJITSU_MHZ2160BK_G2_K82ZT9C2564F"
+          ],
+          "removable": "0",
+          "model": "FUJITSU MHZ2160B",
+          "disk": "disk/by-path/pci-0000:07:00.0-sas-0xffffffffffffffff-lun-0",
+          "size": 160041885696
+        }
+      ],
+      "system": {
+        "product": "S2600GZ",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-8",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz",
+            "frequency": 2701
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 8,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "ready",
+    "name": "node-9 (8B:C8)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.10",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-9.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.9/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.9/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.9/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "c6:22:c1:20:7d:4a",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C9:8B:CB",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C9:8B:CA",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C9:8B:C9",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:C9:8B:C8",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f17c07",
+            "disk/by-id/scsi-35000c50059f17c07"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f17c05-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-9",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 9,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-10 (8C:08)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.11",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-10.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.10/24",
+        "vlan": 102,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.10/24",
+        "vlan": 101,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.10/24",
+        "vlan": 103,
+        "dev": "eth3",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": 1,
+    "mac": "a2:18:b6:f6:a0:4c",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C9:8C:0B",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C9:8C:0A",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C9:8C:09",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:25:90:C9:8C:08",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f14cf7",
+            "disk/by-id/scsi-35000c50059f14cf7"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f14cf5-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-10",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 10,
+    "manufacturer": "Supermicro"
+  },
+  {
+    "status": "ready",
+    "name": "node-14(C0:64)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.15",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-14.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.14/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.14/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.14/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "PowerEdge R620",
+    "cluster": 1,
+    "mac": "4a:f7:70:82:64:42",
+    "meta": {
+      "memory": {
+        "slots": 24,
+        "total": 34359738368,
+        "maximum_capacity": 1649267441664,
+        "devices": [
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1866,
+            "type": "DDR3",
+            "size": 8589934592
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "B8:CA:3A:6B:C0:67",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "B8:CA:3A:6B:C0:66",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "B8:CA:3A:6B:C0:65",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "B8:CA:3A:6B:C0:64",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x6c81f660e10cb1001a7523d215c98ec8",
+            "disk/by-id/scsi-36c81f660e10cb1001a7523d215c98ec8"
+          ],
+          "removable": "0",
+          "model": "PERC H310",
+          "disk": "disk/by-path/pci-0000:02:00.0-scsi-0:2:0:0",
+          "size": 299439751168
+        }
+      ],
+      "system": {
+        "product": "PowerEdge R620",
+        "fqdn": "node-14",
+        "serial": "C580FZ1",
+        "manufacturer": "Dell Inc."
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz",
+            "frequency": 2599
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 14,
+    "manufacturer": "Dell Inc."
+  },
+  {
+    "status": "ready",
+    "name": "node 13 (39:28)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.14",
+    "error_type": "deploy",
+    "pending_addition": false,
+    "fqdn": "node-13.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.0.13/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.0.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.13/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.13/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "S2400BB",
+    "cluster": 1,
+    "mac": "c2:67:fa:6a:4a:44",
+    "meta": {
+      "memory": {
+        "slots": 12,
+        "total": 25769803776,
+        "maximum_capacity": 412316860416,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:34:39:2B",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:34:39:2A",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:34:39:29",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:34:39:28",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-SATA_ST9200420AS_5SH0BRN8",
+            "disk/by-id/ata-ST9200420AS_5SH0BRN8"
+          ],
+          "removable": "0",
+          "model": "ST9200420AS",
+          "disk": "disk/by-path/pci-0000:05:00.0-sas-0xffffffffffffffff-lun-0",
+          "size": 200049647616
+        }
+      ],
+      "system": {
+        "product": "S2400BB",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-13",
+        "version": "....................",
+        "serial": "............",
+        "manufacturer": "Intel Corporation"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2470 0 @ 2.30GHz",
+            "frequency": 2301
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "ubuntu",
+    "id": 13,
+    "manufacturer": "Intel Corporation"
+  },
+  {
+    "status": "discover",
+    "name": "Untitled (C1:04)",
+    "roles": [],
+    "ip": "10.20.0.236",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": null,
+    "network_data": [],
+    "platform_name": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+    "cluster": null,
+    "mac": "00:25:90:c5:c1:04",
+    "meta": {
+      "memory": {
+        "slots": 17,
+        "total": 34376515584,
+        "maximum_capacity": 274894684160,
+        "devices": [
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 1600,
+            "type": "DDR3",
+            "size": 8589934592
+          },
+          {
+            "frequency": 33,
+            "type": "Flash",
+            "size": 16777216
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:25:90:C5:C1:07",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:25:90:C5:C1:06",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:25:90:C5:C1:05",
+          "max_speed": 1000,
+          "state": "down",
+          "current_speed": null,
+          "name": "eth1"
+        },
+        {
+          "name": "eth0",
+          "ip": "10.20.0.236",
+          "state": "up",
+          "mac": "00:25:90:C5:C1:04",
+          "max_speed": 1000,
+          "current_speed": 1000,
+          "netmask": "255.255.255.0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/wwn-0x5000c50059f14c77",
+            "disk/by-id/scsi-35000c50059f14c77"
+          ],
+          "removable": "0",
+          "model": "ST9300605SS",
+          "disk": "disk/by-path/pci-0000:03:00.0-sas-0x5000c50059f14c75-lun-0",
+          "size": 300000000000
+        }
+      ],
+      "system": {
+        "product": "X9DRD-7LN4F(-JBOD)/X9DRD-EF",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "bootstrap",
+        "version": "0123456789",
+        "serial": "0123456789",
+        "manufacturer": "Supermicro"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 16,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2643 0 @ 3.30GHz",
+            "frequency": 3300
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": false,
+    "progress": 0,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 5,
+    "manufacturer": "Supermicro"
+  }
+]

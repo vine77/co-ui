@@ -1,0 +1,29 @@
+{
+  "other": {
+    "hostname": "saaappliance"
+  },
+  "route": {
+    "gateway": "192.168.122.1"
+  },
+  "management": {
+    "netmask": "255.255.255.0",
+    "mac": "52:54:00:C1:00:D2",
+    "address": "192.168.110.252",
+    "active": true,
+    "dhcp": false,
+    "gateway": "0.0.0.0"
+  },
+  "external": {
+    "netmask": "255.255.255.0",
+    "mac": "52:54:00:A1:A8:50",
+    "address": "192.168.122.2",
+    "active": true,
+    "dhcp": true,
+    "gateway": "0.0.0.0"
+  },
+  "dns": {
+    "ns1": "192.168.122.1",
+    "ns2": "",
+    "ns3": ""
+  }
+}

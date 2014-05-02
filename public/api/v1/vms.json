@@ -1,0 +1,18 @@
+{
+  "vms": [
+    {
+      "id": 0,
+      "description": "Fuel Master",
+      "state": 1,
+      "state_description": "running",
+      "action": null
+    },
+    {
+      "id": 1,
+      "description": "SAA IPM",
+      "state": 1,
+      "state_description": "running",
+      "action": null
+    }
+  ]
+}
