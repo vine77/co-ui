@@ -5,9 +5,6 @@ export default Ember.Route.extend({
     window.route = this;
   },
   model: function() {
-    var self = this;
-    var maxIpms = 10;
-    var numberOfResolvedPromises = 0;
     return Ember.RSVP.all([
       // Load Fuel APIs
       this.store.find('cluster'),

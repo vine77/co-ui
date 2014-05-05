@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <th>Cluster name</th>
+    <th>Cluster status</th>
+    <th>IPM</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    {{#each model}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{status}}</td>
+        <td>
+          {{#each ipms}}
+            {{name}}
+          {{/each}}
+        </td>
+        <td>{Unattach IPM}</td>
+      </tr>
+    {{/each}}
+    {{#each unassignedIpms}}
+      <tr>
+        <td>N/A</td>
+        <td></td>
+        <td>{{name}}</td>
+        <td>{Attach to cluster}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

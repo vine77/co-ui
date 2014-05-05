@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>VM name</th>
+      <th>Version</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud controller</td>
+      <td>
+        CO Version: {{cloudController.coVersion}}<br>
+        SAA Version: {{cloudController.saaVersion}}
+      </td>
+      <td>{Reboot, Shutdown}</td>
+    </tr>
+    {{#each model}}
+      <tr>
+        <td>{{description}}</td>
+        <td>{{stateDescription}}</td>
+        <td>{Start, Stop, Restart}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

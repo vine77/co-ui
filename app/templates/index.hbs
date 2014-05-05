@@ -1,20 +1,2 @@
-<table class="table">
-  <thead>
-    <th>Cluster name</th>
-    <th>Cluster status</th>
-    <th>IPM</th>
-  </thead>
-  <tbody>
-    {{#each clusters}}
-      <tr>
-        <td>{{name}}</td>
-        <td>{{status}}</td>
-        <td>
-          {{#each ipms}}
-            {{name}}
-          {{/each}}
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{render "vms"}}
+{{render "clusters"}}

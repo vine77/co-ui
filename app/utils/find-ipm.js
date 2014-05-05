@@ -11,6 +11,9 @@ import getJson from './get-json';
  *   }
  */
 export default function(ipmName) {
+  var self = this;
+  var maxIpms = 10;
+  var numberOfResolvedPromises = 0;
   return getJson('/' + ipmName + '/api/v1/statuses.json').then(function(response) {
     // If IPM was found, add record to store
     var ipm = self.store.push('ipm', {
