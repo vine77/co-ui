@@ -11,6 +11,11 @@ export default DS.Model.extend({
 
   // Relationships
   fuelNodes: DS.hasMany('fuelNode', {async: true}),
-  ipms: DS.hasMany('ipm', {async: true})
+  ipms: DS.hasMany('ipm', {async: true}),
+
+  // Computed properties
+  details: function() {
+    return 'Nodes: ' + this.get('fuelNodes.length') + '<br>CPU (cores): 504<br>HDD: 7.6 TB<br>RAM: 644.1 GB';
+  }.property('fuelNodes')
 
 });

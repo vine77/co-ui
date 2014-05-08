@@ -1,42 +1,18 @@
 <div class="box box-success">
   <div class="box-header">
     <i class="fa fa-desktop"></i>
-    <h3 class="box-title">Hardware and Service VMs</h3>
+    <h3 class="box-title">Service VMs</h3>
   </div>
   <div class="box-body table-responsive no-padding">
     <table class="table table-hover">
       <thead>
         <tr>
           <th>Name</th>
-          <th>Version</th>
+          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Cloud controller</td>
-          <td>
-            CO Version: {{cloudController.coVersion}}<br>
-            SAA Version: {{cloudController.saaVersion}}
-          </td>
-          <td>
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-success">Restart</button>
-              <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </div>
-            {{!-- {Reboot, Shutdown} --}}
-          </td>
-        </tr>
         {{#each model}}
           <tr>
             <td>{{description}}</td>
