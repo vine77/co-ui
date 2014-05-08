@@ -1,5 +1,26 @@
-<div class="container skin-blue">
-  <h1>Intel® DCM: SAAR</h1>
-  {{render "vms"}}
-  {{render "clusters"}}
+<div class="wrapper skin-blue">
+  <aside class="right-side strech">
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+    <section class="content">
+      <div class="row">
+        <section class="col-md-6">
+          {{render "vms"}}
+          {{partial "portlet1"}}
+        </section>
+        <section class="col-md-6">
+          {{render "clusters"}}
+          {{partial "portlet2"}}
+        </section>
+      </div>
+    </section>
+  </aside>
 </div>
