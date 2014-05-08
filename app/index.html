@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Intel® DCM: SAA</title>
+    <title>Intel<C2><AE> DCM: SAA</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/app.css">
-    <link rel="stylesheet" href="assets/bootstrap.css">
   </head>
   <body>
-    <script src="assets/app.js"></script>
     <script>
       window.ENV = {{ENV}};
+    </script>
+    <script src="assets/app.js"></script>
+    <script>
       window.CoUi = require('co-ui/app')['default'].create(ENV.APP);
     </script>
   </body>
