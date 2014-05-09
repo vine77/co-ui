@@ -20,8 +20,11 @@ export default Ember.Route.extend({
     ]).then(function() {
       // Discover locations of IPMs
       var allPromises = [];
-
       return new Ember.RSVP.allSettled(allPromises);
     });
+  },
+  setupController: function(controller, model) {
+    this._super(controller, model);
+    this.controllerFor('vms').set('model', this.store.all('vm'));
   }
 });

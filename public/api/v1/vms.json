@@ -5,6 +5,7 @@
       "description": "Fuel Master",
       "state": 1,
       "state_description": "running",
+      "responding": 1,
       "action": null
     },
     {
@@ -12,6 +13,7 @@
       "description": "SAA IPM",
       "state": 1,
       "state_description": "running",
+      "responding": 1,
       "action": null
     }
   ]

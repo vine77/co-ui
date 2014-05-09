@@ -8,15 +8,19 @@
       <thead>
         <tr>
           <th>Name</th>
+          <th>Version</th>
           <th>Status</th>
+          <th>API</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        {{#each model}}
+        {{#each}}
           <tr>
             <td>{{description}}</td>
+            <td>{{version}}</td>
             <td>{{stateDescription}}</td>
+            <td>{{respondingMessage}}</td>
             <td>
               <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-success">Restart</button>
