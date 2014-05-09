@@ -25,5 +25,15 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
   ]
 });
 
+// App-specific
+app.import('vendor/bootstrap/dist/js/bootstrap.js');
 
-module.exports = app.toTree();
+var fontAwesome = require('broccoli-static-compiler')('vendor', {
+  srcDir: '/fontawesome',
+  files: [
+    'fonts/*'
+  ],
+  destDir: '/'
+});
+
+module.exports = require('broccoli-merge-trees')([app.toTree(), fontAwesome]);
