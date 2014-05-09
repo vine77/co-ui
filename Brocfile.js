@@ -36,4 +36,12 @@ var fontAwesome = require('broccoli-static-compiler')('vendor', {
   destDir: '/'
 });
 
-module.exports = require('broccoli-merge-trees')([app.toTree(), fontAwesome]);
+var glyphicons = require('broccoli-static-compiler')('vendor', {
+  srcDir: '/bootstrap',
+  files: [
+    'fonts/*'
+  ],
+  destDir: '/'
+});
+
+module.exports = require('broccoli-merge-trees')([app.toTree(), fontAwesome, glyphicons]);
