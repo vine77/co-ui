@@ -2,6 +2,7 @@
   "ipms": [{
     "id": 1,
     "name": "ipm01",
+    "status": 3,
     "cluster": 1
   }]
 }

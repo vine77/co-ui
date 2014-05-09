@@ -10,21 +10,19 @@
         <th>Cluster Status</th>
         <th>Cluster Details</th>
         <th>IPM</th>
-        <th>SAA Status</th>
         <th>Actions</th>
       </thead>
       <tbody>
-        {{#each model}}
+        {{#each}}
           <tr>
             <td>{{name}}</td>
             <td>{{status}}</td>
             <td>{{{details}}}</td>
             <td>
               {{#each ipms}}
-                {{name}}
+                {{name}} ({{statusMessage}})
               {{/each}}
             </td>
-            <td><small class="badge bg-green">+</small> Healthy</td>
             <td>
               <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-primary">Unattach IPM</button>

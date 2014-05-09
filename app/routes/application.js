@@ -22,9 +22,5 @@ export default Ember.Route.extend({
       var allPromises = [];
       return new Ember.RSVP.allSettled(allPromises);
     });
-  },
-  setupController: function(controller, model) {
-    this._super(controller, model);
-    this.controllerFor('vms').set('model', this.store.all('vm'));
   }
 });
