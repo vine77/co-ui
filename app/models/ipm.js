@@ -23,6 +23,9 @@ export default DS.Model.extend({
       case 3:
         return 'operational';
     }
-  }.property('status')
+  }.property('status'),
+  systemStatus: function() {
+    return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('message');
+  }.property('statuses.@each')
 
 });

@@ -10,7 +10,6 @@
         <th>Cluster Status</th>
         <th>Cluster Details</th>
         <th>IPM</th>
-        <th>Actions</th>
       </thead>
       <tbody>
         {{#each}}
@@ -20,20 +19,10 @@
             <td>{{{details}}}</td>
             <td>
               {{#each ipms}}
-                {{name}} ({{statusMessage}})
+                {{name}}
+              {{else}}
+                Not assigned
               {{/each}}
-            </td>
-            <td>
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-primary">Unattach IPM</button>
-                <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
-                  <span class="caret"></span>
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Attach IPM</a></li>
-                </ul>
-              </div>
             </td>
           </tr>
         {{/each}}
