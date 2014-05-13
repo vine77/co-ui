@@ -1,3 +1,4 @@
+import Notify from "../helpers/notify";
 export default Ember.ObjectController.extend({
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
@@ -39,9 +40,10 @@ export default Ember.ObjectController.extend({
           "action": "shutdown"
         }
       }).then( function() {
+        //Notify('Success');
         //console.log('success');
       }, function() {
-        //console.log('false');
+        //Failure
       });
     }
   }
