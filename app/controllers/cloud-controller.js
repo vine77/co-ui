@@ -1,4 +1,4 @@
-import Notify from "../helpers/notify";
+import Event from "../helpers/event";
 export default Ember.ObjectController.extend({
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
