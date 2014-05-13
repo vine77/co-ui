@@ -14,6 +14,7 @@
     "ember-load-initializers": "stefanpenner/ember-load-initializers#0.0.1",
     "bootstrap": "^3.1.1",
     "admin-lte": "vine77/admin-lte#1.2.2",
-    "fontawesome": "^4.0.3"
+    "fontawesome": "^4.0.3",
+    "pnotify": "vine77/pnotify#~2.0.0"
   }
 }
