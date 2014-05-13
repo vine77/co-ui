@@ -1,8 +1,9 @@
+import PriorityToType from '../helpers/priority-to-type';
 export default function (message, type, notifyTitle, sticky) {
   if (typeof type === 'undefined') {
     type = 'warning';
   } else {
-    //type = App.priorityToType(type);
+    type = PriorityToType(type);
   }
   if (typeof notifyTitle === 'undefined' || !notifyTitle) {
     notifyTitle = type.capitalize();
