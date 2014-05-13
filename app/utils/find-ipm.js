@@ -4,11 +4,13 @@ import getJson from './get-json';
  * Determine if an IPM is available by querying its possible URI
  * @param {number} ipmName - The proxied subdirectory at which the SAA APIs can be found
  * @returns {promise}
+ *
  * Usage:
- *   for (var i = 1; i <= maxIpms; i++) {
- *     var ipmName = 'ipm' + ('0' + i).slice(-2);
- *     allPromises.push(findIpm(ipmName));
- *   }
+ *
+ *     for (var i = 1; i <= maxIpms; i++) {
+ *       var ipmName = 'ipm' + ('0' + i).slice(-2);
+ *       allPromises.push(findIpm(ipmName));
+ *     }
  */
 export default function(ipmName) {
   var self = this;
