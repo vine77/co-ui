@@ -27,6 +27,14 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
 
 // App-specific
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
+app.import('vendor/pnotify/pnotify.js');
+
+var pnotify = require('broccoli-static-compiler')('vendor', {
+  srcDir: '/pnotify',
+  files: [
+    'pnotify/pnotify.css'
+  ],
+});
 
 var fontAwesome = require('broccoli-static-compiler')('vendor', {
   srcDir: '/fontawesome',

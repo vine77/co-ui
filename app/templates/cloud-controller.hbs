@@ -18,14 +18,13 @@
           <td>{{coVersion}}</td>
           <td>
             <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-success">Restart</button>
+              <button {{action 'reboot'}} type="button" class="btn btn-sm btn-success">Restart</button>
               <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Start</a></li>
-                <li><a href="#">Stop</a></li>
+                <li><a {{action 'shutdown'}}>Shutdown</a></li>
               </ul>
             </div>
           </td>

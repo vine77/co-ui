@@ -4,6 +4,7 @@
     "ember-data": "vine77/ember-data#1.0.0-beta.5+canary.2505863e",
     "bootstrap": "^3.1.1",
     "admin-lte": "vine77/admin-lte#1.2.1",
-    "fontawesome": "^4.0.3"
+    "fontawesome": "^4.0.3",
+    "pnotify": "sciactive/pnotify#2.0.0"
   }
 }
