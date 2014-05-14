@@ -9,7 +9,6 @@
         <th>Cluster Name</th>
         <th>Cluster Status</th>
         <th>Cluster Details</th>
-        <th>IPM</th>
       </thead>
       <tbody>
         {{#each}}
@@ -17,21 +16,6 @@
             <td>{{name}}</td>
             <td>{{status}}</td>
             <td>{{{details}}}</td>
-            <td>
-              {{#each ipms}}
-                {{name}}
-              {{else}}
-                Not assigned
-              {{/each}}
-            </td>
-          </tr>
-        {{/each}}
-        {{#each unassignedIpms}}
-          <tr>
-            <td>N/A</td>
-            <td></td>
-            <td>{{name}}</td>
-            <td>{Attach to cluster}</td>
           </tr>
         {{/each}}
       </tbody>

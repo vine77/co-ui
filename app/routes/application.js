@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     window.route = this;
   },
   model: function() {
+    var self = this;
     return Ember.RSVP.all([
       // Load Fuel APIs
       this.store.find('cluster'),
@@ -16,11 +17,14 @@ export default Ember.Route.extend({
       // Load Cloud Controller APIs
       this.store.find('cloudController', 'current'),
       this.store.find('vm'),
-      this.store.find('ipm')
-    ]).then(function() {
-      // Discover locations of IPMs
-      var allPromises = [];
-      return new Ember.RSVP.allSettled(allPromises);
-    });
+      this.store.find('ipm').then(function(ipms) {
+        ipms.forEach(function(ipm) {
+          ipm.get('statuses');
+          ipm.get('nodes');
+          ipm.get('netconfig');
+          ipm.get('networkType');
+        });
+      })
+    ]);
   }
 });
