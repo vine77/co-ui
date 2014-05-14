@@ -1,5 +1,4 @@
 import ErrorMessage from "../helpers/error-message";
-
 export default function (xhr, defaultMessage) {
   var errorMessage = defaultMessage || 'An error occured: ' + xhr.status + ' ' + xhr.statusText;
   try {

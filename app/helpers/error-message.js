@@ -1,11 +1,19 @@
 import AssociativeToNumericArray from "../helpers/associative-to-numeric-array";
 export default function (response, separator) {
- if (typeof separator === 'undefined') separator = '<br>';
+  if (typeof separator === 'undefined') separator = '<br>';
+  
   if (response.meta && response.meta.registration_status) {
     return response.meta.registration_status.mapBy('error_message').join(separator);
   }
+
   if (Ember.isArray(response)) {
-    return response.join(separator);
+    if (response[0] && response[0].then) {
+      if (response[0].status !== 200) {
+        return response[0].statusText;
+      }
+    } else {
+      return response.join(separator);
+    }
   } else if (response.hasOwnProperty('errors')) {  // Check errors first in case response is actually a DS.InvalidError
     if (Ember.isArray(response.errors)) {
       return response.errors.join(separator);

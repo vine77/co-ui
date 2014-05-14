@@ -1,4 +1,6 @@
 import Event from "../helpers/event";
+import XhrError from "../helpers/xhr-error";
+import Health from '../utils/mappings/health';
 export default Ember.ObjectController.extend({
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
@@ -24,9 +26,9 @@ export default Ember.ObjectController.extend({
           "action": "reboot"
         }
       }).then( function() {
-        //console.log('success');
+        Event('Successfully rebooted cloud controller', Health.SUCCESS);
       }, function() {
-        //console.log('false');
+        XhrError(xhr, 'Failed to reboot cloud controller');
       });
     }, 
     shutdown: function() {
@@ -39,11 +41,10 @@ export default Ember.ObjectController.extend({
           "saa_version": null,
           "action": "shutdown"
         }
-      }).then( function() {
-        //Notify('Success');
-        //console.log('success');
-      }, function() {
-        //Failure
+      }).then( function(xhr) {
+         Event('Successfully shutdown cloud controller', Health.SUCCESS);
+      }, function(xhr) {
+        XhrError(xhr, 'Failed to shutdown cloud controller');
       });
     }
   }
