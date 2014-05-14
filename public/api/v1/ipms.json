@@ -3,6 +3,12 @@
     "id": 1,
     "name": "ipm01",
     "status": 3,
-    "cluster": 1
+    "cluster": 1,
+    "links": {
+      "statuses": "/ipm01/api/v1/statuses.json",
+      "nodes": "/ipm01/api/v1/nodes.json",
+      "netconfig": "/ipm01/api/v1/netconfig.json",
+      "networkType": "/ipm01/api/v1/network_types.json"
+    }
   }]
 }
