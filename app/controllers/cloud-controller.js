@@ -18,13 +18,9 @@ export default Ember.ObjectController.extend({
     reboot: function() {
       var ajaxPromise = this.get('ajaxPromise');
       var reboot = ajaxPromise('/api/v1/cc', {
-        dataType: "json",
-        type: "POST",
-        data: {
-          "co_version": null,
-          "saa_version": null,
-          "action": "reboot"
-        }
+        dataType: 'json',
+        contentType: "application/json",
+        data: '{"co_version": null, "saa_version": null, "action": "reboot"}',
       }).then( function(xhr) {
         Event('Successfully rebooted cloud controller', Health.SUCCESS);
       }, function(xhr) {
@@ -34,13 +30,9 @@ export default Ember.ObjectController.extend({
     shutdown: function() {
       var ajaxPromise = this.get('ajaxPromise');
       var reboot = ajaxPromise('/api/v1/cc', {
-        dataType: "json",
-        type: "POST",
-        data: {
-          "co_version": null,
-          "saa_version": null,
-          "action": "shutdown"
-        }
+        dataType: 'json',
+        contentType: "application/json",
+        data: '{"co_version": null, "saa_version": null, "action": "shutdown"}',
       }).then( function(xhr) {
          Event('Successfully shutdown cloud controller', Health.SUCCESS);
       }, function(xhr) {
