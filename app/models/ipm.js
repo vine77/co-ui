@@ -1,6 +1,7 @@
 export default DS.Model.extend({
   name: DS.attr('string'),
   status: DS.attr('number'),
+  apiDirectory: DS.attr('string'),
 
   // Relationships
   cluster: DS.belongsTo('cluster', {async: true}),
