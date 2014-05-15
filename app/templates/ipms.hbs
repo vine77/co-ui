@@ -24,16 +24,19 @@
               {{/if}}
             </td>
             <td>
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-primary">Unattach IPM</button>
-                <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
-                  <span class="caret"></span>
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Attach IPM</a></li>
-                </ul>
-              </div>
+              {{#if cluster}}
+                {{#unless isActionDisabled}}
+                  <button {{action "unassign" this}} type="button" class="btn btn-sm btn-primary">Detach from Cluster</button>
+                {{else}}
+                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Detach from Cluster</button>
+                {{/unless}}
+              {{else}}
+                {{#unless isActionDisabled}}
+                  <button {{action "assign" this}} type="button" class="btn btn-sm btn-primary">Attach to Cluster</button>
+                {{else}}
+                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Attach to Cluster</button>
+                {{/unless}}
+              {{/if}}
             </td>
           </tr>
         {{/each}}

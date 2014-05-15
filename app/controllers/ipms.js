@@ -1,1 +1,34 @@
-export default Ember.ArrayController.extend();
+import event from '../helpers/event';
+import xhrError from '../helpers/xhr-error';
+import health from '../utils/mappings/health';
+
+export default Ember.ArrayController.extend({
+  actions: {
+    detach: function(ipm) {
+      var cluster = ipm.get('cluster');
+      var confirmed = window.confirm('Are you sure you want to detach "' + ipm.get('name') + '" from cluster "' + cluster.get('name') + '?"');
+      if (confirmed) {
+        ipm.set('cluster', null);
+        ipm.save().then(function() {
+          event('"' + ipm.get('name') + '" was successfully detached from cluster "' + cluster.get('name') + '."', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr);
+          ipm.rollback();
+        });
+      }
+    },
+    attach: function(ipm) {
+      var cluster = this.store.all('cluster').objectAt(0);
+      var confirmed = window.confirm('Are you sure you want to attach "' + ipm.get('name') + '" to cluster "' + cluster.get('name') + '?"');
+      if (confirmed) {
+        ipm.set('cluster', cluster);
+        ipm.save().then(function() {
+          event('"' + ipm.get('name') + '" was successfully attached to cluster "' + cluster.get('name') + '."', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr);
+          ipm.rollback();
+        });
+      }
+    }
+  }
+});

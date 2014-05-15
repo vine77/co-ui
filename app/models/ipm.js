@@ -13,6 +13,9 @@ export default DS.Model.extend({
   networkType: DS.belongsTo('networkType', {async: true}),
 
   // Computed properties
+  isActionDisabled: function() {
+    return this.get('status') === 1 || this.get('status') === 2;
+  }.property('status'),
   statusMessage: function() {
     switch (this.get('status')) {
       case 0:
