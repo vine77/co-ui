@@ -1,8 +1,10 @@
 {
-  "ipms": [{
-    "id": 1,
-    "name": "ipm01",
-    "status": 3,
-    "cluster": 1
-  }]
+  "ipms": [
+    {
+      "status": 2,
+      "cluster": 2,
+      "id": 0,
+      "name": "SAAappliance"
+    }
+  ]
 }

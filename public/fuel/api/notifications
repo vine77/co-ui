@@ -1,0 +1,178 @@
+[
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "done",
+    "cluster": null,
+    "node_id": null,
+    "time": "01:26:14",
+    "date": "13-05-2014",
+    "message": "Master node installation has been completed successfully. Now you can boot new nodes over PXE, they will be discovered and become available for installing OpenStack on them",
+    "id": 1
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "07:19:10",
+    "date": "08-01-2000",
+    "message": "New node is discovered: 24 CPUs / 32.0 GB RAM / 0.299 TB HDD ",
+    "id": 2
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "error",
+    "cluster": null,
+    "node_id": null,
+    "time": "08:03:06",
+    "date": "08-01-2000",
+    "message": "Node 'Untitled (A5:A0)' has gone away",
+    "id": 3
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "08:03:06",
+    "date": "08-01-2000",
+    "message": "Node 'Untitled (A5:A0)' is back online",
+    "id": 4
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "error",
+    "cluster": null,
+    "node_id": null,
+    "time": "23:45:29",
+    "date": "08-01-2000",
+    "message": "Node 'Untitled (A5:A0)' has gone away",
+    "id": 5
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "23:49:24",
+    "date": "08-01-2000",
+    "message": "Node 'Untitled (A5:A0)' is back online",
+    "id": 6
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "error",
+    "cluster": null,
+    "node_id": null,
+    "time": "00:24:19",
+    "date": "09-01-2000",
+    "message": "Node 'Untitled (A5:A0)' has gone away",
+    "id": 7
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "00:24:20",
+    "date": "09-01-2000",
+    "message": "Node 'Untitled (A5:A0)' is back online",
+    "id": 8
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "01:19:49",
+    "date": "09-01-2000",
+    "message": "New node is discovered: 24 CPUs / 24.0 GB RAM / 1.0 TB HDD ",
+    "id": 9
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": null,
+    "time": "01:20:00",
+    "date": "09-01-2000",
+    "message": "New node is discovered: 24 CPUs / 48.0 GB RAM / 0.32 TB HDD ",
+    "id": 10
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "done",
+    "cluster": null,
+    "node_id": null,
+    "time": "01:25:02",
+    "date": "09-01-2000",
+    "message": "Environment 'samdev02 Havana Ubuntu' and all its nodes are deleted",
+    "id": 11
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": 4,
+    "time": "01:25:02",
+    "date": "09-01-2000",
+    "message": "New node is discovered: 24 CPUs / 24.0 GB RAM / 1.0 TB HDD ",
+    "id": 12
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": 5,
+    "time": "01:25:11",
+    "date": "09-01-2000",
+    "message": "New node is discovered: 24 CPUs / 48.0 GB RAM / 0.32 TB HDD ",
+    "id": 13
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "discover",
+    "cluster": null,
+    "node_id": 6,
+    "time": "01:25:21",
+    "date": "09-01-2000",
+    "message": "New node is discovered: 24 CPUs / 32.0 GB RAM / 0.299 TB HDD ",
+    "id": 14
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "error",
+    "cluster": null,
+    "node_id": 4,
+    "time": "02:57:41",
+    "date": "09-01-2000",
+    "message": "Node 'Untitled (D3:CB)' has gone away",
+    "id": 15
+  },
+  {
+    "status": "unread",
+    "task_id": null,
+    "topic": "error",
+    "cluster": 2,
+    "node_id": null,
+    "time": "03:03:46",
+    "date": "09-01-2000",
+    "message": "Deployment has failed. Timeout of deployment is exceeded.",
+    "id": 16
+  }
+]

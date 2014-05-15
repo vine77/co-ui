@@ -1,0 +1,52 @@
+[
+  {
+    "status": "ready",
+    "name": "check_dhcp",
+    "cluster": 2,
+    "result": {},
+    "progress": 0,
+    "message": "",
+    "id": 7,
+    "uuid": "f362c108-3fa7-480e-bc43-8bbf199ce7f5"
+  },
+  {
+    "status": "ready",
+    "name": "verify_networks",
+    "cluster": 2,
+    "result": [],
+    "progress": 100,
+    "message": "",
+    "id": 6,
+    "uuid": "e05576b9-3285-45b4-ae3a-3a52cc201abf"
+  },
+  {
+    "status": "error",
+    "name": "provision",
+    "cluster": 2,
+    "result": {},
+    "progress": 100,
+    "message": "Timeout of provisioning is exceeded",
+    "id": 11,
+    "uuid": "d84348d1-4246-4385-b068-d038248dbcfc"
+  },
+  {
+    "status": "error",
+    "name": "deployment",
+    "cluster": 2,
+    "result": {},
+    "progress": 100,
+    "message": "Deployment has failed. Timeout of deployment is exceeded.",
+    "id": 12,
+    "uuid": "f9737e8e-eec2-4bd3-8625-e4929e7fa81c"
+  },
+  {
+    "status": "error",
+    "name": "deploy",
+    "cluster": 2,
+    "result": {},
+    "progress": 100,
+    "message": "Timeout of provisioning is exceeded\nDeployment has failed. Timeout of deployment is exceeded.",
+    "id": 8,
+    "uuid": "d82cf1cb-626c-4ca4-9979-1917d045220e"
+  }
+]

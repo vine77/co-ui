@@ -1,20 +1,20 @@
 {
   "vms": [
     {
-      "id": 0,
-      "description": "Fuel Master",
-      "state": 1,
-      "state_description": "running",
+      "state_description": "is running",
       "responding": 1,
-      "action": null
+      "description": "Fuel VM",
+      "state": 1,
+      "action": null,
+      "id": 0
     },
     {
-      "id": 1,
-      "description": "SAA IPM",
+      "state_description": "is running",
+      "responding": 2,
+      "description": "SAA VM",
       "state": 1,
-      "state_description": "running",
-      "responding": 1,
-      "action": null
+      "action": null,
+      "id": 1
     }
   ]
 }
