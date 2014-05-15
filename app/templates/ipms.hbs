@@ -12,7 +12,7 @@
         <th>Actions</th>
       </thead>
       <tbody>
-        {{#each}}
+        {{#each ipm in controller}}
           <tr>
             <td>{{name}}</td>
             <td>{{statusMessage}}</td>
@@ -20,22 +20,37 @@
               {{#if cluster}}
                 {{cluster.name}}
               {{else}}
-                Not assigned
+                Not attached
               {{/if}}
             </td>
             <td>
               {{#if cluster}}
-                {{#unless isActionDisabled}}
-                  <button {{action "unassign" this}} type="button" class="btn btn-sm btn-primary">Detach from Cluster</button>
+                {{#if ipm.isActionDisabled}}
+                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Detach from cluster</button>
                 {{else}}
-                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Detach from Cluster</button>
-                {{/unless}}
+                  <button {{action "detach" ipm}} type="button" class="btn btn-sm btn-primary">Detach from cluster</button>
+                {{/if}}
               {{else}}
-                {{#unless isActionDisabled}}
-                  <button {{action "assign" this}} type="button" class="btn btn-sm btn-primary">Attach to Cluster</button>
+                {{#if ipm.isActionDisabled}}
+                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Attach to cluster</button>
                 {{else}}
-                  <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Attach to Cluster</button>
-                {{/unless}}
+                  {{#if controllers.clusters.hasMultipleClusters}}
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-primary" data-toggle="dropdown">Attach to:</button>
+                      <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu pull-right" role="menu">
+                        {{#each cluster in controllers.clusters}}
+                          <li><a href {{action "attach" ipm cluster}}>{{cluster.name}}</a></li>
+                        {{/each}}
+                      </ul>
+                    </div>
+                  {{else}}
+                    <button {{action "attach" ipm}} type="button" class="btn btn-sm btn-primary">Attach to cluster</button>
+                  {{/if}}
+                {{/if}}
               {{/if}}
             </td>
           </tr>

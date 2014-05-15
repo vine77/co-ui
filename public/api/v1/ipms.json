@@ -2,7 +2,7 @@
   "ipms": [
     {
       "status": 3,
-      "cluster": 2,
+      "cluster": null,
       "id": 0,
       "name": "SAAappliance"
     }
