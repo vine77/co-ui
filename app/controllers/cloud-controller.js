@@ -19,6 +19,7 @@ export default Ember.ObjectController.extend({
       var ajaxPromise = this.get('ajaxPromise');
       var reboot = ajaxPromise('/api/v1/cc', {
         dataType: 'json',
+        type: "POST",
         contentType: "application/json",
         data: '{"co_version": null, "saa_version": null, "action": "reboot"}',
       }).then( function(xhr) {
@@ -31,6 +32,7 @@ export default Ember.ObjectController.extend({
       var ajaxPromise = this.get('ajaxPromise');
       var reboot = ajaxPromise('/api/v1/cc', {
         dataType: 'json',
+        type: "POST",
         contentType: "application/json",
         data: '{"co_version": null, "saa_version": null, "action": "shutdown"}',
       }).then( function(xhr) {
