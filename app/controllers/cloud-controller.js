@@ -25,9 +25,9 @@ export default Ember.ObjectController.extend({
           "saa_version": null,
           "action": "reboot"
         }
-      }).then( function() {
+      }).then( function(xhr) {
         Event('Successfully rebooted cloud controller', Health.SUCCESS);
-      }, function() {
+      }, function(xhr) {
         XhrError(xhr, 'Failed to reboot cloud controller');
       });
     }, 
