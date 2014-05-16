@@ -10,12 +10,14 @@ export default Ember.ArrayController.extend({
   }.property('controllers.clusters'),
   actions: {
     detach: function(ipm) {
+      var self = this;
       var cluster = ipm.get('cluster');
       var confirmed = window.confirm('Are you sure you want to detach "' + ipm.get('name') + '" from cluster "' + cluster.get('name') + '?"');
       if (confirmed) {
         ipm.set('cluster', null);
         ipm.save().then(function() {
           event('"' + ipm.get('name') + '" was successfully detached from cluster "' + cluster.get('name') + '."', health.SUCCESS);
+          cluster.get('ipms').removeObject(ipm);  // Set other side of relationship until single-source-of-truth branch is merged
         }, function(xhr) {
           xhrError(xhr);
           ipm.rollback();
@@ -29,6 +31,7 @@ export default Ember.ArrayController.extend({
         ipm.set('cluster', cluster);
         ipm.save().then(function() {
           event('"' + ipm.get('name') + '" was successfully attached to cluster "' + cluster.get('name') + '."', health.SUCCESS);
+          cluster.get('ipms').addObject(ipm);  // Set other side of relationship until single-source-of-truth branch is merged
         }, function(xhr) {
           xhrError(xhr);
           ipm.rollback();
