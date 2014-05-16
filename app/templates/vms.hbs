@@ -22,17 +22,21 @@
             <td>{{stateDescription}}</td>
             <td>{{respondingMessage}}</td>
             <td>
+            {{#if state}}
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-success">Restart</button>
+                <button {{action 'reboot'}} type="button" class="btn btn-sm btn-success">Reboot</button>
                 <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
                   <span class="caret"></span>
                   <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Start</a></li>
-                  <li><a href="#">Stop</a></li>
+                  <li><a {{action 'shutdown'}}>Shutdown</a></li>
+                  <li><a {{action 'forcedShutdown'}}>Force Shutdown</a></li>
                 </ul>
               </div>
+            {{else}}
+              <button {{action 'start'}} type="button" class="btn btn-sm btn-success">Start</button>
+            {{/if}}
             </td>
           </tr>
         {{/each}}
