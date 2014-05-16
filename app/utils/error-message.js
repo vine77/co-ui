@@ -1,7 +1,8 @@
-import AssociativeToNumericArray from "../helpers/associative-to-numeric-array";
-export default function (response, separator) {
+import associativeToNumericArray from '../utils/associative-to-numeric-array';
+
+export default function(response, separator) {
   if (typeof separator === 'undefined') separator = '<br>';
-  
+
   if (response.meta && response.meta.registration_status) {
     return response.meta.registration_status.mapBy('error_message').join(separator);
   }
@@ -21,7 +22,7 @@ export default function (response, separator) {
       return response.errors;
     // Expected format from backend for 422 validation errors
     } else if (typeof response.errors === 'object') {
-      return AssociativeToNumericArray(response.errors).join(separator);
+      return associativeToNumericArray(response.errors).join(separator);
     } else {
       return '';
     }

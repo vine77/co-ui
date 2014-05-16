@@ -1,6 +1,7 @@
-import Event from "../helpers/event";
-import XhrError from "../helpers/xhr-error";
-import Health from '../utils/mappings/health';
+import notify from '../utils/notify';
+import xhrError from '../utils/xhr-error';
+import health from '../utils/mappings/health';
+
 export default Ember.ObjectController.extend({
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
@@ -25,54 +26,66 @@ export default Ember.ObjectController.extend({
   actions: {
     reboot: function() {
       var ajaxPromise = this.get('ajaxPromise');
-      var reboot = ajaxPromise('/api/v1/vms', {
+      ajaxPromise('/api/v1/vms', {
         dataType: 'json',
         type: "POST",
         contentType: "application/json",
-        data: '{"id": '+this.get('id')+', "description": null, "state": null, "state_description": null, "action": "reboot"}',
+        data: JSON.stringify({
+          id: this.get('id'),
+          action: 'reboot'
+        })
       }).then( function(xhr) {
-        Event('Successfully rebooted VM', Health.SUCCESS);
+        notify('Successfully rebooted VM', health.SUCCESS);
       }, function(xhr) {
-        XhrError(xhr, 'Failed to reboot VM');
+        xhrError(xhr, 'Failed to reboot VM');
       });
     },
     start: function() {
       var ajaxPromise = this.get('ajaxPromise');
-      var reboot = ajaxPromise('/api/v1/vms', {
+      ajaxPromise('/api/v1/vms', {
         dataType: 'json',
         type: "POST",
         contentType: "application/json",
-        data: '{"id": '+this.get('id')+', "description": null, "state": null, "state_description": null, "action": "create"}',
+        data: JSON.stringify({
+          id: this.get('id'),
+          action: 'create'
+        })
       }).then( function(xhr) {
-        Event('Successfully started VM', Health.SUCCESS);
+        notify('Successfully started VM', health.SUCCESS);
       }, function(xhr) {
-        XhrError(xhr, 'Failed to started VM');
+        xhrError(xhr, 'Failed to started VM');
       });
     },
     shutdown: function() {
       var ajaxPromise = this.get('ajaxPromise');
-      var reboot = ajaxPromise('/api/v1/vms', {
+      ajaxPromise('/api/v1/vms', {
         dataType: 'json',
         type: "POST",
         contentType: "application/json",
-        data: '{"id": '+this.get('id')+', "description": null, "state": null, "state_description": null, "action": "shutdown"}',
+        data: JSON.stringify({
+          id: this.get('id'),
+          action: 'shutdown'
+        })
       }).then( function(xhr) {
-        Event('Successfully shutdown VM', Health.SUCCESS);
+        notify('Successfully shutdown VM', health.SUCCESS);
       }, function(xhr) {
-        XhrError(xhr, 'Failed to shutdown VM');
+        xhrError(xhr, 'Failed to shutdown VM');
       });
     },
     forcedShutdown: function() {
       var ajaxPromise = this.get('ajaxPromise');
-      var reboot = ajaxPromise('/api/v1/vms', {
+      ajaxPromise('/api/v1/vms', {
         dataType: 'json',
         type: "POST",
         contentType: "application/json",
-        data: '{"id": '+this.get('id')+', "description": null, "state": null, "state_description": null, "action": "destroy"}',
+        data: JSON.stringify({
+          id: this.get('id'),
+          action: 'destroy'
+        })
       }).then( function(xhr) {
-        Event('Successfully force shutdown VM', Health.SUCCESS);
+        notify('Successfully force shutdown VM', health.SUCCESS);
       }, function(xhr) {
-        XhrError(xhr, 'Failed to force shutdown VM');
+        xhrError(xhr, 'Failed to force shutdown VM');
       });
     }
   }

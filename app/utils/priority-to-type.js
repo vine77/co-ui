@@ -1,28 +1,29 @@
-import Health from '../utils/mappings/health';
-export default function (priority, good) {
+import health from '../utils/mappings/health';
+
+export default function(priority, good) {
   if (typeof priority === 'string') priority = priority.toLowerCase();
   switch (priority) {
     // Unknown
     case 'unknown':
     case 'n/a':
-    case Health.UNKNOWN:
-    case Health.UNKNOWN.toString():
+    case health.UNKNOWN:
+    case health.UNKNOWN.toString():
       return 'unknown';
     // Success
     case 'success':
     case 'good':
-    case Health.SUCCESS:
-    case Health.SUCCESS.toString():
+    case health.SUCCESS:
+    case health.SUCCESS.toString():
       return (good) ? 'good' : 'success';
     // Info
     case 'info':
-    case Health.INFO:
-    case Health.INFO.toString():
+    case health.INFO:
+    case health.INFO.toString():
       return 'info';
     // Warning
     case 'warning':
-    case Health.WARNING:
-    case Health.WARNING.toString():
+    case health.WARNING:
+    case health.WARNING.toString():
       return 'warning';
     // Error
     case 'error':
@@ -30,10 +31,10 @@ export default function (priority, good) {
     case 'important':
     case 'bad':
     case 'critical':
-    case Health.ERROR:
-    case Health.ERROR.toString():
-    case Health.CRITICAL:
-    case Health.CRITICAL.toString():
+    case health.ERROR:
+    case health.ERROR.toString():
+    case health.CRITICAL:
+    case health.CRITICAL.toString():
       return 'error';
     default:
       return 'unknown';
