@@ -14,12 +14,44 @@ export default DS.RESTSerializer.extend({
   },
 
   /**
-   * Relationships should use numbers, not strings
+   * IDs should be numbers, not strings
+   */
+  serialize: function(record, options) {
+    var json = this._super(record, options);
+    if (options && options.includeId && record.get('id')) {
+      json[this.get('primaryKey')] = parseInt(record.get('id'));
+    }
+    return json;
+  },
+
+  /**
+   * belongsTo relationship should use numbers, not strings. Add support for persist flag to belongsTo relationship.
    */
   serializeBelongsTo: function(record, json, relationship) {
-    var key = relationship.key;
-    var belongsTo = get(record, key);
-    key = this.keyForRelationship ? this.keyForRelationship(key, "belongsTo") : key;
-    json[key] = Ember.isNone(belongsTo) ? belongsTo : parseInt(belongsTo.get('id'));
+    if (relationship.options.persist !== false) {
+      var key = relationship.key;
+      var belongsTo = Ember.get(record, key);
+      key = this.keyForRelationship ? this.keyForRelationship(key, 'belongsTo') : key;
+      json[key] = Ember.isNone(belongsTo) ? belongsTo : parseInt(belongsTo.get('id'));
+    }
   },
+
+  /**
+   * Add support for persist flag to hasMany relationship
+   */
+  serializeHasMany: function(record, json, relationship) {
+    if (relationship.options.persist !== false) {
+      return this._super(record, json, relationship);
+    }
+  },
+
+  /**
+   * Add support for persist flag to attributes
+   */
+  serializeAttribute: function(record, json, key, attribute) {
+    if (attribute.options.persist !== false) {
+      return this._super(record, json, key, attribute);
+    }
+  }
+
 });
