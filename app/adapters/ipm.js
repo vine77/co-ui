@@ -26,6 +26,7 @@ export default DS.ActiveModelAdapter.extend({
     data[this.pathForType(type.typeKey)] = [
       store.serializerFor(type.typeKey).serialize(record)
     ];
+    window.data = data;
 
     var id = Ember.get(record, 'id');
 
