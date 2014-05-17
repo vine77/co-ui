@@ -31,8 +31,10 @@ export default Ember.ObjectController.extend({
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
-          id: this.get('id'),
-          action: 'reboot'
+          vms: [{
+            id: this.get('id'),
+            action: 'reboot'
+          }]
         })
       }).then( function(xhr) {
         notify('Successfully rebooted VM', health.SUCCESS);
@@ -47,8 +49,10 @@ export default Ember.ObjectController.extend({
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
-          id: this.get('id'),
-          action: 'create'
+          vms: [{
+            id: this.get('id'),
+            action: 'create'
+          }]
         })
       }).then( function(xhr) {
         notify('Successfully started VM', health.SUCCESS);
@@ -63,8 +67,10 @@ export default Ember.ObjectController.extend({
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
-          id: this.get('id'),
-          action: 'shutdown'
+          vms: [{
+            id: this.get('id'),
+            action: 'shutdown'
+          }]
         })
       }).then( function(xhr) {
         notify('Successfully shutdown VM', health.SUCCESS);
@@ -79,8 +85,10 @@ export default Ember.ObjectController.extend({
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
-          id: this.get('id'),
-          action: 'destroy'
+          vms: [{
+            id: this.get('id'),
+            action: 'destroy'
+          }]
         })
       }).then( function(xhr) {
         notify('Successfully force shutdown VM', health.SUCCESS);
