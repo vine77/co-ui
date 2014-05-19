@@ -17,34 +17,40 @@ export default Ember.ObjectController.extend({
   },
   actions: {
     reboot: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/cc', {
-        dataType: 'json',
-        type: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({
-          action: 'reboot'
-        })
-      }).then( function(xhr) {
-        notify('Successfully rebooted cloud controller', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to reboot cloud controller');
-      });
+      var confirmed = window.confirm('Are you sure you want to reboot the cloud controller?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/cc', {
+          dataType: 'json',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            action: 'reboot'
+          })
+        }).then( function(xhr) {
+          notify('Successfully rebooted cloud controller', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to reboot cloud controller');
+        });
+      }
     },
     shutdown: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/cc', {
-        dataType: 'json',
-        type: 'POST',
-        contentType: 'application/json',
-        data: JSON.stringify({
-          action: 'shutdown'
-        })
-      }).then( function(xhr) {
-        notify('Successfully shutdown cloud controller', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to shutdown cloud controller');
-      });
+      var confirmed = window.confirm('Are you sure you want to shut down the cloud controller?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/cc', {
+          dataType: 'json',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            action: 'shutdown'
+          })
+        }).then( function(xhr) {
+          notify('Successfully shutdown cloud controller', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to shutdown cloud controller');
+        });
+      }
     }
   }
 });

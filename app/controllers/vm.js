@@ -25,76 +25,88 @@ export default Ember.ObjectController.extend({
   }.property('id'),
   actions: {
     reboot: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/vms', {
-        dataType: 'json',
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          vms: [{
-            id: this.get('id'),
-            action: 'reboot'
-          }]
-        })
-      }).then( function(xhr) {
-        notify('Successfully rebooted VM', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to reboot VM');
-      });
+      var confirmed = window.confirm('Are you sure you want to reboot "' + this.get('name') + '"?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/vms', {
+          dataType: 'json',
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            vms: [{
+              id: this.get('id'),
+              action: 'reboot'
+            }]
+          })
+        }).then( function(xhr) {
+          notify('Successfully rebooted VM', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to reboot VM');
+        });
+      }
     },
     start: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/vms', {
-        dataType: 'json',
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          vms: [{
-            id: this.get('id'),
-            action: 'create'
-          }]
-        })
-      }).then( function(xhr) {
-        notify('Successfully started VM', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to started VM');
-      });
+      var confirmed = window.confirm('Are you sure you want to start "' + this.get('name') + '"?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/vms', {
+          dataType: 'json',
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            vms: [{
+              id: this.get('id'),
+              action: 'create'
+            }]
+          })
+        }).then( function(xhr) {
+          notify('Successfully started VM', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to started VM');
+        });
+      }
     },
     shutdown: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/vms', {
-        dataType: 'json',
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          vms: [{
-            id: this.get('id'),
-            action: 'shutdown'
-          }]
-        })
-      }).then( function(xhr) {
-        notify('Successfully shutdown VM', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to shutdown VM');
-      });
+      var confirmed = window.confirm('Are you sure you want to shut down "' + this.get('name') + '"?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/vms', {
+          dataType: 'json',
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            vms: [{
+              id: this.get('id'),
+              action: 'shutdown'
+            }]
+          })
+        }).then( function(xhr) {
+          notify('Successfully shutdown VM', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to shutdown VM');
+        });
+      }
     },
     forcedShutdown: function() {
-      var ajaxPromise = this.get('ajaxPromise');
-      ajaxPromise('/api/v1/vms', {
-        dataType: 'json',
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify({
-          vms: [{
-            id: this.get('id'),
-            action: 'destroy'
-          }]
-        })
-      }).then( function(xhr) {
-        notify('Successfully force shutdown VM', health.SUCCESS);
-      }, function(xhr) {
-        xhrError(xhr, 'Failed to force shutdown VM');
-      });
+      var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"?');
+      if (confirmed) {
+        var ajaxPromise = this.get('ajaxPromise');
+        ajaxPromise('/api/v1/vms', {
+          dataType: 'json',
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({
+            vms: [{
+              id: this.get('id'),
+              action: 'destroy'
+            }]
+          })
+        }).then( function(xhr) {
+          notify('Successfully force shutdown VM', health.SUCCESS);
+        }, function(xhr) {
+          xhrError(xhr, 'Failed to force shutdown VM');
+        });
+      }
     }
   }
 });

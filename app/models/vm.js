@@ -7,6 +7,7 @@ export default DS.Model.extend({
 
   // Computed properties
   //isResponding: Ember.computed.eq(1),
+  name: Ember.computed.alias('description'),
   respondingMessage: function() {
     if (this.get('responding') === 1) {
       return 'responding';

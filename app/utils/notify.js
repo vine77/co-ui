@@ -15,8 +15,10 @@ export default function(message, type, notifyTitle, sticky) {
     title: notifyTitle,
     text: message,
     type: type,
-    sticker: false,
     animate_speed: 200,
+    buttons: {
+      sticker: false
+    },
     hide: (sticky) ? false : true
   });
 }
