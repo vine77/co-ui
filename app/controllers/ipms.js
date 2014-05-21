@@ -12,10 +12,10 @@ export default Ember.ArrayController.extend({
       if (confirmed) {
         ipm.set('cluster', null);
         ipm.save().then(function() {
-          notify('"' + ipm.get('name') + '" was successfully detached from cluster "' + cluster.get('name') + '."', health.SUCCESS);
+          notify('"' + ipm.get('name') + '" was successfully detached from cluster "' + cluster.get('name') + '".', health.SUCCESS);
           cluster.get('ipms').removeObject(ipm);  // Set other side of relationship until single-source-of-truth branch is merged
         }, function(xhr) {
-          xhrError(xhr);
+          xhrError(xhr, 'Failed to detach cluster "' + cluster.get('name') + '".');
           ipm.rollback();
         });
       }
@@ -26,10 +26,10 @@ export default Ember.ArrayController.extend({
       if (confirmed) {
         ipm.set('cluster', cluster);
         ipm.save().then(function() {
-          notify('"' + ipm.get('name') + '" was successfully attached to cluster "' + cluster.get('name') + '."', health.SUCCESS);
+          notify('"' + ipm.get('name') + '" was successfully attached to cluster "' + cluster.get('name') + '".', health.SUCCESS);
           cluster.get('ipms').addObject(ipm);  // Set other side of relationship until single-source-of-truth branch is merged
         }, function(xhr) {
-          xhrError(xhr);
+          xhrError(xhr, 'Failed to attach cluster "' + cluster.get('name') + '".');
           ipm.rollback();
         });
       }

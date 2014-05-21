@@ -13,6 +13,7 @@ export default DS.ActiveModelAdapter.extend({
     data[this.pathForType(type.typeKey)] = [
       store.serializerFor(type.typeKey).serialize(record, {includeId: true})
     ];
-    return this.ajax(this.buildURL(type.typeKey), 'PUT', {data: data});
+    return this.ajax(this.buildURL(type.typeKey, record.get('id')), 'PUT', {data: data});
   }
+
 });
