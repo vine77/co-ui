@@ -8,7 +8,9 @@ body {
   background-color: transparent;
 }
 .header {
+  @logo-width: 450px;
   .logo {
+    width: @logo-width;
     font-family: "Neo Sans Intel";
     text-align: left;
     #logo-company {
@@ -18,6 +20,12 @@ body {
       vertical-align: top;
     }
   }
+  .navbar {
+    margin-left: @logo-width;
+  }
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
 }
 .iframe-content-container{
   margin: 0;
