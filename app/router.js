@@ -4,6 +4,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
    this.route("orchestration", { path: "/orchestration" });
+   this.route("saa-appliance", { path: "/saa-appliance" });
 });
 
 export default Router;

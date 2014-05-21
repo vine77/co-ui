@@ -1,5 +1,1 @@
-export default Ember.Route.extend({
-  model: function() {
-    return this.store.find('ipm', { name: "SAAappliance" });
-  }
-});
+export default Ember.Route.extend({});
