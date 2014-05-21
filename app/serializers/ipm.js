@@ -3,12 +3,11 @@ export default DS.RESTSerializer.extend({
    * Add locations for SAA API relationships
    */
   normalize: function(type, hash, prop) {
-    hash.apiDirectory = 'ipm' + ('0' + hash.id).slice(-2);
     hash.links = {
-      statuses: '/' + hash.apiDirectory + '/api/v1/statuses.json',
-      nodes: '/' + hash.apiDirectory + '/api/v1/nodes.json',
-      netconfig: '/' + hash.apiDirectory + '/api/v1/netconfig.json',
-      networkType: '/' + hash.apiDirectory + '/api/v1/network_types.json'
+      statuses: hash.proxy + '/api/v1/statuses.json',
+      nodes: hash.proxy + '/api/v1/nodes.json',
+      netconfig: hash.proxy + '/api/v1/netconfig.json',
+      networkType: hash.proxy + '/api/v1/network_types.json'
     };
     return this._super(type, hash, prop);
   },

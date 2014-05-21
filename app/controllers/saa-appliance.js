@@ -1,6 +1,5 @@
 export default Ember.ObjectController.extend({
   iframeSrc: function() {
-    //return '/';
-    return '/' + this.get('model.firstObject.apiDirectory');
+    return this.get('model.firstObject.proxy');
   }.property('model.@each')
 });
