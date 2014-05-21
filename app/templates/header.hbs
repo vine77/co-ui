@@ -6,14 +6,11 @@
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-right">
       <ul class="nav navbar-nav">
-        <li class="dropdown messages-menu">
-          {{#link-to 'orchestration'}}<i class="fa fa-music"></i> Orchestration {{/link-to}}
-        </li>
-        <li class="dropdown messages-menu">
-          {{#link-to 'saa-appliance'}}<i class="fa fa-bar-chart-o"></i> SAAappliance {{/link-to}}
-        </li>
-        <li class="dropdown user user-menu">
-          <a href="#">
+        <li>{{#link-to "index"}}<i class="fa fa-home"></i> Dashboard{{/link-to}}</li>
+        <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
+        <li>{{#link-to "saa-appliance"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
+        <li class="user">
+          <a>
             <i class="glyphicon glyphicon-user"></i>
             <span>User</span>
           </a>
