@@ -4,6 +4,9 @@ html, body {
 body {
   background-image: url("images/texture.png");
 }
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
 .content, .right-side {
   background-color: transparent;
 }
@@ -24,9 +27,6 @@ body {
     margin-left: @logo-width;
   }
 }
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-  margin-top: 0;
-}
 .iframe-content-container{
   margin: 0;
   padding: 0;
@@ -42,4 +42,16 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+.actions-column {
+  width: 150px;
+  .btn {
+    width: 125px;
+  }
+  .btn-group .btn {
+    width: auto;
+    &:first-child {
+      width: 100px;
+    }
+  }
 }

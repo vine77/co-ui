@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>Status</th>
         <th>Cluster</th>
-        <th>Actions</th>
+        <th class="actions-column">Actions</th>
       </thead>
       <tbody>
         {{#each ipm in controller}}
@@ -23,7 +23,7 @@
                 Not attached
               {{/if}}
             </td>
-            <td>
+            <td class="actions-column">
               {{#if cluster}}
                 {{#if ipm.isActionDisabled}}
                   <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Detach from cluster</button>

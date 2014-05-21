@@ -1,15 +1,15 @@
 <div class="wrapper skin-blue">
   <aside class="right-side strech">
+    <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
     <section class="content-header">
       <h1>
         Orchestration
         <small>Mirantis Fuel</small>
       </h1>
       <ol class="breadcrumb">
-        <li>{{#link-to 'application'}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
+        <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
         <li class="active">Orchestration</li>
       </ol>
     </section>
-    <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
   </aside>
 </div>

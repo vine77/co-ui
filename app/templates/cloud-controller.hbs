@@ -9,22 +9,22 @@
         <tr>
           <th>Name</th>
           <th>Version</th>
-          <th>Actions</th>
+          <th class="actions-column">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><abbr title="Intel&reg; Datacenter Manager: Service Assurance Administrator">SAA</abbr> host</td>
           <td>{{coVersion}}</td>
-          <td>
+          <td class="actions-column">
             <div class="btn-group">
-              <button {{action 'reboot'}} type="button" class="btn btn-sm btn-success">Restart</button>
+              <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
               <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <ul class="dropdown-menu" role="menu">
-                <li><a {{action 'shutdown'}}>Shutdown</a></li>
+                <li><a {{action "shutdown"}} href>Shutdown</a></li>
               </ul>
             </div>
           </td>
