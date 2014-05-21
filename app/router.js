@@ -3,6 +3,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+   this.route("orchestration", { path: "/orchestration" });
 });
 
 export default Router;
