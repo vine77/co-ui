@@ -6,7 +6,8 @@
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-right">
       <ul class="nav navbar-nav">
-        <li>{{#link-to "index"}}<i class="fa fa-home"></i> Dashboard{{/link-to}}</li>
+        <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}}><i class="fa fa-desktop"></i> Infrastructure</a></li>
+        <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}}><i class="fa fa-cloud"></i> Clouds</a></li>
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
         <li>{{#link-to "saa-appliance"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
         <li class="user">

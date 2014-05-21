@@ -4,11 +4,17 @@ html, body {
 body {
   background-image: url("images/texture.png");
 }
+a {
+  cursor: pointer;
+}
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
   margin-top: 0;
 }
 .content, .right-side {
   background-color: transparent;
+}
+.navbar .nav > li > a.active {
+  background-color: #367fa9;
 }
 .header {
   @logo-width: 450px;
@@ -53,5 +59,38 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
     &:first-child {
       width: 100px;
     }
+  }
+}
+.col-md-6 {
+  .transition(~"width 1s, opacity 1s");
+}
+.actions-column {
+  opacity: 1;
+  .transition(opacity 1s);
+}
+.infrastructure-view {
+  .col-md-6:first-child {
+    width: 70%;
+  }
+  .col-md-6:last-child {
+    width: 30%;
+    opacity: 0.4;
+    .actions-column {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+.clouds-view {
+  .col-md-6:first-child {
+    width: 30%;
+    opacity: 0.4;
+    .actions-column {
+      display: none;
+      opacity: 0;
+    }
+  }
+  .col-md-6:last-child {
+    width: 70%;
   }
 }
