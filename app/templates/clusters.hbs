@@ -17,7 +17,10 @@
           <tr>
             <td>{{name}}</td>
             <td>{{status}}</td>
-            <td>{{systemHealth}}</td>
+            <td>
+              <i {{bind-attr class="systemHealthIcon"}}></i> 
+              {{capitalize-text systemHealthType}} 
+            </td>
             <td>{{{details}}}</td>
             <td>
               {{#if ipms}}
