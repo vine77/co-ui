@@ -6,12 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     goToInfrastructure: function() {
-      this.transitionTo('index');
-      this.controllerFor('index').set('viewName', 'infrastructure');
+      this.transitionTo('app.control-panel');
+      this.controllerFor('app/control-panel').set('viewName', 'infrastructure');
     },
     goToClouds: function() {
-      this.transitionTo('index');
-      this.controllerFor('index').set('viewName', 'clouds');
+      this.transitionTo('app.control-panel');
+      this.controllerFor('app/control-panel').set('viewName', 'clouds');
     }
   }
 });

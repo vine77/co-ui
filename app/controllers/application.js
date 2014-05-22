@@ -1,9 +1,9 @@
 export default Ember.ObjectController.extend({
-  needs: ['index'],
+  needs: ['app/control-panel'],
   isInfrastructure: function() {
-    return this.get('currentRouteName') === 'index' && this.get('controllers.index.viewName') === 'infrastructure';
-  }.property('currentRouteName', 'controllers.index.viewName'),
+    return this.get('currentRouteName') === 'app.control-panel' && this.get('controllers.app/control-panel.viewName') === 'infrastructure';
+  }.property('currentRouteName', 'controllers.app/control-panel.viewName'),
   isClouds: function() {
-    return this.get('currentRouteName') === 'index' && this.get('controllers.index.viewName') === 'clouds';
-  }.property('currentRouteName', 'controllers.index.viewName')
+    return this.get('currentRouteName') === 'app.control-panel' && this.get('controllers.app/control-panel.viewName') === 'clouds';
+  }.property('currentRouteName', 'controllers.app/control-panel.viewName')
 });

@@ -3,9 +3,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('orchestration', {path: '/orchestration'});
-  this.route('saa-appliance', {path: '/saa-appliance'});
+  this.route('orchestration');
+  this.route('saa-appliance');
   this.route('login');
+  this.resource('app', function() {
+    this.route('control-panel');
+    this.route('dashboard');
+  });
 });
 
 export default Router;
