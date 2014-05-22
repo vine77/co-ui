@@ -13,6 +13,9 @@ export default DS.Model.extend({
   networkType: DS.belongsTo('networkType', {async: true, persist: false}),
 
   // Computed properties
+  route: function() {
+    return 'saa-appliance';
+  }.property(),
   statusMessage: function() {
     switch (this.get('status')) {
       case 0:

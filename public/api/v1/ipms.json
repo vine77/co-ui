@@ -2,7 +2,8 @@
   "ipms": [
     {
       "status": 3,
-      "cluster": null,
+      "cluster": 2,
+      "proxy": "/ipm00",
       "id": 0,
       "name": "SAAappliance"
     }
