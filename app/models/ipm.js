@@ -28,8 +28,8 @@ export default DS.Model.extend({
         return 'operational';
     }
   }.property('status'),
-  systemStatus: function() {
-    return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('message');
-  }.property('statuses.@each')
+  systemHealth: function() {
+    return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('health');
+  }.property('statuses.@each.health')
 
 });

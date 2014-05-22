@@ -13,7 +13,7 @@
       "is_notification": false,
       "action_name": [],
       "parent_ids": [],
-      "health": 1,
+      "health": 3,
       "message": "Health status: Ok",
       "id": "system"
     },

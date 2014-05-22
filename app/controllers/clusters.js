@@ -1,4 +1,5 @@
 export default Ember.ArrayController.extend({
+  itemController: 'cluster',
   hasNoClusters: function() {
     return this.get('model.length') < 1;
   }.property('model.@each'),
