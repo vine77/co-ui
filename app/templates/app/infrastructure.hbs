@@ -1,0 +1,38 @@
+<div class="box box-success">
+  <div class="box-header">
+    <i class="fa fa-desktop"></i>
+    <h3 class="box-title">Infrastructure</h3>
+    <div class="pull-right box-tools">
+      <div class="btn-group">
+        <button class="btn btn-success btn-sm" {{action "goToInfrastructure"}}>Manage Infrastructure</button>
+      </div>
+    </div>
+  </div>
+  <div class="box-body table-responsive no-padding">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Version</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#with controllers.cloud-controller}}
+          <tr>
+            <td><abbr title="Intel&reg; Datacenter Manager: Service Assurance Administrator">SAA</abbr> host</td>
+            <td>{{coVersion}}</td>
+            <td>running</td>
+          </tr>
+        {{/with}}
+        {{#each controllers.vms}}
+          <tr>
+            <td>{{#link-to route}}{{name}}{{/link-to}}</td>
+            <td>{{version}}</td>
+            <td>{{stateDescription}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

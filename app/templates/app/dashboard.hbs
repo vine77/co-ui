@@ -13,10 +13,11 @@
     <section class="content">
       <div class="row">
         <section class="col-md-6" {{action "goToInfrastructure"}}>
-
+          {{render "app/infrastructure"}}
+          {{!-- {{render "app/nodes"}} --}}
         </section>
         <section class="col-md-6" {{action "goToClouds"}}>
-
+          {{render "app/clouds"}}
         </section>
       </div>
     </section>
