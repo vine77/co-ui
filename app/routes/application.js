@@ -7,11 +7,11 @@ export default Ember.Route.extend({
   actions: {
     goToInfrastructure: function() {
       this.transitionTo('index');
-      this.controllerFor('index').set('viewClass', 'infrastructure-view');
+      this.controllerFor('index').set('viewName', 'infrastructure');
     },
     goToClouds: function() {
       this.transitionTo('index');
-      this.controllerFor('index').set('viewClass', 'clouds-view');
+      this.controllerFor('index').set('viewName', 'clouds');
     }
   }
 });

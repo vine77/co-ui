@@ -1,4 +1,4 @@
-<div {{bind-attr class="viewClass :wrapper :skin-blue"}}>
+<div {{bind-attr class="viewName :wrapper :skin-blue"}}>
   <aside class="right-side strech">
     <section class="content-header">
       <h1>
@@ -7,7 +7,7 @@
       </h1>
       <ol class="breadcrumb">
         <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
-        <li class="active">Dashboard</li>
+        <li class="active">{{capitalize-text viewName}}</li>
       </ol>
     </section>
     <section class="content">

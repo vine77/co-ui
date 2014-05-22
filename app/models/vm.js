@@ -11,9 +11,9 @@ export default DS.Model.extend({
   isResponding: Ember.computed.equal('responding', 1),
   name: Ember.computed.alias('description'),
   route: function() {
-    if (this.get('id') == 0) {
+    if (this.get('id') === '0') {
       return 'orchestration';
-    } else if (this.get('id') == 1) {
+    } else if (this.get('id') === '1') {
       return 'saa-appliance';
     }
   }.property('id'),
