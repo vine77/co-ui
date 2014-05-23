@@ -12,7 +12,7 @@
       "state_description": "running",
       "responding": 2,
       "description": "SAA VM",
-      "state": 1,
+      "state": 0,
       "action": null,
       "id": 1
     }

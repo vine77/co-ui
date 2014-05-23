@@ -22,24 +22,34 @@
             <td>{{stateDescription}}</td>
             <td>{{respondingMessage}}</td>
             <td class="actions-column">
-            {{#if isRunning}}
-              <div class="btn-group">
-                <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
-                <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
-                  <span class="caret"></span>
-                  <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a {{action "shutdown"}}>Shutdown</a></li>
-                  <li><a {{action "forcedShutdown"}}>Force Shutdown</a></li>
-                </ul>
-              </div>
-            {{else}}
-              <button {{action "start"}} type="button" class="btn btn-sm btn-success">Start</button>
-            {{/if}}
+              {{#if isRunning}}
+                <div class="btn-group">
+                  <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
+                  <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a {{action "shutdown"}}>Shutdown</a></li>
+                    <li><a {{action "forcedShutdown"}}>Force Shutdown</a></li>
+                  </ul>
+                </div>
+              {{else}}
+                {{#if isSaaAppliance}}
+                  {{#if ipm.cluster}}
+                    <button {{action "start"}} type="button" class="btn btn-sm btn-success">Start</button>
+                  {{else}}
+                    <div title="You must first attach the SAAappliance to a cluster before starting.">
+                      <button type="button" class="btn btn-sm btn-success disabled">Start</button>
+                    </div>
+                  {{/if}}
+                {{else}}
+                  <button {{action "start"}} type="button" class="btn btn-sm btn-success">Start</button>
+                {{/if}}
+              {{/if}}
             </td>
           </tr>
-        {{/each}}
+        {{/each}} 
       </tbody>
     </table>
   </div>
