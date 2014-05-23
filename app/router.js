@@ -5,6 +5,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('orchestration');
   this.route('saa-appliance');
+  this.route('logs');
   this.route('login');
   this.route('about');
   this.resource('app', function() {

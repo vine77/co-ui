@@ -1,5 +1,6 @@
 import priorityToIconClass from '../utils/priority-to-icon-class';
 import priorityToType from '../utils/priority-to-type';
+
 export default Ember.ObjectController.extend({
   systemHealth: function() {
     return this.get('model.ipms.firstObject.systemHealth');

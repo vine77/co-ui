@@ -1,7 +1,7 @@
 <header class="header skin-blue">
   <div class="brand logo">
     <img id="logo-company" src="assets/images/logo-intel-white.svg" alt="Intel">
-    DCM: Service Assurance Administrator
+    DCM: SAA
   </div>
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-right">
@@ -11,6 +11,7 @@
         <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}}><i class="fa fa-cloud"></i> Clouds</a></li>
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
         <li>{{#link-to "saa-appliance"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
+        <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
         <li>{{#link-to "login"}}<i class="glyphicon glyphicon-user"></i> User{{/link-to}}
         </li>
         <li>

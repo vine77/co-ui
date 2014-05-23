@@ -12,12 +12,13 @@
     </section>
     <section class="content">
       <div class="row">
-        <section class="col-md-6" {{action "goToInfrastructure"}}>
+        <section class="col-md-6">
           {{render "app/infrastructure"}}
-          {{!-- {{render "app/nodes"}} --}}
+          {{!-- {{render "app/dashboard-vms"}} --}}
         </section>
-        <section class="col-md-6" {{action "goToClouds"}}>
+        <section class="col-md-6">
           {{render "app/clouds"}}
+          {{!-- {{render "app/nodes"}} --}}
         </section>
       </div>
     </section>
