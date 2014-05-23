@@ -1,5 +1,5 @@
 export default {
-  name: 'extentions',
+  name: 'rsvp',
   initialize: function(container, application) {
     Ember.RSVP.Promise.prototype.always = function(func) {
       return this.then(func, func);

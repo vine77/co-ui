@@ -12,11 +12,28 @@
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
         <li>{{#link-to "saa-appliance"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
         <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
-        <li>{{#link-to "login"}}<i class="glyphicon glyphicon-user"></i> User{{/link-to}}
-        </li>
-        <li>
-          {{#link-to "about"}}<i class="fa fa-info-circle"></i> {{/link-to}}
-        </li>
+        {{#if isLoggedIn}}
+          <li class="user-menu">
+            <a data-toggle="dropdown">
+              <i class="fa fa-user"></i>
+              <span>{{username}} <i class="caret"></i></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="user-header bg-light-blue">
+                <span class="avatar img-circle"><i class="fa fa-user fa-4"></i></span>
+                <p>{{username}}</p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a {{action "logout"}} class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        {{else}}
+          <li>{{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}</li>
+        {{/if}}
+        <li>{{#link-to "about"}}<i class="fa fa-info-circle"></i> {{/link-to}}</li>
       </ul>
     </div>
   </nav>

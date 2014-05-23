@@ -16,6 +16,7 @@
     "admin-lte": "vine77/admin-lte#1.2.2",
     "fontawesome": "^4.0.3",
     "pnotify": "vine77/pnotify#~2.0.0",
-    "ember-json-api": "daliwali/ember-json-api"
+    "ember-json-api": "daliwali/ember-json-api",
+    "jquery-cookie": "~1.4.1"
   }
 }

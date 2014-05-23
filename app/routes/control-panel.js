@@ -1,4 +1,6 @@
-export default Ember.Route.extend({
+import authenticatedRoute from './authenticated';
+
+export default authenticatedRoute.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
     this.controllerFor('cloudController').set('model', this.store.getById('cloudController', 'current'));

@@ -1,7 +1,12 @@
-export default Ember.Route.extend({
+import authenticatedRoute from './authenticated';
+
+export default authenticatedRoute.extend({
   model: function() {
     var self = this;
     return Ember.RSVP.all([
+      // Load Cloud Controller and VM APIs
+      this.store.find('cloudController', 'current'),
+      this.store.find('vm'),
       // Load IPM APIs
       this.store.find('ipm').then(function(ipms) {
         // Load SAA APIs (don't block on failure)

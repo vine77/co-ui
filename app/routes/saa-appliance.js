@@ -1,5 +1,7 @@
-export default Ember.Route.extend({
+import authenticatedRoute from './authenticated';
+
+export default authenticatedRoute.extend({
   model: function() {
-    return this.store.find('ipm', { name: "SAAappliance" });
+    return this.store.find('ipm');
   }
 });

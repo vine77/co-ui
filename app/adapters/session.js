@@ -11,7 +11,7 @@ export default DS.ActiveModelAdapter.extend({
     var data = {};
     var serializer = store.serializerFor(type.typeKey);
     serializer.serializeIntoHash(data, type, record);
-    return this.ajax(this.buildURL(type.typeKey), 'POST', { data: data });
+    return this.ajax(this.buildURL(type.typeKey), 'POST', {data: data});
   }
 
 });

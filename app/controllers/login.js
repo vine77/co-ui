@@ -69,19 +69,14 @@ export default Ember.ObjectController.extend({
       var self = this;
       this.set('isPending', true);
       //localStorage.isLoggedIn = true;
-      var session = this.store.createRecord('session', {
-        username: this.get('username'),
-        password: this.get('password'),
-        //tenant: this.get('isDefaultTenant') ? '' : this.get('tenantName')
-      });
+      var session = this.get('model');
       session.save().then(function (session) {
-        self.set('csrfToken', session.get('csrfToken'));
         self.set('isPending', false);
         self.set('isLoggedIn', true);
         self.transitionToAttempted();
       }, function (xhr) {
         self.set('isPending', false);
-        if (xhr instanceof DS.InvalidError) {  // status == 422
+        if (xhr.status === 422 || xhr instanceof DS.InvalidError) {
           var csrfToken = xhr.errors.message.csrf_token;
           //var setProfile = xhr.errors.message.set_profile;
           self.set('csrfToken', csrfToken);
