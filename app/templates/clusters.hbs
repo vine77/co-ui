@@ -27,7 +27,9 @@
             <td>
               {{#if ipms}}
                 {{#each ipm in ipms}}
-                  {{ipm.name}}
+                  {{#link-to 'saa-appliance'}} 
+                    {{ipm.name}}
+                  {{/link-to}}
                 {{/each}}
               {{else}}
                 Not assigned
