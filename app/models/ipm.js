@@ -32,7 +32,8 @@ export default DS.Model.extend({
     return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('health');
   }.property('statuses.@each.health'),
   systemHealthMessage: function() {
-    return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('message');
+    var message = this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('message');
+    return message || 'Unknown';
   }.property('statuses.@each.message')
 
 });

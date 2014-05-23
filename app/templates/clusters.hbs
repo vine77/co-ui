@@ -17,9 +17,11 @@
           <tr>
             <td>{{name}}</td>
             <td>{{status}}</td>
-            <td {{bind-attr title="systemHealthMessage"}}>
-              <i {{bind-attr class="systemHealthIcon"}}></i> 
-              {{capitalize-text systemHealthType}} 
+            <td>
+              <span {{bind-attr title="systemHealthMessage"}} class="hasTooltip inline-block">
+                <i {{bind-attr class="systemHealthIcon"}}></i>
+                {{capitalize-text systemHealthType}}
+              </span>
             </td>
             <td>{{{details}}}</td>
             <td>

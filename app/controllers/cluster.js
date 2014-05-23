@@ -9,7 +9,8 @@ export default Ember.ObjectController.extend({
     return priorityToIconClass(this.get('systemHealth'));
   }.property('systemHealth'),
   systemHealthMessage: function() {
-    return this.get('model.ipms.firstObject.systemHealthMessage');
+    var message = this.get('model.ipms.firstObject.systemHealthMessage');
+    return message || 'Unknown';
   }.property('systemHealth'),
   systemHealthType: function() {
     return priorityToType(this.get('systemHealth'));
