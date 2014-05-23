@@ -9,7 +9,7 @@ export default Ember.ObjectController.extend({
       options.success = function(data){
         resolve(data);
       };
-      options.error = function(jqXHR, status, error){
+      options.error = function(jqXHR, status, error) {
         reject(arguments);
       };
       $.ajax(url, options);

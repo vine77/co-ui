@@ -1,17 +1,8 @@
 export default Ember.Route.extend({
-  setupController: function(controller, model) {
-    this._super(controller, model);
-    this.controllerFor('cloudController').set('model', this.store.getById('cloudController', 'current'));
-    this.controllerFor('vms').set('model', this.store.all('vm'));
-    this.controllerFor('clusters').set('model', this.store.all('cluster'));
-    this.controllerFor('ipms').set('model', this.store.all('ipm'));
-  },
   model: function() {
     var self = this;
     return Ember.RSVP.all([
-      // Load Cloud Controller APIs
-      this.store.find('cloudController', 'current'),
-      this.store.find('vm'),
+      // Load IPM APIs
       this.store.find('ipm').then(function(ipms) {
         // Load SAA APIs (don't block on failure)
         ipms.forEach(function(ipm) {
