@@ -6,9 +6,14 @@ export default DS.Model.extend({
   responding: DS.attr('number'),
   action: DS.attr('string'),
 
+  // Relationships
+  ipm: DS.belongsTo('ipm'),
+
   // Computed properties
   isRunning: Ember.computed.equal('state', 1),
   isResponding: Ember.computed.equal('responding', 1),
+  isSaaAppliance: Ember.computed.equal('id', 1),
+
   name: Ember.computed.alias('description'),
   route: function() {
     if (this.get('id') === '0') {

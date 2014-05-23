@@ -3,6 +3,7 @@ export default DS.RESTSerializer.extend({
    * Add locations for SAA API relationships
    */
   normalize: function(type, hash, prop) {
+    if (hash.id === 0) { hash.vm_id = 1; }
     if (hash.proxy) {
       hash.links = {
         statuses: hash.proxy + '/api/v1/statuses.json',
