@@ -1,19 +1,18 @@
+import health from '../utils/mappings/health';
+import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
 import apiDomain from '../utils/api-domain';
 
 export default Ember.ObjectController.extend({
-  needs: ['application'],
   init: function () {
     this._super();
-    this.refreshSession();
+    //this.refreshSession();
   },
-  loggedIn: false,
-  username: '',
-  password: '',
-  csrfToken: null,
-  alert: '',
+  isLoggedIn: false,
+  //username: '',
+  //password: '',
+  //csrfToken: null,
   isPending: false,
-  session: null,
   tenantType: 'default',
   isDefaultTenant: Ember.computed.equal('tenantType', 'default'),
   tenantName: '',
@@ -29,8 +28,8 @@ export default Ember.ObjectController.extend({
   }.observes('csrfToken'),
   refreshSession: function () {
     Ember.run.later(this, 'refreshSession', 120000);  // Refresh every 2 minutes
-    //if (this.get('loggedIn') && this.get('controllers.application.isAutoRefreshEnabled')) {
-    if (this.get('loggedIn')) {
+    //if (this.get('isLoggedIn') && this.get('controllers.application.isAutoRefreshEnabled')) {
+    if (this.get('isLoggedIn')) {
       var host = apiDomain();
       Ember.$.ajax(host + '/api/v1/sessions', {
         type: 'POST',
@@ -66,33 +65,29 @@ export default Ember.ObjectController.extend({
     }
   },
   actions: {
-    clearAlert: function () {
-      this.set('alert', '');
-    },
     login: function () {
       var self = this;
       this.set('isPending', true);
-      this.send('clearAlert');
-      //localStorage.loggedIn = true;
+      //localStorage.isLoggedIn = true;
       var session = this.store.createRecord('session', {
         username: this.get('username'),
         password: this.get('password'),
-        tenant: this.get('isDefaultTenant') ? '' : this.get('tenantName')
+        //tenant: this.get('isDefaultTenant') ? '' : this.get('tenantName')
       });
       session.save().then(function (session) {
         self.set('csrfToken', session.get('csrfToken'));
         self.set('isPending', false);
-        self.set('loggedIn', true);
+        self.set('isLoggedIn', true);
         self.transitionToAttempted();
       }, function (xhr) {
         self.set('isPending', false);
         if (xhr instanceof DS.InvalidError) {  // status == 422
           var csrfToken = xhr.errors.message.csrf_token;
-          var setProfile = xhr.errors.message.set_profile;
+          //var setProfile = xhr.errors.message.set_profile;
           self.set('csrfToken', csrfToken);
           self.transitionToRoute('profile', self.get('username'));
         } else if (xhr.status === 401) {
-          self.set('alert', 'The username or password you entered was incorrect. Please try again.');
+          notify('The username or password you entered was incorrect. Please try again.', health.ERROR);
           self.set('username', '');
           self.set('password', '');
           $('#login-username').focus();

@@ -1,12 +1,12 @@
 <div class="form-box" id="login-box">
   <div class="header bg-light-blue">Sign In</div>
-  <form {{action "goToDashboard" on="submit"}}>
+  <form {{action "login" on="submit"}}>
     <div class="body bg-gray">
       <div class="form-group">
-        <input type="text" name="userid" class="form-control" placeholder="User ID" autofocus="autofocus">
+        {{input value=username id="login-username" class="form-control" placeholder="Username" autofocus="autofocus"}}
       </div>
       <div class="form-group">
-        <input type="password" name="password" class="form-control" placeholder="Password">
+        {{input value=password id="login-password" class="form-control" type="password" placeholder="Password"}}
       </div>
       {{!--
       <div class="form-group">
@@ -15,7 +15,12 @@
       --}}
     </div>
     <div class="footer">
-      <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+      {{#unless isPending}}
+        <input class="btn btn-block btn-primary" type="submit" value="Login"></input>
+      {{else}}
+        <a class="btn btn-block btn-primary disabled"><i class="icon-spinner icon-spin"></i> Logging in...</a>
+      {{/unless}}
+    </div>
       {{!-- <p><a href="#">I forgot my password</a></p> --}}
     </div>
   </form>

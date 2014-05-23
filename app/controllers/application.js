@@ -1,5 +1,6 @@
 export default Ember.ObjectController.extend({
-  needs: ['app/control-panel'],
+  needs: ['app/control-panel', 'login'],
+  isLoggedIn: Ember.computed.alias('controllers.login.isLoggedIn'),
   isInfrastructure: function() {
     return this.get('currentRouteName') === 'app.control-panel' && this.get('controllers.app/control-panel.viewName') === 'infrastructure';
   }.property('currentRouteName', 'controllers.app/control-panel.viewName'),

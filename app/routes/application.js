@@ -1,6 +1,7 @@
 export default Ember.Route.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
+    this.controllerFor('login').set('model', this.store.find('session', 'current_session'));
     this.controllerFor('cloudController').set('model', this.store.getById('cloudController', 'current'));
     this.controllerFor('vms').set('model', this.store.all('vm'));
     this.controllerFor('clusters').set('model', this.store.all('cluster'));
@@ -12,7 +13,6 @@ export default Ember.Route.extend({
     window.route = this;
   },
   model: function() {
-    var self = this;
     return Ember.RSVP.all([
       // Load Cloud Controller and VM APIs
       this.store.find('cloudController', 'current'),
