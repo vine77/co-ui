@@ -5,6 +5,9 @@ export default Ember.Route.extend({
     window.route = this;
   },
   actions: {
+    goToDashboard: function() {
+      this.transitionTo('app.dashboard');
+    },
     goToInfrastructure: function() {
       this.transitionTo('app.control-panel');
       this.controllerFor('app/control-panel').set('viewName', 'infrastructure');

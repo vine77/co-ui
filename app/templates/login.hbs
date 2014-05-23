@@ -1,6 +1,6 @@
 <div class="form-box" id="login-box">
   <div class="header bg-light-blue">Sign In</div>
-  <form action="../../index.html" method="post">
+  <form {{action "goToDashboard" on="submit"}}>
     <div class="body bg-gray">
       <div class="form-group">
         <input type="text" name="userid" class="form-control" placeholder="User ID" autofocus="autofocus">
@@ -16,7 +16,7 @@
     </div>
     <div class="footer">
       <button type="submit" class="btn btn-block btn-primary">Sign in</button>
-      <p><a href="#">I forgot my password</a></p>
+      {{!-- <p><a href="#">I forgot my password</a></p> --}}
     </div>
   </form>
 </div>
