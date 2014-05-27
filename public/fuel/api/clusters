@@ -1,34 +1,25 @@
 [
   {
-    "status": "error",
+    "status": "operational",
     "is_customized": false,
-    "release_id": 2,
-    "name": "samdev02 Havana Ubuntu",
+    "release_id": 1,
+    "name": "centana",
     "net_provider": "neutron",
     "mode": "multinode",
     "net_segment_type": "gre",
-    "changes": [
-      {
-        "node_id": null,
-        "name": "attributes"
-      },
-      {
-        "node_id": null,
-        "name": "networks"
-      },
-      {
-        "node_id": 5,
-        "name": "disks"
-      },
-      {
-        "node_id": 4,
-        "name": "disks"
-      },
-      {
-        "node_id": 6,
-        "name": "disks"
-      }
-    ],
+    "changes": [],
+    "id": 1,
+    "grouping": "roles"
+  },
+  {
+    "status": "operational",
+    "is_customized": false,
+    "release_id": 1,
+    "name": "centana2",
+    "net_provider": "neutron",
+    "mode": "multinode",
+    "net_segment_type": "gre",
+    "changes": [],
     "id": 2,
     "grouping": "roles"
   }

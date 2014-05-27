@@ -1,577 +1,1523 @@
 [
   {
-    "status": "error",
-    "name": "Untitled (D3:F5)",
-    "roles": [
-      "controller"
-    ],
-    "ip": "10.20.0.4",
-    "error_type": "deploy",
-    "pending_addition": false,
-    "fqdn": "node-5.domain.tld",
-    "network_data": [
-      {
-        "name": "management",
-        "ip": "192.168.0.3/24",
-        "vlan": 202,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "192.168.0.255",
-        "gateway": null
-      },
-      {
-        "name": "public",
-        "ip": "172.16.0.3/24",
-        "vlan": 201,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "172.16.0.255",
-        "gateway": "172.16.0.1"
-      },
-      {
-        "name": "storage",
-        "ip": "192.168.1.3/24",
-        "vlan": 203,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "192.168.1.255",
-        "gateway": null
-      },
-      {
-        "name": "admin",
-        "dev": "eth0"
-      }
-    ],
-    "platform_name": "S2400BB",
-    "cluster": 2,
-    "mac": "00:1e:67:49:d3:f5",
-    "meta": {
-      "memory": {
-        "slots": 12,
-        "total": 51539607552,
-        "maximum_capacity": 412316860416,
-        "devices": [
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1067,
-            "type": "DDR3",
-            "size": 4294967296
-          }
-        ]
-      },
-      "interfaces": [
-        {
-          "mac": "00:1E:67:49:D3:F8",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
-          "name": "eth3"
-        },
-        {
-          "mac": "00:1E:67:49:D3:F7",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
-          "name": "eth2"
-        },
-        {
-          "mac": "00:1E:67:49:D3:F6",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": 1000,
-          "name": "eth1"
-        },
-        {
-          "name": "eth0",
-          "ip": "10.20.0.4",
-          "state": "up",
-          "mac": "00:1E:67:49:D3:F5",
-          "max_speed": 1000,
-          "current_speed": 1000,
-          "netmask": "255.255.255.0"
-        }
-      ],
-      "disks": [
-        {
-          "name": "sdb",
-          "extra": [
-            "disk/by-id/wwn-0x50014ee1acfcbf10",
-            "disk/by-id/scsi-SATA_GB0160EAPRR_WCAT25823870",
-            "disk/by-id/ata-GB0160EAPRR_WCAT25823870"
-          ],
-          "removable": "0",
-          "model": "GB0160EAPRR",
-          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6749d3f5001-lun-0",
-          "size": 160041885696
-        },
-        {
-          "name": "sda",
-          "extra": [
-            "disk/by-id/wwn-0x50014ee10258c666",
-            "disk/by-id/scsi-SATA_GB0160EAPRR_WCAT25823862",
-            "disk/by-id/ata-GB0160EAPRR_WCAT25823862"
-          ],
-          "removable": "0",
-          "model": "GB0160EAPRR",
-          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6749d3f5000-lun-0",
-          "size": 160041885696
-        }
-      ],
-      "system": {
-        "product": "S2400BB",
-        "family": "To be filled by O.E.M.",
-        "fqdn": "node-5.domain.tld",
-        "version": "....................",
-        "serial": "............",
-        "manufacturer": "Intel Corporation"
-      },
-      "cpu": {
-        "real": 2,
-        "total": 24,
-        "spec": [
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2401
-          }
-        ]
-      }
-    },
-    "pending_deletion": false,
-    "online": true,
-    "progress": 0,
-    "pending_roles": [],
-    "os_platform": "ubuntu",
-    "id": 5,
-    "manufacturer": "Intel Corporation"
-  },
-  {
-    "status": "error",
-    "name": "Untitled (A5:A0)",
+    "status": "ready",
+    "name": "Untitled (F4:64)",
     "roles": [
       "compute"
     ],
-    "ip": "10.20.0.5",
-    "error_type": "deploy",
-    "pending_addition": false,
-    "fqdn": "node-6.domain.tld",
-    "network_data": [
-      {
-        "name": "management",
-        "ip": "192.168.0.4/24",
-        "vlan": 202,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "192.168.0.255",
-        "gateway": null
-      },
-      {
-        "name": "public",
-        "ip": "172.16.0.4/24",
-        "vlan": 201,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "172.16.0.255",
-        "gateway": "172.16.0.1"
-      },
-      {
-        "name": "storage",
-        "ip": "192.168.1.4/24",
-        "vlan": 203,
-        "dev": "eth1",
-        "netmask": "255.255.255.0",
-        "brd": "192.168.1.255",
-        "gateway": null
-      },
-      {
-        "name": "admin",
-        "dev": "eth0"
-      }
-    ],
-    "platform_name": "ProLiant DL360p Gen8",
-    "cluster": 2,
-    "mac": "a0:d3:c1:01:a5:a0",
-    "meta": {
-      "memory": {
-        "slots": 24,
-        "total": 34359738368,
-        "maximum_capacity": 824633720832,
-        "devices": [
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          },
-          {
-            "frequency": 1333,
-            "type": "DDR3",
-            "size": 4294967296
-          }
-        ]
-      },
-      "interfaces": [
-        {
-          "mac": "A0:D3:C1:01:A5:A3",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
-          "name": "eth3"
-        },
-        {
-          "mac": "A0:D3:C1:01:A5:A2",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
-          "name": "eth2"
-        },
-        {
-          "mac": "A0:D3:C1:01:A5:A1",
-          "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
-          "name": "eth1"
-        },
-        {
-          "name": "eth0",
-          "ip": "10.20.0.5",
-          "state": "up",
-          "mac": "A0:D3:C1:01:A5:A0",
-          "max_speed": 1000,
-          "current_speed": 1000,
-          "netmask": "255.255.255.0"
-        }
-      ],
-      "disks": [
-        {
-          "name": "sda",
-          "extra": [
-            "disk/by-id/wwn-0x600508b1001ced10b850d3464749622f",
-            "disk/by-id/scsi-3600508b1001ced10b850d3464749622f"
-          ],
-          "removable": "0",
-          "model": "LOGICAL VOLUME",
-          "disk": "disk/by-path/pci-0000:02:00.0-scsi-0:0:0:0",
-          "size": 299966445568
-        }
-      ],
-      "system": {
-        "product": "ProLiant DL360p Gen8",
-        "manufacturer": "HP",
-        "fqdn": "node-6.domain.tld",
-        "serial": "MXQ41500NR",
-        "family": "ProLiant"
-      },
-      "cpu": {
-        "real": 2,
-        "total": 24,
-        "spec": [
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          },
-          {
-            "model": "Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz",
-            "frequency": 2500
-          }
-        ]
-      }
-    },
-    "pending_deletion": false,
-    "online": true,
-    "progress": 0,
-    "pending_roles": [],
-    "os_platform": "ubuntu",
-    "id": 6,
-    "manufacturer": "HP"
-  },
-  {
-    "status": "error",
-    "name": "Untitled (D3:CB)",
-    "roles": [
-      "cinder",
-      "compute"
-    ],
-    "ip": "10.20.0.150",
-    "error_type": "provision",
+    "ip": "10.20.0.6",
+    "error_type": null,
     "pending_addition": false,
     "fqdn": "node-4.domain.tld",
     "network_data": [
       {
         "name": "management",
-        "ip": "192.168.0.2/24",
+        "ip": "192.168.10.5/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.10.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.5/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.5/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 1,
+    "mac": "da:eb:87:72:c9:4a",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 8589934592,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:E1:F1",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:E1:F0",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:F4:65",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F4:64",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-2223100015568b1f9"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-4",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100103",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 4,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (F2:04)",
+    "roles": [
+      "controller"
+    ],
+    "ip": "10.20.0.9",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-7.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.20.3/24",
         "vlan": 202,
         "dev": "eth1",
         "netmask": "255.255.255.0",
-        "brd": "192.168.0.255",
+        "brd": "192.168.20.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.8/24",
+        "vlan": 201,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.8/24",
+        "vlan": 203,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 2,
+    "mac": "ca:fd:59:a7:6e:4d",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 17179869184,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:47:F1:EF",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:47:F1:EE",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:F2:05",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F2:04",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-222fb0001552eaa24"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-7",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI21800174",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 7,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (F3:1C)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.7",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-5.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.10.6/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.10.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.6/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.6/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 1,
+    "mac": "7a:82:93:f8:b3:41",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 34359738368,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:E1:85",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:E1:84",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:F3:1D",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F3:1C",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-22283000155f164c0"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x500015500002040a-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-5",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100008",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 5,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (F5:B8)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.12",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-10.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.20.6/24",
+        "vlan": 202,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.20.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.11/24",
+        "vlan": 201,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.11/24",
+        "vlan": 203,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 2,
+    "mac": "ba:c0:41:32:6e:4e",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 17179869184,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:E2:41",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:E2:40",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:F5:B9",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F5:B8",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-222d8000155120dff"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-10",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100199",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 10,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (3F:B0)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.8",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-6.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.20.2/24",
+        "vlan": 202,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.20.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.7/24",
+        "vlan": 201,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.7/24",
+        "vlan": 203,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 2,
+    "mac": "ae:e3:f7:f7:01:4b",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 34359738368,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:E1:E9",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:E1:E8",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:0B:3F:B1",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:0B:3F:B0",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-222e0000155956a1e"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020409-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-6",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100315",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 6,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (F7:DC)",
+    "roles": [
+      "cinder"
+    ],
+    "ip": "10.20.0.3",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-1.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.10.2/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.10.255",
         "gateway": null
       },
       {
         "name": "public",
         "ip": "172.16.0.2/24",
-        "vlan": 201,
+        "vlan": 101,
         "dev": "eth1",
         "netmask": "255.255.255.0",
         "brd": "172.16.0.255",
@@ -580,7 +1526,7 @@
       {
         "name": "storage",
         "ip": "192.168.1.2/24",
-        "vlan": 203,
+        "vlan": 103,
         "dev": "eth1",
         "netmask": "255.255.255.0",
         "brd": "192.168.1.255",
@@ -591,14 +1537,14 @@
         "dev": "eth0"
       }
     ],
-    "platform_name": "S2400BB",
-    "cluster": 2,
-    "mac": "00:1e:67:49:d3:cb",
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 1,
+    "mac": "e2:78:03:80:4e:49",
     "meta": {
       "memory": {
-        "slots": 12,
+        "slots": 16,
         "total": 25769803776,
-        "maximum_capacity": 412316860416,
+        "maximum_capacity": 549755813888,
         "devices": [
           {
             "frequency": 1333,
@@ -664,21 +1610,1502 @@
       },
       "interfaces": [
         {
-          "mac": "00:1E:67:49:D3:CE",
+          "mac": "00:1E:67:47:F4:0F",
           "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
+          "state": "up",
+          "current_speed": 1000,
           "name": "eth3"
         },
         {
-          "mac": "00:1E:67:49:D3:CD",
+          "mac": "00:1E:67:47:F4:0E",
           "max_speed": 1000,
-          "state": "down",
-          "current_speed": null,
+          "state": "up",
+          "current_speed": 1000,
           "name": "eth2"
         },
         {
-          "mac": "00:1E:67:49:D3:CC",
+          "mac": "00:1E:67:4A:F7:DD",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F7:DC",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sdc",
+          "extra": [
+            "disk/by-id/scsi-2223800015526731c"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-2",
+          "size": 322122547200
+        },
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-2220f0001556307fd"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-0",
+          "size": 53687091200
+        },
+        {
+          "name": "sdb",
+          "extra": [
+            "disk/by-id/scsi-222ef000155772db1"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020408-lun-1",
+          "size": 322122547200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-1",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI21800158",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 1,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (F7:C8)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.5",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-3.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.10.4/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.10.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.4/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.4/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 1,
+    "mac": "1e:61:5d:d9:de:4a",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 34359738368,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:E1:8D",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:E1:8C",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:F7:C9",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:F7:C8",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-2228500015525186e"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020409-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-3",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100341",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 3,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (45:C8)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.10",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-8.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.20.4/24",
+        "vlan": 202,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.20.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.9/24",
+        "vlan": 201,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.9/24",
+        "vlan": 203,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 2,
+    "mac": "f6:23:8d:b9:23:46",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 17179869184,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:47:F5:0F",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:47:F5:0E",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:15:17:AC:45:C9",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:15:17:AC:45:C8",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-222bf00015507e685"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x500015500002040a-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-8",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI21800282",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 1.80GHz",
+            "frequency": 1795
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 8,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (6B:DC)",
+    "roles": [
+      "controller"
+    ],
+    "ip": "10.20.0.4",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-2.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.10.3/24",
+        "vlan": 102,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.10.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.3/24",
+        "vlan": 101,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.3/24",
+        "vlan": 103,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 1,
+    "mac": "c2:2c:05:b9:59:4a",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 17179869184,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1067,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:38:DF:41",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:38:DF:40",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:4A:6B:DD",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:4A:6B:DC",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-222340001551f86d5"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020409-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-2",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI20100265",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 2,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "ready",
+    "name": "Untitled (EE:84)",
+    "roles": [
+      "compute"
+    ],
+    "ip": "10.20.0.11",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": "node-9.domain.tld",
+    "network_data": [
+      {
+        "name": "management",
+        "ip": "192.168.20.5/24",
+        "vlan": 202,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.20.255",
+        "gateway": null
+      },
+      {
+        "name": "public",
+        "ip": "172.16.0.10/24",
+        "vlan": 201,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "172.16.0.255",
+        "gateway": "172.16.0.1"
+      },
+      {
+        "name": "storage",
+        "ip": "192.168.1.10/24",
+        "vlan": 203,
+        "dev": "eth1",
+        "netmask": "255.255.255.0",
+        "brd": "192.168.1.255",
+        "gateway": null
+      },
+      {
+        "name": "admin",
+        "dev": "eth0"
+      }
+    ],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": 2,
+    "mac": "32:2a:c9:bd:da:41",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 17179869184,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 2147483648
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:47:F3:9B",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:47:F3:9A",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:08:EE:85",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth1"
+        },
+        {
+          "mac": "00:1E:67:08:EE:84",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth0"
+        }
+      ],
+      "disks": [
+        {
+          "name": "sda",
+          "extra": [
+            "disk/by-id/scsi-2222c000155e2accc"
+          ],
+          "removable": "0",
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x5000155000020409-lun-0",
+          "size": 53687091200
+        }
+      ],
+      "system": {
+        "product": "MFS2600KI Compute Module",
+        "family": "To be filled by O.E.M.",
+        "fqdn": "node-9",
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI21800418",
+        "manufacturer": "INTEL"
+      },
+      "cpu": {
+        "real": 2,
+        "total": 32,
+        "spec": [
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          }
+        ]
+      }
+    },
+    "pending_deletion": false,
+    "online": true,
+    "progress": 100,
+    "pending_roles": [],
+    "os_platform": "centos",
+    "id": 9,
+    "manufacturer": "INTEL"
+  },
+  {
+    "status": "discover",
+    "name": "Untitled (a7:a8)",
+    "roles": [],
+    "ip": "10.20.0.225",
+    "error_type": null,
+    "pending_addition": false,
+    "fqdn": null,
+    "network_data": [],
+    "platform_name": "MFS2600KI Compute Module",
+    "cluster": null,
+    "mac": "00:1e:67:0b:a7:a8",
+    "meta": {
+      "memory": {
+        "slots": 16,
+        "total": 68719476736,
+        "maximum_capacity": 549755813888,
+        "devices": [
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          },
+          {
+            "frequency": 1333,
+            "type": "DDR3",
+            "size": 4294967296
+          }
+        ]
+      },
+      "interfaces": [
+        {
+          "mac": "00:1E:67:47:F7:4B",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth3"
+        },
+        {
+          "mac": "00:1E:67:47:F7:4A",
+          "max_speed": 1000,
+          "state": "up",
+          "current_speed": 1000,
+          "name": "eth2"
+        },
+        {
+          "mac": "00:1E:67:0B:A7:A9",
           "max_speed": 1000,
           "state": "up",
           "current_speed": 1000,
@@ -686,9 +3113,9 @@
         },
         {
           "name": "eth0",
-          "ip": "10.20.0.150",
+          "ip": "10.20.0.225",
           "state": "up",
-          "mac": "00:1E:67:49:D3:CB",
+          "mac": "00:1E:67:0B:A7:A8",
           "max_speed": 1000,
           "current_speed": 1000,
           "netmask": "255.255.255.0"
@@ -698,145 +3125,163 @@
         {
           "name": "sda",
           "extra": [
-            "disk/by-id/wwn-0x5000c500270336fa",
-            "disk/by-id/scsi-SATA_ST3500514NS_9WJ0BH6H",
-            "disk/by-id/ata-ST3500514NS_9WJ0BH6H"
+            "disk/by-id/scsi-22210000155f992f6"
           ],
           "removable": "0",
-          "model": "ST3500514NS",
-          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6749d3cb000-lun-0",
-          "size": 500107862016
-        },
-        {
-          "name": "sdb",
-          "extra": [
-            "disk/by-id/wwn-0x5000c5002709015c",
-            "disk/by-id/scsi-SATA_ST3500514NS_9WJ0CH8B",
-            "disk/by-id/ata-ST3500514NS_9WJ0CH8B"
-          ],
-          "removable": "0",
-          "model": "ST3500514NS",
-          "disk": "disk/by-path/pci-0000:05:00.0-sas-0x5001e6749d3cb001-lun-0",
-          "size": 500107862016
+          "model": "Multi-Flex",
+          "disk": "disk/by-path/pci-0000:04:00.0-sas-0x500015500002040a-lun-0",
+          "size": 53687091200
         }
       ],
       "system": {
-        "product": "S2400BB",
+        "product": "MFS2600KI Compute Module",
         "family": "To be filled by O.E.M.",
         "fqdn": "bootstrap",
-        "version": "....................",
-        "serial": "............",
-        "manufacturer": "Intel Corporation"
+        "version": "To be filled by O.E.M.",
+        "serial": "QSKI21800411",
+        "manufacturer": "INTEL"
       },
       "cpu": {
         "real": 2,
-        "total": 24,
+        "total": 32,
         "spec": [
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           },
           {
-            "model": "Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz",
-            "frequency": 2394
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
+          },
+          {
+            "model": "Genuine Intel(R) CPU @ 2.20GHz",
+            "frequency": 2194
           }
         ]
       }
     },
     "pending_deletion": false,
-    "online": false,
-    "progress": 100,
+    "online": true,
+    "progress": 0,
     "pending_roles": [],
     "os_platform": "centos",
-    "id": 4,
-    "manufacturer": "Intel Corporation"
+    "id": 11,
+    "manufacturer": "INTEL"
   }
 ]

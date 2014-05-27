@@ -1,52 +1,82 @@
 [
   {
     "status": "ready",
-    "name": "check_dhcp",
-    "cluster": 2,
-    "result": {},
-    "progress": 0,
-    "message": "",
-    "id": 7,
-    "uuid": "f362c108-3fa7-480e-bc43-8bbf199ce7f5"
-  },
-  {
-    "status": "ready",
     "name": "verify_networks",
-    "cluster": 2,
+    "cluster": 1,
     "result": [],
     "progress": 100,
     "message": "",
-    "id": 6,
-    "uuid": "e05576b9-3285-45b4-ae3a-3a52cc201abf"
+    "id": 5,
+    "uuid": "c3678a3f-2126-48d6-89a5-e23e0b0e0ff3"
   },
   {
-    "status": "error",
-    "name": "provision",
-    "cluster": 2,
+    "status": "ready",
+    "name": "check_dhcp",
+    "cluster": 1,
     "result": {},
-    "progress": 100,
-    "message": "Timeout of provisioning is exceeded",
-    "id": 11,
-    "uuid": "d84348d1-4246-4385-b068-d038248dbcfc"
+    "progress": 0,
+    "message": "",
+    "id": 6,
+    "uuid": "1df474f9-a237-41a0-88b4-95c87c3d72c2"
   },
   {
-    "status": "error",
+    "status": "ready",
     "name": "deployment",
     "cluster": 2,
     "result": {},
     "progress": 100,
-    "message": "Deployment has failed. Timeout of deployment is exceeded.",
-    "id": 12,
-    "uuid": "f9737e8e-eec2-4bd3-8625-e4929e7fa81c"
+    "message": "Deployment of environment 'centana2' is done. Access the OpenStack dashboard (Horizon) at http://172.16.0.8/ or via internal network at http://10.20.0.9/",
+    "id": 25,
+    "uuid": "e02d62f0-ce0f-4d09-bb9d-7b973ede630f"
   },
   {
-    "status": "error",
+    "status": "ready",
     "name": "deploy",
     "cluster": 2,
     "result": {},
     "progress": 100,
-    "message": "Timeout of provisioning is exceeded\nDeployment has failed. Timeout of deployment is exceeded.",
-    "id": 8,
-    "uuid": "d82cf1cb-626c-4ca4-9979-1917d045220e"
+    "message": "Deployment of environment 'centana2' is done. Access the OpenStack dashboard (Horizon) at http://172.16.0.8/ or via internal network at http://10.20.0.9/",
+    "id": 21,
+    "uuid": "bf38d593-347b-495c-837f-9b68a895038e"
+  },
+  {
+    "status": "ready",
+    "name": "provision",
+    "cluster": 2,
+    "result": {},
+    "progress": 100,
+    "message": null,
+    "id": 24,
+    "uuid": "1d8287fb-3dca-4b1a-8cd7-16591ecc8fd4"
+  },
+  {
+    "status": "ready",
+    "name": "deployment",
+    "cluster": 1,
+    "result": {},
+    "progress": 100,
+    "message": "Deployment of environment 'centana' is done. Access the OpenStack dashboard (Horizon) at http://172.16.0.3/ or via internal network at http://10.20.0.4/",
+    "id": 11,
+    "uuid": "fa4792fd-25a4-4b51-b199-30345561480c"
+  },
+  {
+    "status": "ready",
+    "name": "deploy",
+    "cluster": 1,
+    "result": {},
+    "progress": 100,
+    "message": "Deployment of environment 'centana' is done. Access the OpenStack dashboard (Horizon) at http://172.16.0.3/ or via internal network at http://10.20.0.4/",
+    "id": 7,
+    "uuid": "4093492f-5308-4c54-b0d9-b1d631ae2145"
+  },
+  {
+    "status": "ready",
+    "name": "provision",
+    "cluster": 1,
+    "result": {},
+    "progress": 100,
+    "message": null,
+    "id": 10,
+    "uuid": "70c5e224-349b-48b9-bc53-70b61490f0bf"
   }
 ]
