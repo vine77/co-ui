@@ -10,10 +10,24 @@
         <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}}><i class="fa fa-desktop"></i> Infrastructure</a></li>
         <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}}><i class="fa fa-cloud"></i> Clouds</a></li>
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
-        <li>{{#link-to "saa-appliance"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
+        <li class="dropdown">
+          {{!-- {{#link-to "ingredient" data-toggle="dropdown"}} --}}
+          <a data-toggle="dropdown">
+            <i class="fa fa-bar-chart-o"></i> SAAappliance <i class="caret"></i>
+          </a>
+          {{!-- {{/link-to}} --}}
+          <ul class="dropdown-menu" role="menu">
+            <li>{{#link-to "ingredient.index"}}Dashboard{{/link-to}}</li>
+            <li>{{#link-to "ingredient.nodes"}}Nodes{{/link-to}}</li>
+            <li>{{#link-to "ingredient.vms"}}VMs{{/link-to}}</li>
+            <li>{{#link-to "ingredient.services"}}Services{{/link-to}}</li>
+            <li>{{#link-to "ingredient.trust"}}Trust{{/link-to}}</li>
+            <li>{{#link-to "ingredient.settings"}}Settings{{/link-to}}</li>
+          </ul>
+        </li>
         <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
         {{#if isLoggedIn}}
-          <li class="user-menu">
+          <li class="user-menu dropdown">
             <a data-toggle="dropdown">
               <i class="fa fa-user"></i>
               <span>{{username}} <i class="caret"></i></span>

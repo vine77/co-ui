@@ -75,11 +75,16 @@ export default Ember.ObjectController.extend({
         self.set('isLoggedIn', true);
         self.transitionToAttempted();
       }, function (xhr) {
+        var setProfile = false;
+        window.xhr = xhr;
         self.set('isPending', false);
-        if (xhr.status === 422 || xhr instanceof DS.InvalidError) {
-          var csrfToken = xhr.errors.message.csrf_token;
-          //var setProfile = xhr.errors.message.set_profile;
-          self.set('csrfToken', csrfToken);
+        try {
+          if (xhr.responseJSON.errors.message.set_profile) setProfile = true;
+        } catch(error) {}
+        if (setProfile || xhr.status === 422 || xhr instanceof DS.InvalidError) {
+          var csrfToken = xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.message.csrf_token;
+          if (csrfToken) self.set('csrfToken', csrfToken);
+          notify('Change your password.');
           self.transitionToRoute('profile', self.get('username'));
         } else if (xhr.status === 401) {
           notify('The username or password you entered was incorrect. Please try again.', health.ERROR);

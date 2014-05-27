@@ -19,7 +19,7 @@ export default DS.Model.extend({
     if (this.get('id') === '0') {
       return 'orchestration';
     } else if (this.get('id') === '1') {
-      return 'saa-appliance';
+      return 'ingredient';
     }
   }.property('id'),
   respondingMessage: function() {

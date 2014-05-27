@@ -15,7 +15,7 @@ export default DS.Model.extend({
 
   // Computed properties
   route: function() {
-    return 'saa-appliance';
+    return 'ingredient';
   }.property(),
   statusMessage: function() {
     switch (this.get('status')) {

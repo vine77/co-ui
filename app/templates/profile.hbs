@@ -1,0 +1,25 @@
+<div class="form-box" id="login-box">
+  <div class="header bg-light-blue">Change Password</div>
+  <form {{action "changePassword" on="submit"}}>
+    <div class="body bg-gray">
+      <div class="form-group">
+        {{input value=username id="login-username" class="form-control" placeholder="Username" disabled="disabled"}}
+      </div>
+      <div class="form-group">
+        {{input value=password id="login-password" class="form-control" type="password" placeholder="Password" autofocus="autofocus" autocomplete="off"}}
+      </div>
+      <div class="form-group">
+        {{input value=passwordRepeat id="login-passwordRepeat" class="form-control" type="password" placeholder="Repeat password" autocomplete="off"}}
+      </div>
+    </div>
+    <div class="footer">
+      {{#unless isPending}}
+        <input class="btn btn-block btn-primary" type="submit" value="Change password"></input>
+      {{else}}
+        <a class="btn btn-block btn-primary disabled"><i class="icon-spinner icon-spin"></i> Signing in...</a>
+      {{/unless}}
+    </div>
+      {{!-- <p><a href="#">I forgot my password</a></p> --}}
+    </div>
+  </form>
+</div>
