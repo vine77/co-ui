@@ -7,20 +7,20 @@ export default function(priority) {
     case health.UNKNOWN.toString():
     case 'unknown':
     case 'n/a':
-      return 'fa fa-question-circle';
+      return 'fa fa-question-circle text-muted';
     case health.SUCCESS:
     case health.SUCCESS.toString():
     case 'success':
     case 'good':
-      return 'fa fa-check-square-o';
+      return 'fa fa-check-square-o text-success';
     case health.INFO:
     case health.INFO.toString():
     case 'info':
-      return 'fa fa-info-circle';
+      return 'fa fa-info-circle text-primary';
     case health.WARNING:
     case health.WARNING.toString():
     case 'warning':
-      return 'fa fa-exclamation-triangle';
+      return 'fa fa-exclamation-triangle text-warning';
     case health.ERROR:
     case health.ERROR.toString():
     case health.CRITICAL:
@@ -30,7 +30,7 @@ export default function(priority) {
     case 'important':
     case 'bad':
     case 'critical':
-      return 'fa fa-times-circle';
+      return 'fa fa-times-circle text-danger';
     default:
       return 'fa fa-question-circle';
   }
