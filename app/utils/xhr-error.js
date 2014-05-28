@@ -1,6 +1,6 @@
 import notify from '../utils/notify';
 import health from '../utils/mappings/health';
-import errorMessage from '../utils/error-message';
+import errorMessage from '../utils/xhr-error-message';
 
 export default function(xhr, defaultMessage) {
   var message = errorMessage(xhr, defaultMessage);
