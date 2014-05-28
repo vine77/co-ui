@@ -50,16 +50,6 @@ export default Ember.Route.extend({
         self.removeCookies();
         self.transitionTo('login');
       });
-    },
-    redirectToLogin: function(transition) {
-      // Log out user
-      this.controllerFor('login').set('loggedIn', false);
-      this.controllerFor('login').set('username', null);
-      this.controllerFor('login').set('password', null);
-      // Save attempted route transition
-      if (transition) this.controllerFor('login').set('attemptedTransition', transition);
-      // Redirect to login route
-      this.transitionTo('login');
     }
   }
 });

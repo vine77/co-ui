@@ -25,12 +25,12 @@ export default Ember.ObjectController.extend({
           self.get('controllers.login').set('password', self.get('password'));
           return self.get('controllers.login.model').save().then(function(session) {
             self.set('isPending', false);
-            self.get('controllers.login').set('loggedIn', true);
+            self.get('controllers.login').set('isLoggedIn', true);
             self.get('controllers.login').transitionToAttempted();
             notify('Your password was updated successfully.', health.SUCCESS);
           }, function(xhr) {
             self.set('isPending', false);
-            self.get('controllers.login').set('loggedIn', false);
+            self.get('controllers.login').set('isLoggedIn', false);
             xhrError(xhr, 'An error occurred while attempting to update your password.', health.ERROR);
           });
         }, function(xhr) {
