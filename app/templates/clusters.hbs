@@ -18,10 +18,14 @@
             <td>{{name}}</td>
             <td>{{status}}</td>
             <td>
-              <span {{bind-attr title="systemHealthMessage"}} class="hasTooltip inline-block">
-                <i {{bind-attr class="systemHealthIcon"}}></i>
-                {{capitalize-text systemHealthType}}
-              </span>
+              {{#if ipms}}
+                <span {{bind-attr title="systemHealthMessage"}} class="hasTooltip inline-block">
+                  <i {{bind-attr class="systemHealthIcon"}}></i>
+                  {{capitalize-text systemHealthType}}
+                </span>
+              {{else}}
+                N/A
+              {{/if}}
             </td>
             <td>{{{details}}}</td>
             <td>
