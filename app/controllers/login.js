@@ -68,7 +68,6 @@ export default Ember.ObjectController.extend({
     login: function () {
       var self = this;
       this.set('isPending', true);
-      //localStorage.isLoggedIn = true;
       var session = this.get('model');
       session.save().then(function (session) {
         self.set('isPending', false);
@@ -84,7 +83,7 @@ export default Ember.ObjectController.extend({
         if (setProfile || xhr.status === 422 || xhr instanceof DS.InvalidError) {
           var csrfToken = xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.message.csrf_token;
           if (csrfToken) self.set('csrfToken', csrfToken);
-          notify('Change your password.');
+          notify('Please change your password.');
           self.transitionToRoute('profile', self.get('username'));
         } else if (xhr.status === 401) {
           notify('The username or password you entered was incorrect. Please try again.', health.ERROR);
