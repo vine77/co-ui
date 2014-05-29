@@ -29,6 +29,9 @@ app.import('vendor/ic-ajax/dist/named-amd/main.js', {
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
 app.import('vendor/pnotify/pnotify.js');
 app.import('vendor/jquery-cookie/jquery.cookie.js');
+app.import('vendor/d3/d3.js');
+app.import('vendor/crossfilter/crossfilter.js');
+app.import('vendor/dcjs/dc.js');
 
 var fontAwesome = require('broccoli-static-compiler')('vendor', {
   srcDir: '/fontawesome',
