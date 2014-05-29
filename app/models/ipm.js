@@ -5,7 +5,7 @@ export default DS.Model.extend({
 
   // Relationships
   cluster: DS.belongsTo('cluster', {async: true}),
-  vm: DS.belongsTo('vm'),
+  vm: DS.belongsTo('vm', {async: true}),
 
   // Relationships to SAA APIs
   statuses: DS.hasMany('status', {async: true, persist: false}),

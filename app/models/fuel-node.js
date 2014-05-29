@@ -18,6 +18,6 @@ export default DS.Model.extend({
   manufacturer: DS.attr('string'),
 
   // Relationships
-  cluster: DS.belongsTo('cluster')
+  cluster: DS.belongsTo('cluster', {async: true})
 
 });
