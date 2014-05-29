@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>Status</th>
         <th>Health</th>
-        <th>Details</th>
+        <th class="show-when-expanded">Details</th>
         <th><abbr title="Intel&reg; Datacenter Manager: Service Assurance Administrator">SAA</abbr> Controllers</th>
       </thead>
       <tbody>
@@ -27,7 +27,7 @@
                 N/A
               {{/if}}
             </td>
-            <td>{{{details}}}</td>
+            <td class="show-when-expanded">{{{details}}}</td>
             <td>
               {{#if ipms}}
                 {{#each ipm in ipms}}

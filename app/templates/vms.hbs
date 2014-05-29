@@ -11,7 +11,7 @@
           <th>Version</th>
           <th>Status</th>
           <th>API</th>
-          <th class="actions-column">Actions</th>
+          <th class="actions-column show-when-expanded">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -21,7 +21,7 @@
             <td>{{version}}</td>
             <td>{{stateDescription}}</td>
             <td>{{respondingMessage}}</td>
-            <td class="actions-column">
+            <td class="actions-column show-when-expanded">
               {{#if isRunning}}
                 <div class="btn-group">
                   <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
@@ -49,7 +49,7 @@
               {{/if}}
             </td>
           </tr>
-        {{/each}} 
+        {{/each}}
       </tbody>
     </table>
   </div>

@@ -141,10 +141,6 @@ ul.navbar-nav {
 .col-md-6 {
   .transition(~"width 1s, opacity 1s");
 }
-.actions-column {
-  opacity: 1;
-  .transition(opacity 1s);
-}
 .infrastructure {
   .col-md-6:first-child {
     width: 65%;
@@ -153,9 +149,8 @@ ul.navbar-nav {
     width: 35%;
     opacity: 0.5;
     cursor: pointer;
-    .actions-column {
+    .show-when-expanded {
       display: none;
-      opacity: 0;
     }
   }
 }
@@ -164,9 +159,8 @@ ul.navbar-nav {
     width: 35%;
     opacity: 0.5;
     cursor: pointer;
-    .actions-column {
+    .show-when-expanded {
       display: none;
-      opacity: 0;
     }
   }
   .col-md-6:last-child {
