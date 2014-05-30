@@ -1,7 +1,22 @@
 import authenticatedRoute from './authenticated';
 
 export default authenticatedRoute.extend({
+  refreshInterval: 10, // in seconds
   model: function() {
+    return this.loadModels();
+  },
+  afterModel: function() {
+    this.addRelationships();
+    Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
+  },
+  setupController: function(controller, model) {
+    this._super(controller, model);
+    this.controllerFor('cloudController').set('model', this.store.getById('cloudController', 'current'));
+    this.controllerFor('vms').set('model', this.store.all('vm'));
+    this.controllerFor('clusters').set('model', this.store.all('cluster'));
+    this.controllerFor('ipms').set('model', this.store.all('ipm'));
+  },
+  loadModels: function() {
     var self = this;
     return Ember.RSVP.all([
       // Load Cloud Controller and VM APIs
@@ -29,7 +44,16 @@ export default authenticatedRoute.extend({
       ]);
     });
   },
-  afterModel: function() {
+  reloadModels: function() {
+    var self = this;
+    Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
+    if (this.controllerFor('application').get('currentPath').split('.')[0] === 'app') {
+      return this.loadModels().then(function() {
+        return self.addRelationships();
+      });
+    }
+  },
+  addRelationships: function() {
     // Manually add relationships (until Ember Data single-source-of-truth branch is merged)
     var self = this;
     this.store.all('cluster').forEach(function(cluster) {
@@ -54,12 +78,5 @@ export default authenticatedRoute.extend({
         });
       });
     });
-  },
-  setupController: function(controller, model) {
-    this._super(controller, model);
-    this.controllerFor('cloudController').set('model', this.store.getById('cloudController', 'current'));
-    this.controllerFor('vms').set('model', this.store.all('vm'));
-    this.controllerFor('clusters').set('model', this.store.all('cluster'));
-    this.controllerFor('ipms').set('model', this.store.all('ipm'));
   }
 });
