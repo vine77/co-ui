@@ -6,7 +6,7 @@ import apiDomain from '../utils/api-domain';
 export default Ember.ObjectController.extend({
   init: function () {
     this._super();
-    //this.refreshSession();
+    this.refreshSession();
   },
   isLoggedIn: false,
   //username: '',
@@ -28,14 +28,12 @@ export default Ember.ObjectController.extend({
   }.observes('csrfToken'),
   refreshSession: function () {
     Ember.run.later(this, 'refreshSession', 120000);  // Refresh every 2 minutes
-    //if (this.get('isLoggedIn') && this.get('controllers.application.isAutoRefreshEnabled')) {
     if (this.get('isLoggedIn')) {
-      var host = apiDomain();
-      Ember.$.ajax(host + '/api/v1/sessions', {
+      Ember.$.ajax(apiDomain() + '/api/v1/sessions', {
         type: 'POST',
         data: JSON.stringify({
           session: {
-            request: "refresh_ticket"
+            request: 'refresh_ticket'
           }
         }),
         contentType: 'application/json',
