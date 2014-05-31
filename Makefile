@@ -1,7 +1,7 @@
-all: build 
+all: build
 
 build:
-	ember build
+	ember build --environment=production
 	rm -rf ../public
 	mv dist ../public
 	rm -rf ../public/api
