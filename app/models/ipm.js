@@ -27,6 +27,10 @@ export default DS.Model.extend({
         return 'configuring';
       case 3:
         return 'operational';
+      case -1:
+        return 'unknown';
+      default:
+        return 'unknown';
     }
   }.property('status'),
   systemHealth: function() {
