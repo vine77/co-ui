@@ -21,33 +21,47 @@
             <td>{{version}}</td>
             <td>{{stateDescription}}</td>
             <td>{{respondingMessage}}</td>
-            <td class="actions-column show-when-expanded">
-              {{#if isRunning}}
+            {{#with this as contextVm}}
+              <td class="actions-column show-when-expanded" {{bind-attr title="contextVm.firstAction.isDisabledMessage"}}>
                 <div class="btn-group">
-                  <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
-                  <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a {{action "shutdown"}}>Graceful Shutdown</a></li>
-                    <li><a {{action "forcedShutdown"}}>Force Shutdown</a></li>
+                  {{#if contextVm.firstAction.method}}
+                    {{#if contextVm.firstAction.isDisabled}}
+                      <button type="button" class="btn btn-sm btn-success disabled">{{contextVm.firstAction.name}}</button>
+                    {{else}}
+                      <button {{action "performAction" contextVm.firstAction.method}} type="button" class="btn btn-sm btn-success">{{contextVm.firstAction.name}}
+                      </button>
+                    {{/if}}
+                  {{/if}}
+                  
+                  {{#if actionsAreAvailable}}
+                    <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
+                      <span class="caret"></span>
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                  {{/if}}
+
+                  <ul class="dropdown-menu">
+                    {{#each contextVm.vmActions}} 
+                      {{#unless isFirstAction}}
+                        {{#if isVisible}}
+                          <li {{bind-attr class="isDisabled:disabled"}}>
+                            {{#if isDisabled}}
+                              <a class="disabled">
+                                {{name}}
+                              </a>
+                            {{else}}
+                              <a {{action "performAction" method}}>
+                                {{name}}
+                              </a>
+                            {{/if}}
+                          </li>
+                        {{/if}}
+                      {{/unless}}
+                    {{/each}}
                   </ul>
                 </div>
-              {{else}}
-                {{#if isSaaAppliance}}
-                  {{#if ipm.cluster}}
-                    <button {{action "start"}} type="button" class="btn btn-sm btn-success">Start</button>
-                  {{else}}
-                    <div title="You must first attach the SAAappliance to a cluster before starting.">
-                      <button type="button" class="btn btn-sm btn-success disabled">Start</button>
-                    </div>
-                  {{/if}}
-                {{else}}
-                  <button {{action "start"}} type="button" class="btn btn-sm btn-success">Start</button>
-                {{/if}}
-              {{/if}}
-            </td>
+              </td>
+            {{/with}}
           </tr>
         {{/each}}
       </tbody>

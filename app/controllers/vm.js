@@ -1,6 +1,7 @@
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
 import health from '../utils/mappings/health';
+import vmAction from '../controllers/vm-action';
 
 export default Ember.ObjectController.extend({
   ajaxPromise: function(url, promiseOptions) {
@@ -23,6 +24,40 @@ export default Ember.ObjectController.extend({
       return this.store.getById('cloudController', 'current').get('saaVersion');
     }
   }.property('id'),
+  vmActions: function() {
+    return [
+      vmAction.create({
+        name: 'Start',
+        method: 'start',
+        sortOrder: 0,
+        vm: this
+      }),
+      vmAction.create({
+        name: 'Reboot',
+        method: 'reboot',
+        sortOrder: 1,
+        vm: this
+      }),
+      vmAction.create({
+        name: 'Graceful Shutdown',
+        method: 'shutdown',
+        sortOrder: 2,
+        vm: this
+      }),
+      vmAction.create({
+        name: 'Force Shutdown',
+        method: 'forcedShutdown',
+        sortOrder: 3,
+        vm: this
+      })
+    ];
+  }.property('@each'),
+  firstAction: function() {
+    return this.get('vmActions').findBy('isFirstAction', true);
+  }.property('vmActions.@each'),
+  actionsAreAvailable: function() {
+    return this.get('vmActions').filterBy('isVisible').get('length') > 1;
+  }.property('vmActions'),
   actions: {
     reboot: function() {
       var confirmed = window.confirm('Are you sure you want to reboot "' + this.get('name') + '"?');
@@ -107,6 +142,9 @@ export default Ember.ObjectController.extend({
           xhrError(xhr, 'Failed to force shutdown VM');
         });
       }
+    },
+    performAction: function(method) {
+      this.send(method);
     }
   }
 });
