@@ -1,7 +1,7 @@
 import authenticatedRoute from './authenticated';
 
 export default authenticatedRoute.extend({
-  refreshInterval: 10, // in seconds
+  refreshInterval: 25, // in seconds
   model: function() {
     return this.loadModels();
   },
