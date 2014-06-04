@@ -9,8 +9,8 @@
         {{!--
         <li>{{#link-to "app.dashboard"}}<i class="fa fa-dashboard"></i> Dashboard{{/link-to}}</li>
         --}}
-        <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}}><i class="fa fa-desktop"></i> Infrastructure</a></li>
-        <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}}><i class="fa fa-cloud"></i> Clouds</a></li>
+        <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
+        <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
         <li>{{#link-to "ingredient"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
         <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>

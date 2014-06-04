@@ -30,7 +30,7 @@ export default Ember.ObjectController.extend({
     var self = this;
     Ember.run.later(this, 'refreshSession', 20000);  // Refresh every 20 seconds
     if (this.get('isLoggedIn')) {
-      Ember.$.ajax(apiDomain() + '/api/v1/sessions', {
+      Ember.$.ajax(apiDomain() + '/api/v1/sessions.json', {
         type: 'POST',
         data: JSON.stringify({
           session: {
