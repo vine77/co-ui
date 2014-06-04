@@ -27,7 +27,8 @@ export default Ember.ObjectController.extend({
     window.sessionStorage.csrfToken = csrfToken;
   }.observes('csrfToken'),
   refreshSession: function () {
-    Ember.run.later(this, 'refreshSession', 120000);  // Refresh every 2 minutes
+    var self = this;
+    Ember.run.later(this, 'refreshSession', 20000);  // Refresh every 20 seconds
     if (this.get('isLoggedIn')) {
       Ember.$.ajax(apiDomain() + '/api/v1/sessions', {
         type: 'POST',
@@ -38,6 +39,8 @@ export default Ember.ObjectController.extend({
         }),
         contentType: 'application/json',
         dataType: 'json'
+      }).then(function() {}, function() {
+        self.send('logout');
       });
     }
   },
