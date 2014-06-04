@@ -1,6 +1,7 @@
 import priorityToIconClass from '../utils/priority-to-icon-class';
 import priorityToType from '../utils/priority-to-type';
 import bytesToReadableSize from '../utils/bytes-to-readable-size';
+import health from '../utils/mappings/health';
 
 export default Ember.ObjectController.extend({
   needs: ['ipms'],
@@ -38,7 +39,17 @@ export default Ember.ObjectController.extend({
     return priorityToIconClass(this.get('systemHealth'));
   }.property('systemHealth'),
   systemHealthMessage: function() {
-    var message = this.get('model.ipms.firstObject.systemHealthMessage');
+    if (this.get('systemHealth') !== health.SUCCESS) {
+      if (this.get('model.ipms.firstObject.parentHealthMessages') ) {
+        var parentHealthMessages = [];
+        this.get('model.ipms.firstObject.parentHealthMessages').forEach( function(item, index, enumerable){
+          parentHealthMessages.push(item.name + ':"' + item.message + '"');
+        });
+        message = parentHealthMessages.join(', ');
+      }
+    } else {
+      var message = this.get('model.ipms.firstObject.systemHealthMessage');
+    }
     return message || 'Unknown';
   }.property('systemHealth'),
   systemHealthType: function() {
