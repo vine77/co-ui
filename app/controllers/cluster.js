@@ -46,7 +46,7 @@ export default Ember.ObjectController.extend({
     if (this.get('systemHealth') !== health.SUCCESS && topStatuses) {
       return topStatuses.map(function(item, index, enumerable) {
         return item.get('name') + ': "' + item.get('message') + '"';
-      }).join('; ');
+      }).join('\u000A \u000A');
     } else {
       return this.get('model.ipms.firstObject.systemHealthMessage');
     }
