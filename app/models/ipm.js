@@ -33,24 +33,17 @@ export default DS.Model.extend({
         return 'unknown';
     }
   }.property('status'),
+  systemStatus: function() {
+    return this.get('statuses').findBy('id', 'system');
+  }.property('statuses.@each'),
   systemHealth: function() {
-    return this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('health');
-  }.property('statuses.@each.health'),
+    return this.get('systemStatus') && this.get('systemStatus').get('health');
+  }.property('statuses.@each'),
   systemHealthMessage: function() {
-    var message = this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('message');
-    return message || 'Unknown';
-  }.property('statuses.@each.message'),
-  parentHealthMessages: function() {
-    var messages = [];
-    if (this.get('statuses') && this.get('statuses').findBy('id', 'system') && this.get('statuses').findBy('id', 'system').get('offspring')) {
-      this.get('statuses').findBy('id', 'system').get('offspring').forEach(function(item, index, enumerable) {
-        messages.push({
-          name: item.get('name'),
-          message: item.get('message')
-        });
-      });
-    }
-    return messages;
-  }.property('statuses.@each.message', 'statuses.@each.name')
+    return this.get('systemStatus') && this.get('systemStatus').get('message');
+  }.property('statuses.@each'),
+  topStatuses: function() {
+    return this.get('systemStatus') && this.get('systemStatus').get('offspring');
+  }.property('statuses.@each')
 
 });

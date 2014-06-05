@@ -35,23 +35,22 @@ export default Ember.ObjectController.extend({
   systemHealth: function() {
     return this.get('model.ipms.firstObject.systemHealth');
   }.property('model.ipms.@each.systemHealth'),
+  topStatuses: function() {
+    return this.get('model.ipms.firstObject.topStatuses');
+  }.property('model.ipms.@each.topStatuses'),
   systemHealthIcon: function() {
     return priorityToIconClass(this.get('systemHealth'));
   }.property('systemHealth'),
   systemHealthMessage: function() {
-    if (this.get('systemHealth') !== health.SUCCESS) {
-      if (this.get('model.ipms.firstObject.parentHealthMessages') ) {
-        var parentHealthMessages = [];
-        this.get('model.ipms.firstObject.parentHealthMessages').forEach( function(item, index, enumerable){
-          parentHealthMessages.push(item.name + ':"' + item.message + '"');
-        });
-        message = parentHealthMessages.join(', ');
-      }
+    var topStatuses = this.get('model.ipms.firstObject.topStatuses');
+    if (this.get('systemHealth') !== health.SUCCESS && topStatuses) {
+      return topStatuses.map(function(item, index, enumerable) {
+        return item.get('name') + ': "' + item.get('message') + '"';
+      }).join('; ');
     } else {
-      var message = this.get('model.ipms.firstObject.systemHealthMessage');
+      return this.get('model.ipms.firstObject.systemHealthMessage');
     }
-    return message || 'Unknown';
-  }.property('systemHealth'),
+  }.property('systemHealth', 'topStatuses'),
   systemHealthType: function() {
     return priorityToType(this.get('systemHealth'));
   }.property('systemHealth'),

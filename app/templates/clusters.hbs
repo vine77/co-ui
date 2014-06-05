@@ -19,7 +19,7 @@
             <td>{{status}}</td>
             <td>
               {{#if ipms}}
-                <span {{bind-attr title="systemHealthMessage"}} class="hasTooltip inline-block">
+                <span {{bind-attr title="systemHealthMessage"}} {{bind-attr class="systemHealthMessage:hasTooltip :inline-block"}}>
                   <i {{bind-attr class="systemHealthIcon"}}></i>
                   {{capitalize-text systemHealthType}}
                 </span>
