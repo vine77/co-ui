@@ -1,5 +1,5 @@
 export default Ember.ObjectController.extend({
   iframeSrc: function() {
-    return '//' + window.location.hostname + ':800';
+    return '/fuel';
   }.property('model.@each')
 });
