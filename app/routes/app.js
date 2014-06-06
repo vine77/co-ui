@@ -15,6 +15,7 @@ export default authenticatedRoute.extend({
     this.controllerFor('vms').set('model', this.store.all('vm'));
     this.controllerFor('clusters').set('model', this.store.all('cluster'));
     this.controllerFor('ipms').set('model', this.store.all('ipm'));
+
   },
   loadModels: function() {
     var self = this;
@@ -48,8 +49,15 @@ export default authenticatedRoute.extend({
     var self = this;
     Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
     if (this.controllerFor('application').get('currentPath').split('.')[0] === 'app') {
-      return this.loadModels().then(function() {
+      this.loadModels().then(function() {
         return self.addRelationships();
+      });
+      this.store.all('cluster').forEach(function(cluster) {
+        if (cluster.get('ipms.firstObject')) {
+          cluster.get('ipms.firstObject.statuses').then(function(statuses) {
+            statuses.reloadLinks();
+          });
+        }
       });
     }
   },
