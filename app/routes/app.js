@@ -52,6 +52,7 @@ export default authenticatedRoute.extend({
       this.loadModels().then(function() {
         return self.addRelationships();
       });
+      // Reload relationship links for SAA Statuses API
       this.store.all('cluster').forEach(function(cluster) {
         if (cluster.get('ipms.firstObject')) {
           cluster.get('ipms.firstObject.statuses').then(function(statuses) {

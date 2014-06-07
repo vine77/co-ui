@@ -9,13 +9,13 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/co-ui.css">
+    <link rel="stylesheet" href="{{rev "assets/co-ui.css"}}">
   </head>
   <body>
     <script>
       window.ENV = {{ENV}};
     </script>
-    <script src="assets/co-ui.js"></script>
+    <script src="{{rev "assets/co-ui.js"}}"></script>
     <script>
       window.CoUi = require('co-ui/app')['default'].create(ENV.APP);
     </script>

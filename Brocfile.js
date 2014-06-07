@@ -1,8 +1,10 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var mergeTrees = require('broccoli-merge-trees');
 var pickFiles = require('broccoli-static-compiler');
+var mergeTrees = require('broccoli-merge-trees');
+var removeFiles = require('broccoli-file-remover');
+var rev = require('broccoli-rev');
 var trees = [];
 
 var app = new EmberApp({
@@ -54,4 +56,23 @@ trees.push(pickFiles('vendor', {
 }));
 
 trees.push(app.toTree());
-module.exports = mergeTrees(trees);
+tree = mergeTrees(trees);
+
+// Add file revision checksums (cache killer)
+revTree = mergeTrees([rev(pickFiles(tree, {
+  srcDir: '/assets',
+  files: ['co-ui.js', 'co-ui.css'],
+  destDir: '/assets'
+}), {
+  hashLength: 4
+}), removeFiles(tree, {
+  files: ['/assets/co-ui.js', '/assets/co-ui.css']
+})]);
+
+// Insert revved file names in HTML
+rewrittenTree = rev.rewriter(revTree, {
+  inputFile: 'index.html',
+  outputFile: 'index.html'
+});
+
+module.exports = rewrittenTree;
