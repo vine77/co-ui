@@ -6,7 +6,7 @@ export default Ember.ObjectController.extend({
       default:
         return false;
     }
-  }.property('method'),
+  }.property('method', 'vm.isSaaAppliance', 'vm.ipm.cluster'),
   isDisabledMessage: function() {
     if (this.get('isDisabled') && this.get('method') === 'start') {
       return 'You must first attach the SAAappliance to a cluster before starting.';
