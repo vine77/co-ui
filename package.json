@@ -25,6 +25,7 @@
     "broccoli-merge-trees": "^0.1.4",
     "broccoli-rev": "^0.3.0",
     "broccoli-static-compiler": "^0.1.4",
+    "connect-pause": "^0.1.0",
     "ember-cli": "0.0.28",
     "express": "^4.1.1",
     "glob": "^3.2.9",
