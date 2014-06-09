@@ -8,6 +8,7 @@ Router.map(function() {
     this.route('control-panel');
   });
   this.route('orchestration');
+  this.route('horizon');
   this.resource('ingredient', function() {
     this.route('dashboard');
     this.route('nodes');
