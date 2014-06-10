@@ -1,12 +1,11 @@
 import authenticatedRoute from './authenticated';
 
 export default authenticatedRoute.extend({
-  refreshInterval: 25, // in seconds
+  refreshInterval: 15, // in seconds
   model: function() {
     return this.loadModels();
   },
   afterModel: function() {
-    this.addRelationships();
     Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
   },
   setupController: function(controller, model) {
@@ -15,7 +14,6 @@ export default authenticatedRoute.extend({
     this.controllerFor('vms').set('model', this.store.all('vm'));
     this.controllerFor('clusters').set('model', this.store.all('cluster'));
     this.controllerFor('ipms').set('model', this.store.all('ipm'));
-
   },
   loadModels: function() {
     var self = this;
@@ -35,9 +33,13 @@ export default authenticatedRoute.extend({
       })
     ]).then(function() {
       return Ember.RSVP.allSettled([
-        // Load Fuel APIs (don't block on failure)
-        self.store.find('cluster'),
-        self.store.find('fuelNode'),
+        // Load Fuel APIs (don't block on failure via allSettled)
+        self.store.find('cluster').then(function() {
+          self.fixRelationship({belongsTo: 'cluster', hasMany: 'ipm'});
+        }),
+        self.store.find('fuelNode').then(function() {
+          self.fixRelationship({belongsTo: 'cluster', hasMany: 'fuelNode'});
+        }),
         self.store.find('notification'),
         self.store.find('release'),
         self.store.find('task'),
@@ -46,12 +48,9 @@ export default authenticatedRoute.extend({
     });
   },
   reloadModels: function() {
-    var self = this;
     Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
     if (this.controllerFor('application').get('currentPath').split('.')[0] === 'app') {
-      this.loadModels().then(function() {
-        return self.addRelationships();
-      });
+      this.loadModels();
       // Reload relationship links for SAA Statuses API
       this.store.all('cluster').forEach(function(cluster) {
         if (cluster.get('ipms.firstObject')) {
@@ -62,28 +61,18 @@ export default authenticatedRoute.extend({
       });
     }
   },
-  addRelationships: function() {
-    // Manually add relationships (until Ember Data single-source-of-truth branch is merged)
+  fixRelationship: function(options) {
     var self = this;
-    this.store.all('cluster').forEach(function(cluster) {
-      var nodeClusters = [];
-      var ipmClusters = [];
-      self.store.all('fuelNode').forEach(function(node) {
-        nodeClusters.push(node.get('cluster'));
+    if (options.belongsTo === undefined || options.hasMany === undefined) return;
+    this.store.all(options.belongsTo).forEach(function(belongsToItem) {
+      var belongsToItems = [];
+      self.store.all(options.hasMany).forEach(function(hasManyItem) {
+        belongsToItems.push(hasManyItem.get(options.belongsTo));
       });
-      Ember.RSVP.allSettled(nodeClusters).then(function() {
-        var fuelNodes = self.store.all('fuelNode').filterBy('cluster.id', cluster.get('id'));
-        cluster.get('fuelNodes').then(function(promiseNodes) {
-          promiseNodes.setObjects(fuelNodes);
-        });
-      });
-      self.store.all('ipm').forEach(function(ipm) {
-        ipmClusters.push(ipm.get('cluster'));
-      });
-      Ember.RSVP.allSettled(ipmClusters).then(function() {
-        var ipms = self.store.all('ipm').filterBy('cluster.id', cluster.get('id'));
-        cluster.get('ipms').then(function(promiseIpms) {
-          promiseIpms.setObjects(ipms);
+      Ember.RSVP.allSettled(belongsToItems).then(function() {
+        var hasManyItems = self.store.all(options.hasMany).filterBy(options.belongsTo + '.id', belongsToItem.get('id'));
+        belongsToItem.get(options.hasMany.pluralize()).then(function(hasManyPromises) {
+          hasManyPromises.setObjects(hasManyItems);
         });
       });
     });
