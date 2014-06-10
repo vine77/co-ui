@@ -12,7 +12,18 @@
         <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
         <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
         <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
-        <li>{{#link-to "ingredient"}}<i class="fa fa-bar-chart-o"></i> SAAappliance{{/link-to}}</li>
+        <li class="dropdown">
+          <a {{action "goToIngredient" "dashboard"}} href><i class="fa fa-shield"></i> SAAappliance</a>
+          <ul class="dropdown-menu">
+            <li><a {{action "goToIngredient" "dashboard"}} href>Dashboard</a></li>
+            <li><a {{action "goToIngredient" "nodes"}} href>Nodes</a></li>
+            <li><a {{action "goToIngredient" "vms"}} href>VMs</a></li>
+            <li><a {{action "goToIngredient" "services"}} href>Services</a></li>
+            <li><a {{action "goToIngredient" "trust"}} href>Trust</a></li>
+            <li><a {{action "goToIngredient" "settings"}} href>Settings</a></li>
+          </ul>
+        </li>
+        <li>{{#link-to "horizon"}}<i class="fa fa-cubes"></i> Horizon{{/link-to}}</li>
         <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
         {{#if isLoggedIn}}
           <li class="user-menu dropdown">
