@@ -25,12 +25,16 @@ export default Ember.ObjectController.extend({
     }, 0);
   }.property('fuelNodes.@each'),
   details: function() {
-    return [
-      'Nodes: ' + this.get('fuelNodes.length'),
-      'CPU (cores): ' + this.get('numberOfCores'),
-      'HDD: ' + bytesToReadableSize(this.get('totalStorage')),
-      'RAM: ' + bytesToReadableSize(this.get('totalMemory'))
-    ].join('<br>');
+    if (this.get('fuelNodes.length') === 0) {
+      return 'Nodes: ' + this.get('fuelNodes.length');
+    } else {
+      return [
+        'Nodes: ' + this.get('fuelNodes.length'),
+        'CPU (cores): ' + this.get('numberOfCores'),
+        'HDD: ' + bytesToReadableSize(this.get('totalStorage')),
+        'RAM: ' + bytesToReadableSize(this.get('totalMemory'))
+      ].join('<br>');
+    }
   }.property('fuelNodes.@each'),
   systemHealth: function() {
     return this.get('model.ipms.firstObject.systemHealth');

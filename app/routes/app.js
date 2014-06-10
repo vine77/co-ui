@@ -36,6 +36,7 @@ export default authenticatedRoute.extend({
         // Load Fuel APIs (don't block on failure via allSettled)
         self.store.find('cluster').then(function() {
           self.fixRelationship({belongsTo: 'cluster', hasMany: 'ipm'});
+          self.fixRelationship({belongsTo: 'cluster', hasMany: 'fuelNode'});
         }),
         self.store.find('fuelNode').then(function() {
           self.fixRelationship({belongsTo: 'cluster', hasMany: 'fuelNode'});
