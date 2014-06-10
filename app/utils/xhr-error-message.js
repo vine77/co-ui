@@ -3,7 +3,13 @@ import errorMessage from '../utils/error-message';
 export default function(xhr, defaultMessage) {
   var message = defaultMessage || 'An error occured: ' + xhr.status + ' ' + xhr.statusText;
   try {
-    var json = (xhr.hasOwnProperty('responseText')) ? Ember.$.parseJSON(xhr.responseText) : xhr;
+    if (xhr[0].hasOwnProperty('responseText')) {
+      var json = Ember.$.parseJSON(xhr[0].responseText);
+    } else if (xhr.hasOwnProperty('responseText')) {
+      var json = Ember.$.parseJSON(xhr.responseText);
+    } else {
+      var json = xhr;
+    }
     message = errorMessage(json) || message;
   } catch(error) {}
   return message;
