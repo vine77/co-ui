@@ -1,10 +1,12 @@
 <div class="wrapper skin-blue">
   <aside class="right-side strech">
-    <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
+    {{#if isSaaApplianceAttached}}
+      <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
+    {{/if}}
     <section class="content-header">
       <h1>
-        SAAappliance
-        <small>SAA Ingredient</small>
+        Horizon
+        <small>OpenStack Dashboard</small>
       </h1>
       <ol class="breadcrumb">
         <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
@@ -13,3 +15,6 @@
     </section>
   </aside>
 </div>
+{{#unless isSaaApplianceAttached}}
+  {{partial "app/-not-attached"}}
+{{/unless}}

@@ -42,8 +42,8 @@ export default Ember.Route.extend({
         trust: '/ipm00/#/app/data/trust',
         settings: '/ipm00/#/app/settings'
       };
-      this.controllerFor('ingredient').set('iframeSrc', map[location]);
-      this.transitionTo('ingredient');
+      this.controllerFor('app.ingredient').set('iframeSrc', map[location]);
+      this.transitionTo('app.ingredient');
     },
     logout: function() {
       var self = this;

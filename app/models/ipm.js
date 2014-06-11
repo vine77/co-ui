@@ -15,7 +15,7 @@ export default DS.Model.extend({
 
   // Computed properties
   route: function() {
-    return 'ingredient';
+    return 'app.ingredient';
   }.property(),
   statusMessage: function() {
     switch (this.get('status')) {
