@@ -25,6 +25,11 @@ export default Ember.ObjectController.extend({
     }
   }.property('id'),
   vmActions: function() {
+    console.log('vmActions fired');
+    console.log('parentController', this.get('parentController'));
+    console.log('model.state', this.get('model.state'));
+    console.log('state', this.get('state'));
+
     return [
       vmAction.create({
         name: 'Start',
@@ -51,7 +56,7 @@ export default Ember.ObjectController.extend({
         vm: this
       })
     ];
-  }.property('@each'),
+  }.property('state', 'model.state'),
   firstAction: function() {
     return this.get('vmActions').findBy('isFirstAction', true);
   }.property('vmActions.@each'),
