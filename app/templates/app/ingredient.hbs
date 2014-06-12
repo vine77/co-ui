@@ -6,7 +6,13 @@
     <section class="content-header">
       <h1>
         SAAappliance
-        <small>SAA Ingredient</small>
+        <small>
+          {{#if isSaaApplianceAttached}}
+            Cloud "{{cluster.name}}"
+          {{else}}
+            SAA Ingredient
+          {{/if}}
+        </small>
       </h1>
       <ol class="breadcrumb">
         <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>

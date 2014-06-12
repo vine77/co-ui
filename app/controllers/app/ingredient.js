@@ -4,7 +4,13 @@ export default Ember.ObjectController.extend({
     //return this.get('model.firstObject.proxy') + '/';
     return '/ipm00/';
   }.property(),
+  ipm: function() {
+    return this.get('controllers.ipms') && this.get('controllers.ipms').findBy('id', '0');
+  }.property('controllers.ipms'),
+  cluster: function() {
+    return this.get('ipm.cluster');
+  }.property('ipm.cluster'),
   isSaaApplianceAttached: function() {
-    return (this.get('controllers.ipms') && this.get('controllers.ipms').findBy('id', '0') && !!this.get('controllers.ipms').findBy('id', '0').get('cluster'));
-  }.property('controllers.ipms')
+    return !!this.get('cluster');
+  }.property('cluster')
 });
