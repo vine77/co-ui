@@ -11,7 +11,7 @@
         --}}
         <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
         <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
-        <li>{{#link-to "orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
+        <li>{{#link-to "app.orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
         <li class="dropdown">
           <a {{action "goToIngredient" "dashboard"}} href><i class="fa fa-shield"></i> SAAappliance</a>
           <ul class="dropdown-menu">
@@ -24,7 +24,7 @@
           </ul>
         </li>
         <li>{{#link-to "app.horizon"}}<i class="fa fa-cubes"></i> Horizon{{/link-to}}</li>
-        <li>{{#link-to "logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
+        <li>{{#link-to "app.logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
         {{#if isLoggedIn}}
           <li class="user-menu dropdown">
             <a data-toggle="dropdown">
@@ -46,7 +46,7 @@
         {{else}}
           <li>{{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}</li>
         {{/if}}
-        <li>{{#link-to "about"}}<i class="fa fa-info-circle"></i> {{/link-to}}</li>
+        <li>{{#link-to "app.about"}}<i class="fa fa-info-circle"></i> {{/link-to}}</li>
       </ul>
     </div>
   </nav>

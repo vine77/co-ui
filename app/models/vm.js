@@ -17,7 +17,7 @@ export default DS.Model.extend({
   name: Ember.computed.alias('description'),
   route: function() {
     if (this.get('id') === '0') {
-      return 'orchestration';
+      return 'app.orchestration';
     } else if (this.get('id') === '1') {
       return 'app.ingredient';
     }

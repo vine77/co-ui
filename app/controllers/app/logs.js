@@ -1,6 +1,7 @@
 export default Ember.ObjectController.extend({
+  needs: ['app'],
   iframeSrc: function() {
-    //return this.get('model.firstObject.proxy') + '/kibana3/index.html#/dashboard/file/logs.json';
     return '/ipm00/kibana3/index.html#/dashboard/file/logs.json';
-  }.property('model.@each')
+  }.property(),
+  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttached')
 });

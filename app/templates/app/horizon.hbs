@@ -1,6 +1,6 @@
 <div class="wrapper skin-blue">
   <aside class="right-side strech">
-    {{#if isSaaApplianceAttached}}
+    {{#if isFrameEnabled}}
       <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
     {{/if}}
     <section class="content-header">
@@ -15,6 +15,6 @@
     </section>
   </aside>
 </div>
-{{#unless isSaaApplianceAttached}}
-  {{partial "app/-not-attached"}}
+{{#unless isFrameEnabled}}
+  {{partial "app/-disabled-app"}}
 {{/unless}}

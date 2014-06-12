@@ -1,12 +1,9 @@
 export default Ember.ObjectController.extend({
-  needs: ['ipms'],
+  needs: ['app', 'ipms'],
   iframeSrc: function() {
-    //return this.get('model.firstObject.proxy') + '/horizon/';
     return '/ipm00/horizon/';
   }.property(),
-  isSaaApplianceAttached: function() {
-    return (this.get('controllers.ipms') && this.get('controllers.ipms').findBy('id', '0') && !!this.get('controllers.ipms').findBy('id', '0').get('cluster'));
-  }.property('controllers.ipms.@each'),
+  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttached'),
   updateLocation: function() {
     var self = this;
     //Ember.run.later(this, 'updateLocation', 20000);
