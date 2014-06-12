@@ -4,6 +4,7 @@ import health from '../utils/mappings/health';
 import vmAction from '../controllers/vm-action';
 
 export default Ember.ObjectController.extend({
+  isActionPending: false,
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       var options = promiseOptions || {};
@@ -62,6 +63,7 @@ export default Ember.ObjectController.extend({
     reboot: function() {
       var confirmed = window.confirm('Are you sure you want to reboot "' + this.get('name') + '"?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/vms', {
           dataType: 'json',
@@ -74,8 +76,10 @@ export default Ember.ObjectController.extend({
             }]
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully rebooted VM', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to reboot VM');
         });
       }
@@ -83,6 +87,7 @@ export default Ember.ObjectController.extend({
     start: function() {
       var confirmed = window.confirm('Are you sure you want to start "' + this.get('name') + '"?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/vms', {
           dataType: 'json',
@@ -95,8 +100,10 @@ export default Ember.ObjectController.extend({
             }]
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully started VM', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to started VM');
         });
       }
@@ -104,6 +111,7 @@ export default Ember.ObjectController.extend({
     shutdown: function() {
       var confirmed = window.confirm('Are you sure you want to shut down "' + this.get('name') + '"?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/vms', {
           dataType: 'json',
@@ -116,8 +124,10 @@ export default Ember.ObjectController.extend({
             }]
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully shutdown VM', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to shutdown VM');
         });
       }
@@ -125,6 +135,7 @@ export default Ember.ObjectController.extend({
     forcedShutdown: function() {
       var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/vms', {
           dataType: 'json',
@@ -137,8 +148,10 @@ export default Ember.ObjectController.extend({
             }]
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully force shutdown VM', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to force shutdown VM');
         });
       }

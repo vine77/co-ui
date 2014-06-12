@@ -18,9 +18,13 @@
           <td>{{coVersion}}</td>
           <td class="actions-column show-when-expanded">
             <div class="btn-group">
-              <button {{action "reboot"}} type="button" class="btn btn-sm btn-success">Reboot</button>
-              <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
+              <button {{action "reboot"}} type="button" {{bind-attr class=":btn :btn-sm :btn-success isActionPending:disabled"}}>Reboot</button>
+              <button type="button" {{bind-attr class=":btn :btn-sm :btn-success :dropdown-toggle isActionPending:disabled"}} data-toggle="dropdown">
+                {{#unless isActionPending}}
+                  <span class="caret"></span>
+                {{else}}
+                  <i class="fa fa-spinner fa-spin"></i>
+                {{/unless}}
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <ul class="dropdown-menu" role="menu">

@@ -3,6 +3,7 @@ import xhrError from '../utils/xhr-error';
 import health from '../utils/mappings/health';
 
 export default Ember.ObjectController.extend({
+  isActionPending: false,
   ajaxPromise: function(url, promiseOptions) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       var options = promiseOptions || {};
@@ -19,6 +20,7 @@ export default Ember.ObjectController.extend({
     reboot: function() {
       var confirmed = window.confirm('Are you sure you want to reboot the cloud controller?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/cc', {
           dataType: 'json',
@@ -28,8 +30,10 @@ export default Ember.ObjectController.extend({
             action: 'reboot'
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully rebooted cloud controller', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to reboot cloud controller');
         });
       }
@@ -37,6 +41,7 @@ export default Ember.ObjectController.extend({
     shutdown: function() {
       var confirmed = window.confirm('Are you sure you want to shut down the cloud controller?');
       if (confirmed) {
+        this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
         ajaxPromise('/api/v1/cc', {
           dataType: 'json',
@@ -46,8 +51,10 @@ export default Ember.ObjectController.extend({
             action: 'shutdown'
           })
         }).then( function(xhr) {
+          this.set('isActionPending', false);
           notify('Successfully shutdown cloud controller', health.SUCCESS);
         }, function(xhr) {
+          this.set('isActionPending', false);
           xhrError(xhr, 'Failed to shutdown cloud controller');
         });
       }
