@@ -28,7 +28,7 @@
                 {{#if ipm.isActionDisabled}}
                   <button type="button" class="btn btn-sm btn-primary" disabled="disabled">Detach from cluster</button>
                 {{else}}
-                  <button {{action "detach" ipm}} type="button" class="btn btn-sm btn-primary">Detach from cluster</button>
+                  <button {{action "detach" ipm}} type="button" {{bind-attr class=":btn :btn-sm :btn-primary ipm.isActionPending:disabled"}}>Detach from cluster</button>
                 {{/if}}
               {{else}}
                 {{#if ipm.isActionDisabled}}
@@ -36,9 +36,13 @@
                 {{else}}
                   {{#if controllers.clusters.hasMultipleClusters}}
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-primary" data-toggle="dropdown">Attach to:</button>
-                      <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <span class="caret"></span>
+                      <button type="button" {{bind-attr class=":btn :btn-sm :btn-primary ipm.isActionPending:disabled"}} data-toggle="dropdown">Attach to:</button>
+                      <button type="button" {{bind-attr class=":btn :btn-sm :btn-primary :dropdown-toggle ipm.isActionPending:disabled"}} data-toggle="dropdown">
+                        {{#unless isActionPending}}
+                          <span class="caret"></span>
+                        {{else}}
+                          <i class="fa fa-spinner fa-spin"></i>
+                        {{/unless}}
                         <span class="sr-only">Toggle Dropdown</span>
                       </button>
                       <ul class="dropdown-menu pull-right" role="menu">
@@ -48,7 +52,7 @@
                       </ul>
                     </div>
                   {{else}}
-                    <button {{action "attach" ipm}} type="button" class="btn btn-sm btn-primary">Attach to cluster</button>
+                    <button {{action "attach" ipm}} type="button" {{bind-attr class=":btn :btn-sm :btn-primary"}}>Attach to cluster</button>
                   {{/if}}
                 {{/if}}
               {{/if}}
