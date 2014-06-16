@@ -12,7 +12,7 @@
       "state_description": "shut off",
       "responding": 2,
       "description": "SAAappliance",
-      "state": 5,
+      "state": 1,
       "action": null,
       "id": 1
     }

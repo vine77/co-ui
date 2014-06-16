@@ -3,5 +3,5 @@ export default Ember.ObjectController.extend({
   iframeSrc: function() {
     return '/ipm00/kibana3/index.html#/dashboard/file/logs.json';
   }.property(),
-  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttached')
+  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning')
 });

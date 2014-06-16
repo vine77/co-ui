@@ -3,6 +3,6 @@ export default Ember.ObjectController.extend({
   iframeSrc: function() {
     return '/ipm00/';
   }.property(),
-  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttached'),
+  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning'),
   cluster: Ember.computed.alias('controllers.app.cluster')
 });

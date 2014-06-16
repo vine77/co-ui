@@ -3,7 +3,7 @@ export default Ember.ObjectController.extend({
   iframeSrc: function() {
     return '/ipm00/horizon/';
   }.property(),
-  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttached'),
+  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning'),
   updateLocation: function() {
     var self = this;
     //Ember.run.later(this, 'updateLocation', 20000);
