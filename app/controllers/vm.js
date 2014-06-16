@@ -133,7 +133,7 @@ export default Ember.ObjectController.extend({
       }
     },
     forcedShutdown: function() {
-      var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"?');
+      var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"? Warning: This action can potentially be dangerous.');
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
