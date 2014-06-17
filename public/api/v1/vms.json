@@ -4,7 +4,7 @@
       "state_description": "running",
       "responding": 1,
       "description": "Fuel VM",
-      "state": 0,
+      "state": 1,
       "action": null,
       "id": 0
     },
@@ -12,7 +12,7 @@
       "state_description": "shut off",
       "responding": 2,
       "description": "SAAappliance",
-      "state": 1,
+      "state": 5,
       "action": null,
       "id": 1
     }

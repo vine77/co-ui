@@ -1,7 +1,7 @@
 {
   "ipms": [
     {
-      "status": 0,
+      "status": 3,
       "cluster": 1,
       "proxy": "/ipm00",
       "id": 0,
