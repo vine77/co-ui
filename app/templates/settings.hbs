@@ -1,0 +1,27 @@
+<div class="wrapper skin-blue">
+  <aside class="right-side strech">
+    <section class="content-header">
+      <h1>
+        Settings
+        <small>Configure SAA</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
+        <li class="active">Settings</li>
+      </ol>
+    </section>
+    <section class="content">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group">
+            {{#link-to "settings.user" class="list-group-item"}}<i class="fa fa-chevron-right pull-right"></i><i class="fa fa-user"></i> User{{/link-to}}
+            {{#link-to "settings.mail" class="list-group-item"}}<i class="fa fa-chevron-right pull-right"></i><i class="fa fa-envelope"></i> Mail Server{{/link-to}}
+          </div>
+        </div>
+        <div class="col-md-9">
+          {{outlet}}
+        </div>
+      </div>
+    </section>
+  </aside>
+</div>

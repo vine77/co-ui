@@ -14,6 +14,10 @@ Router.map(function() {
   });
   this.route('login');
   this.route('reset-password');
+  this.resource('settings', function() {
+    this.route('user');
+    this.route('mail');
+  });
   //this.route('profile');
   this.route('profile', {path: '/profiles/:user_id'});
 });
