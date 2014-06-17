@@ -28,7 +28,13 @@
           </li>
           <li>{{#link-to "app.horizon"}}<i class="fa fa-cubes"></i> Horizon{{/link-to}}</li>
           <li>{{#link-to "app.logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
-          <li>{{#link-to "settings"}}<i class="fa fa-cog"></i> {{/link-to}}</li>
+          <li class="dropdown">
+            {{#link-to "settings"}}<i class="fa fa-cog"></i> {{/link-to}}
+            <ul class="dropdown-menu">
+              <li>{{#link-to "settings.user"}}User{{/link-to}}</li>
+              <li>{{#link-to "settings.mail"}}Mail Server{{/link-to}}</li>
+            </ul>
+          </li>
           <li>{{#link-to "app.about"}}<i class="fa fa-info-circle"></i> {{/link-to}}</li>
           <li class="user-menu dropdown">
             <a data-toggle="dropdown">

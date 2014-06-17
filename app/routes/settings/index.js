@@ -1,4 +1,4 @@
-import authenticatedRoute from './authenticated';
+import authenticatedRoute from '../authenticated';
 
 export default authenticatedRoute.extend({
   beforeModel: function() {
