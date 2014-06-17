@@ -25,7 +25,16 @@ export default authenticatedRoute.extend({
       this.store.find('ipm').then(function(ipms) {
         // Load SAA APIs (don't block on failure)
         ipms.forEach(function(ipm) {
-          ipm.get('statuses');
+          ipm.get('statuses').then(function(statuses) {
+            // Reload relationship links for SAA Statuses API
+            statuses.reloadLinks();
+            // TODO: clear statuses if reloadLinks() fails
+          }, function(xhr) {
+            // Reset rejected promise
+            if (ipm.get('statuses')) ipm.get('statuses').clear();
+            ipm._relationships.statuses = null;
+            ipm.get('statuses');  // Reload
+          });
           ipm.get('nodes');
           ipm.get('netconfig');
           ipm.get('networkType');
@@ -52,14 +61,6 @@ export default authenticatedRoute.extend({
     Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
     if (this.controllerFor('application').get('currentPath').split('.')[0] === 'app') {
       this.loadModels();
-      // Reload relationship links for SAA Statuses API
-      this.store.all('cluster').forEach(function(cluster) {
-        if (cluster.get('ipms.firstObject')) {
-          cluster.get('ipms.firstObject.statuses').then(function(statuses) {
-            statuses.reloadLinks();
-          });
-        }
-      });
     }
   },
   fixRelationship: function(options) {

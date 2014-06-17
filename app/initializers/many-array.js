@@ -9,7 +9,7 @@ export default {
         var resolver = Ember.RSVP.defer();
         var meta = owner.constructor.metaForProperty(name);
         var link = owner._data.links[meta.key];
-        this.get('store').findHasMany(owner, link, meta, resolver);
+        return this.get('store').findHasMany(owner, link, meta, resolver);
       }
     });
   }
