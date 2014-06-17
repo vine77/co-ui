@@ -18,7 +18,7 @@ export default Ember.ObjectController.extend({
   },
   actions: {
     reboot: function() {
-      var confirmed = window.confirm('Are you sure you want to reboot the cloud controller?');
+      var confirmed = window.confirm('Are you sure you want to reboot the SAA host?');
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
@@ -31,15 +31,15 @@ export default Ember.ObjectController.extend({
           })
         }).then( function(xhr) {
           this.set('isActionPending', false);
-          notify('Successfully rebooted cloud controller', health.SUCCESS);
+          notify('Successfully rebooted SAA host', health.SUCCESS);
         }, function(xhr) {
           this.set('isActionPending', false);
-          xhrError(xhr, 'Failed to reboot cloud controller');
+          xhrError(xhr, 'Failed to reboot SAA host');
         });
       }
     },
     shutdown: function() {
-      var confirmed = window.confirm('Are you sure you want to shut down the cloud controller?');
+      var confirmed = window.confirm('Are you sure you want to shut down the SAA host?');
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
@@ -52,10 +52,10 @@ export default Ember.ObjectController.extend({
           })
         }).then( function(xhr) {
           this.set('isActionPending', false);
-          notify('Successfully shutdown cloud controller', health.SUCCESS);
+          notify('Successfully shutdown SAA host', health.SUCCESS);
         }, function(xhr) {
           this.set('isActionPending', false);
-          xhrError(xhr, 'Failed to shutdown cloud controller');
+          xhrError(xhr, 'Failed to shutdown SAA host');
         });
       }
     }
