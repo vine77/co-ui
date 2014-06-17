@@ -1,4 +1,4 @@
-<div class="form-box" id="login-box">
+<div class="form-box">
   <div class="header bg-light-blue">Change Password</div>
   <form {{action "changePassword" on="submit"}}>
     <div class="body bg-gray">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="footer">
-      {{#unless isPending}}
+      {{#unless isActionPending}}
         <input class="btn btn-block btn-primary" type="submit" value="Change password"></input>
       {{else}}
         <a class="btn btn-block btn-primary disabled"><i class="fa fa-spinner fa-spin"></i> Signing in...</a>

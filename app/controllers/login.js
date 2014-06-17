@@ -12,7 +12,7 @@ export default Ember.ObjectController.extend({
   //username: '',
   //password: '',
   //csrfToken: null,
-  isPending: false,
+  isActionPending: false,
   tenantType: 'default',
   isDefaultTenant: Ember.computed.equal('tenantType', 'default'),
   tenantName: '',
@@ -68,16 +68,16 @@ export default Ember.ObjectController.extend({
   actions: {
     login: function () {
       var self = this;
-      this.set('isPending', true);
+      this.set('isActionPending', true);
       var session = this.get('model');
       session.save().then(function (session) {
-        self.set('isPending', false);
+        self.set('isActionPending', false);
         self.set('isLoggedIn', true);
         self.transitionToAttempted();
       }, function (xhr) {
         var setProfile = false;
         window.xhr = xhr;
-        self.set('isPending', false);
+        self.set('isActionPending', false);
         try {
           if (xhr.responseJSON.errors.message.set_profile) setProfile = true;
         } catch(error) {}

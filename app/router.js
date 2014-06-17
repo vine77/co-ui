@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('about');
   });
   this.route('login');
+  this.route('reset-password');
   //this.route('profile');
   this.route('profile', {path: '/profiles/:user_id'});
 });

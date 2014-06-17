@@ -59,9 +59,9 @@ export default authenticatedRoute.extend({
   },
   reloadModels: function() {
     Ember.run.later(this, 'reloadModels', this.refreshInterval * 1000);
-    if (this.controllerFor('application').get('currentPath').split('.')[0] === 'app') {
-      this.loadModels();
-    }
+    var isAppRoute = this.controllerFor('application').get('currentPath').split('.')[0] === 'app';
+    var isLoggedIn = this.controllerFor('login').get('isLoggedIn');
+    if (isAppRoute && isLoggedIn) this.loadModels();
   },
   fixRelationship: function(options) {
     var self = this;
