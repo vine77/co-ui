@@ -30,6 +30,8 @@ export default function(response, separator) {
     return response.error_message;
   } else if (response.hasOwnProperty('message')) {
     return response.message;
+  } else if (response.hasOwnProperty('faultstring')) {
+    return response.faultstring;
   } else {
     return '';
   }
