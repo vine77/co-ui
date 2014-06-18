@@ -1,49 +1,73 @@
-<div class="box">
-  <div class="box-header">
-    <h3 class="box-title">User Account</h3>
-  </div>
-  <form {{action "save" on="submit"}} class="form-horizontal" role="form">
-    <div class="box-body">
-      <div class="form-group">
-        <label class="col-sm-2 control-label">Username</label>
-        <div class="col-sm-10">
-          <p class="form-control-static">{{username}}</p>
+<div class="wrapper skin-blue">
+  <aside class="right-side strech">
+    <section class="content-header">
+      <h1>
+        Settings
+        <small>User</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
+        <li>{{#link-to "settings"}}Settings{{/link-to}}</li>
+        <li class="active">User</li>
+      </ol>
+    </section>
+    <section class="content">
+      <div class="row">
+        <div class="col-md-3">
+          {{partial "settings/-navigation"}}
+        </div>
+        <div class="col-md-9">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">User Account</h3>
+            </div>
+            <form {{action "save" on="submit"}} class="form-horizontal" role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Username</label>
+                  <div class="col-sm-10">
+                    <p class="form-control-static">{{username}}</p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">Email address</label>
+                  <div class="col-sm-10">
+                    {{input class="form-control" placeholder="Email address" autofocus="autofocus"}}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">Current password</label>
+                  <div class="col-sm-10">
+                    {{input type="password" class="form-control" placeholder="Enter existing password"}}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">New Password</label>
+                  <div class="col-sm-10">
+                    {{input type="password" class="form-control" placeholder="Enter new password"}}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-sm-2 control-label">Confirm password</label>
+                  <div class="col-sm-10">
+                    {{input type="password" class="form-control" placeholder="Repeat new password"}}
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer clearfix">
+                <div class="pull-right">
+                  {{#unless isActionPending}}
+                    <a class="btn btn-default" type="button" {{action "cancel"}}>Cancel</a>
+                    <input class="btn btn-primary" type="submit" value="Save" {{action "save"}}></input>
+                  {{else}}
+                    <a class="btn btn-primary disabled"><i class="icon-spinner icon-spin"></i> Saving...</a>
+                  {{/unless}}
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">Email address</label>
-        <div class="col-sm-10">
-          {{input class="form-control" placeholder="Email address" autofocus="autofocus"}}
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">Current password</label>
-        <div class="col-sm-10">
-          {{input type="password" class="form-control" placeholder="Enter existing password"}}
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">New Password</label>
-        <div class="col-sm-10">
-          {{input type="password" class="form-control" placeholder="Enter new password"}}
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword" class="col-sm-2 control-label">Confirm password</label>
-        <div class="col-sm-10">
-          {{input type="password" class="form-control" placeholder="Repeat new password"}}
-        </div>
-      </div>
-    </div>
-    <div class="box-footer clearfix">
-      <div class="pull-right">
-        {{#unless isActionPending}}
-          <a class="btn btn-default" type="button" {{action "cancel"}}>Cancel</a>
-          <input class="btn btn-primary" type="submit" value="Save" {{action "save"}}></input>
-        {{else}}
-          <a class="btn btn-primary disabled"><i class="icon-spinner icon-spin"></i> Saving...</a>
-        {{/unless}}
-      </div>
-    </div>
-  </form>
+    </section>
+  </aside>
 </div>
