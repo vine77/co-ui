@@ -24,38 +24,38 @@
             <form {{action "save" on="submit"}} class="form-horizontal" role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">Hostname</label>
+                  <label for="mail-hostname" class="col-sm-2 control-label">Hostname</label>
                   <div class="col-sm-10">
-                    {{input class="form-control" placeholder="Hostname or IP address" autofocus="autofocus"}}
+                    {{input type="text" id="mail-hostname" class="form-control" value=hostname placeholder="IP address or hostname" autofocus="autofocus"}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">Port</label>
+                  <label for="mail-port" class="col-sm-2 control-label">Port</label>
                   <div class="col-sm-10">
-                    {{input class="form-control" placeholder="Port"}}
+                    {{input id="mail-port" class="form-control" value=port placeholder="Port"}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">Username</label>
+                  <label for="mail-username" class="col-sm-2 control-label">Username</label>
                   <div class="col-sm-10">
-                    {{input class="form-control" placeholder="Username"}}
+                    {{input id="mail-username" class="form-control" value=username placeholder="Username"}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                  <label for="mail-password" class="col-sm-2 control-label">Password</label>
                   <div class="col-sm-10">
-                    {{input type="password" class="form-control" placeholder="Password"}}
+                    {{input type="password" id="mail-password" class="form-control" value=password placeholder="Password"}}
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputPassword" class="col-sm-2 control-label">
+                  <label for="mail-email" class="col-sm-2 control-label">
                     Email
                     <span class="hint--top" data-hint="The &quot;From:&quot; address as sent to recipients from the mail server">
                       <a class="has-tooltip"><i class="fa fa-question-circle"></i></a>
                     </span>
                   </label>
                   <div class="col-sm-10">
-                    {{input class="form-control" placeholder="Email address"}}
+                    {{input id="mail-email" class="form-control" value=sender_email placeholder="Email address"}}
                   </div>
                 </div>
                 <div class="form-group">
