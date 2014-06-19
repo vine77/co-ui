@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
       var user = this.get('model');
       var isAllEmpty = !this.get('oldPassword') && !this.get('newPassword') && !this.get('confirmPassword');
       var isAllFilled = !!this.get('oldPassword') && !!this.get('newPassword') && !!this.get('confirmPassword');
-      var passwordMismatch = this.get('newPassword') !== this.get('confirmPassword') && (!!this.get('newPassword') || !!this.get('confirmPassword'))
+      var passwordMismatch = this.get('newPassword') !== this.get('confirmPassword') && (!!this.get('newPassword') || !!this.get('confirmPassword'));
       if (!(isAllEmpty || isAllFilled)) {
         notify('Please enter all of the required fields.');
       } else if (passwordMismatch) {

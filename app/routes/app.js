@@ -50,9 +50,9 @@ export default authenticatedRoute.extend({
         self.store.find('fuelNode').then(function() {
           self.fixRelationship({belongsTo: 'cluster', hasMany: 'fuelNode'});
         }),
-        self.store.find('notification'),
         self.store.find('release'),
-        self.store.find('task'),
+        //self.store.find('notification'),
+        //self.store.find('task'),
         self.store.find('version', 'current'),
       ]);
     });
