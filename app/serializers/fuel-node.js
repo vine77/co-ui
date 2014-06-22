@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.JSONSerializer.extend({
   /**
     Patch the extractFindAll method to unload records not present in

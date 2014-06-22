@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default {
   name: 'inflector',
   initialize: function(container, application) {

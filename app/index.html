@@ -9,15 +9,18 @@
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="{{rev "assets/co-ui.css"}}">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/co-ui.css">
   </head>
   <body>
     <script>
-      window.ENV = {{ENV}};
+      window.CoUiENV = {{ENV}};
+      window.EmberENV = window.CoUiENV.EmberENV;
     </script>
-    <script src="{{rev "assets/co-ui.js"}}"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/co-ui.js"></script>
     <script>
-      window.CoUi = require('co-ui/app')['default'].create(ENV.APP);
+      window.CoUi = require('co-ui/app')['default'].create(CoUiENV.APP);
     </script>
   </body>
 </html>

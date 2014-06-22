@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.ActiveModelSerializer.extend({
   // Add ID
   extractSingle: function(store, type, payload, id, requestType) {

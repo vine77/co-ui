@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import errorMessage from '../utils/error-message';
 
 export default function(xhr, defaultMessage) {

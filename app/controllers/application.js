@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default Ember.ObjectController.extend({
   needs: ['app/control-panel', 'login'],
   isLoggedIn: Ember.computed.alias('controllers.login.isLoggedIn'),

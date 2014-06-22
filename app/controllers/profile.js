@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import health from '../utils/mappings/health';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
@@ -12,7 +13,7 @@ export default Ember.ObjectController.extend({
         notify('Passwords do not match. Please try again.', health.ERROR);
         this.set('password', '');
         this.set('passwordRepeat', '');
-        $('#login-password').focus();
+        Ember.$('#login-password').focus();
       } else {
         user.setProperties({
           username: this.get('username'),

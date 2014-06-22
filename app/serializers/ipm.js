@@ -1,3 +1,6 @@
+import Ember from 'ember';
+import DS from 'ember-data';
+
 export default DS.RESTSerializer.extend({
   /**
    * Add locations for SAA API relationships

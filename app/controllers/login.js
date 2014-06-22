@@ -1,3 +1,5 @@
+import Ember from 'ember';
+import DS from 'ember-data';
 import health from '../utils/mappings/health';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
@@ -90,7 +92,7 @@ export default Ember.ObjectController.extend({
           notify('The username or password you entered was incorrect. Please try again.', health.ERROR);
           self.set('username', '');
           self.set('password', '');
-          $('#login-username').focus();
+          Ember.$('#login-username').focus();
         } else {
           xhrError(xhr, 'An error occurred while attempting to log in.');
         }

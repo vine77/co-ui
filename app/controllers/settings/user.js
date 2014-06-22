@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import notify from '../../utils/notify';
 import xhrError from '../../utils/xhr-error';
 import health from '../../utils/mappings/health';
@@ -17,7 +18,7 @@ export default Ember.ObjectController.extend({
         notify('Passwords do not match. Please try again.');
         this.set('newPassword', '');
         this.set('confirmPassword', '');
-        $('#user-newPassword').focus();
+        Ember.$('#user-newPassword').focus();
       } else {
         this.set('isActionPending', true);
         return user.save().then(function () {
@@ -26,21 +27,21 @@ export default Ember.ObjectController.extend({
           self.set('oldPassword', '');
           self.set('newPassword', '');
           self.set('confirmPassword', '');
-          $('#user-email').focus();
+          Ember.$('#user-email').focus();
         }, function (xhr) {
           self.set('isActionPending', false);
           xhrError(xhr, 'An error occurred while attempting to update your user account.');
           self.set('oldPassword', '');
           self.set('newPassword', '');
           self.set('confirmPassword', '');
-          $('#user-email').focus();
+          Ember.$('#user-email').focus();
         });
       }
     },
     cancel: function () {
       this.get('model').rollback();
       this.set('confirmPassword', '');
-      $('#user-email').focus();
+      Ember.$('#user-email').focus();
     }
   }
 });

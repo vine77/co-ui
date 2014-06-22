@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
 import health from '../utils/mappings/health';
@@ -13,7 +14,7 @@ export default Ember.ObjectController.extend({
       options.error = function(jqXHR, status, error) {
         reject(arguments);
       };
-      $.ajax(url, options);
+      Ember.$.ajax(url, options);
     });
   },
   actions: {

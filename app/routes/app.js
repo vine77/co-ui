@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import authenticatedRoute from './authenticated';
 
 export default authenticatedRoute.extend({
