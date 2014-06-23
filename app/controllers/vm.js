@@ -63,7 +63,11 @@ export default Ember.ObjectController.extend({
   actions: {
     reboot: function() {
       var self = this;
-      var confirmed = window.confirm('Are you sure you want to reboot "' + this.get('name') + '"?');
+      var confirmation = [
+        'Are you sure you want to reboot "' + this.get('name') + '"?',
+        'Warning: Services will not be available until "' + this.get('name') + '" has restarted.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
@@ -113,7 +117,11 @@ export default Ember.ObjectController.extend({
     },
     shutdown: function() {
       var self = this;
-      var confirmed = window.confirm('Are you sure you want to shut down "' + this.get('name') + '"?');
+      var confirmation = [
+        'Are you sure you want to shut down "' + this.get('name') + '"?',
+        'Warning: Services will not be available until "' + this.get('name') + '" is restarted.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
@@ -138,7 +146,11 @@ export default Ember.ObjectController.extend({
     },
     forcedShutdown: function() {
       var self = this;
-      var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"? Warning: This action can potentially be dangerous.');
+      var confirmation = [
+        'Are you sure you want to force shut down "' + this.get('name') + '"?',
+        'Warning: This action can potentially result in loss of data, and services will not be available until "' + this.get('name') + '" is restarted.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');

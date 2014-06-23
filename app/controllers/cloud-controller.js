@@ -20,7 +20,11 @@ export default Ember.ObjectController.extend({
   actions: {
     reboot: function() {
       var self = this;
-      var confirmed = window.confirm('Are you sure you want to reboot the SAA host?');
+      var confirmation = [
+        'Are you sure you want to reboot the SAA host?',
+        'Warning: Cloud infrastructure will not be available until the SAA host has restarted.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
@@ -42,7 +46,11 @@ export default Ember.ObjectController.extend({
     },
     shutdown: function() {
       var self = this;
-      var confirmed = window.confirm('Are you sure you want to shut down the SAA host?');
+      var confirmation = [
+        'Are you sure you want to shut down the SAA host?',
+        'Warning: Cloud infrastructure will not be available until the SAA host is restarted.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         this.set('isActionPending', true);
         var ajaxPromise = this.get('ajaxPromise');
