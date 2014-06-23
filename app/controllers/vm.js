@@ -62,6 +62,7 @@ export default Ember.ObjectController.extend({
   }.property('vmActions'),
   actions: {
     reboot: function() {
+      var self = this;
       var confirmed = window.confirm('Are you sure you want to reboot "' + this.get('name') + '"?');
       if (confirmed) {
         this.set('isActionPending', true);
@@ -76,16 +77,17 @@ export default Ember.ObjectController.extend({
               action: 'reboot'
             }]
           })
-        }).then( function(xhr) {
-          this.set('isActionPending', false);
+        }).then(function(xhr) {
+          self.set('isActionPending', false);
           notify('Successfully rebooted VM', health.SUCCESS);
         }, function(xhr) {
-          this.set('isActionPending', false);
+          self.set('isActionPending', false);
           xhrError(xhr, 'Failed to reboot VM');
         });
       }
     },
     start: function() {
+      var self = this;
       var confirmed = window.confirm('Are you sure you want to start "' + this.get('name') + '"?');
       if (confirmed) {
         this.set('isActionPending', true);
@@ -100,16 +102,17 @@ export default Ember.ObjectController.extend({
               action: 'create'
             }]
           })
-        }).then( function(xhr) {
-          this.set('isActionPending', false);
+        }).then(function(xhr) {
+          self.set('isActionPending', false);
           notify('Successfully started VM', health.SUCCESS);
         }, function(xhr) {
-          this.set('isActionPending', false);
+          self.set('isActionPending', false);
           xhrError(xhr, 'Failed to started VM');
         });
       }
     },
     shutdown: function() {
+      var self = this;
       var confirmed = window.confirm('Are you sure you want to shut down "' + this.get('name') + '"?');
       if (confirmed) {
         this.set('isActionPending', true);
@@ -124,16 +127,17 @@ export default Ember.ObjectController.extend({
               action: 'shutdown'
             }]
           })
-        }).then( function(xhr) {
-          this.set('isActionPending', false);
+        }).then(function(xhr) {
+          self.set('isActionPending', false);
           notify('Successfully shutdown VM', health.SUCCESS);
         }, function(xhr) {
-          this.set('isActionPending', false);
+          self.set('isActionPending', false);
           xhrError(xhr, 'Failed to shutdown VM');
         });
       }
     },
     forcedShutdown: function() {
+      var self = this;
       var confirmed = window.confirm('Are you sure you want to force shut down "' + this.get('name') + '"? Warning: This action can potentially be dangerous.');
       if (confirmed) {
         this.set('isActionPending', true);
@@ -148,11 +152,11 @@ export default Ember.ObjectController.extend({
               action: 'destroy'
             }]
           })
-        }).then( function(xhr) {
-          this.set('isActionPending', false);
+        }).then(function(xhr) {
+          self.set('isActionPending', false);
           notify('Successfully force shutdown VM', health.SUCCESS);
         }, function(xhr) {
-          this.set('isActionPending', false);
+          self.set('isActionPending', false);
           xhrError(xhr, 'Failed to force shutdown VM');
         });
       }
