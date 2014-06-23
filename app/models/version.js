@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   ostf_sha: DS.attr('string'),
   fuelmain_sha: DS.attr('string'),

@@ -1,3 +1,6 @@
+import Ember from 'ember';
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   // id: 0 = Fuel VM, 1 = SAA IPM VM
   description: DS.attr('string'),

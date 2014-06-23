@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import health from '../utils/mappings/health';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';

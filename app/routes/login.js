@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default Ember.Route.extend({
   beforeModel: function() {
     var isLoggedIn = this.controllerFor('login').get('isLoggedIn');

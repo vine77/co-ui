@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.Model.extend({
   hostname: DS.attr('string'),
   port: DS.attr('string'),

@@ -1,3 +1,5 @@
+import DS from 'ember-data';
+
 export default DS.ActiveModelSerializer.extend({
   extractArray: function(store, type, payload) {
     var json = JSON.parse(JSON.stringify(payload));

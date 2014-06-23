@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import getJson from './get-json';
 
 /**

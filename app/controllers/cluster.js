@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import priorityToIconClass from '../utils/priority-to-icon-class';
 import priorityToType from '../utils/priority-to-type';
 import bytesToReadableSize from '../utils/bytes-to-readable-size';

@@ -11,3 +11,8 @@ build:
 	rm -rf ../public/ipm00
 	mv ../tmp/static ../public/static
 	rm -rf ../tmp
+
+server:
+	ember server --watcher=polling
+
+.PHONY: server

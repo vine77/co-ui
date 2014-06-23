@@ -1,3 +1,5 @@
+import Ember from 'ember';
+import DS from 'ember-data';
 import health from '../utils/mappings/health';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
@@ -9,9 +11,6 @@ export default Ember.ObjectController.extend({
     this.refreshSession();
   },
   isLoggedIn: false,
-  //username: '',
-  //password: '',
-  //csrfToken: null,
   isActionPending: false,
   tenantType: 'default',
   isDefaultTenant: Ember.computed.equal('tenantType', 'default'),
@@ -75,13 +74,12 @@ export default Ember.ObjectController.extend({
         self.set('isLoggedIn', true);
         self.transitionToAttempted();
       }, function (xhr) {
-        var setProfile = false;
-        window.xhr = xhr;
+        var changePassword = false;
         self.set('isActionPending', false);
         try {
-          if (xhr.responseJSON.errors.message.set_profile) setProfile = true;
+          if (xhr.responseJSON.errors.message.change_password) changePassword = true;
         } catch(error) {}
-        if (setProfile || xhr.status === 422 || xhr instanceof DS.InvalidError) {
+        if (changePassword || xhr.status === 422 || xhr instanceof DS.InvalidError) {
           var csrfToken = xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.message.csrf_token;
           if (csrfToken) self.set('csrfToken', csrfToken);
           notify('Please change your password.');
@@ -90,7 +88,7 @@ export default Ember.ObjectController.extend({
           notify('The username or password you entered was incorrect. Please try again.', health.ERROR);
           self.set('username', '');
           self.set('password', '');
-          $('#login-username').focus();
+          Ember.$('#login-username').focus();
         } else {
           xhrError(xhr, 'An error occurred while attempting to log in.');
         }

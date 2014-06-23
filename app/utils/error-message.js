@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import associativeToNumericArray from '../utils/associative-to-numeric-array';
 
 export default function(response, separator) {

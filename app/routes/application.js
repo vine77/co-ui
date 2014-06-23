@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import apiDomain from '../utils/api-domain';
 
 export default Ember.Route.extend({

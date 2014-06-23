@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default function(url) {
   return new Ember.RSVP.Promise(function(resolve, reject) {
     var xhr = new window.XMLHttpRequest();

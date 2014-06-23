@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import notify from '../utils/notify';
 import xhrError from '../utils/xhr-error';
 import health from '../utils/mappings/health';
@@ -8,7 +9,11 @@ export default Ember.ArrayController.extend({
   actions: {
     detach: function(ipm) {
       var cluster = ipm.get('cluster');
-      var confirmed = window.confirm('Are you sure you want to detach "' + ipm.get('name') + '" from cluster "' + cluster.get('name') + '"? Warning: This is a destructive action.');
+      var confirmation = [
+        'Are you sure you want to detach "' + ipm.get('name') + '" from cluster "' + cluster.get('name') + '"?',
+        'Warning: This is a destructive action.'
+      ].join('\n');
+      var confirmed = window.confirm(confirmation);
       if (confirmed) {
         ipm.set('isActionPending', true);
         ipm.set('cluster', null);

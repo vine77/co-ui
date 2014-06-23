@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default function(sizeInBytes, multiplier, decimalPrefix) {
   if (typeof sizeInBytes !== 'number') sizeInBytes = parseInt(sizeInBytes);
   if (!window.isNaN(sizeInBytes) && !Ember.isEmpty(sizeInBytes)) {
