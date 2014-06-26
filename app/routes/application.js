@@ -54,7 +54,7 @@ export default Ember.Route.extend({
       Ember.$.ajax(apiDomain() + '/api/v1/sessions/current_session.json', {type: 'DELETE'}).always(function() {
         self.removeCookies();
         self.transitionTo('login').then(function() {
-          window.location.reload();
+          window.location.reload(true);
         });
       });
     }
