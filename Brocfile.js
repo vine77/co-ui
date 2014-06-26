@@ -11,9 +11,10 @@ var trees = [];
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
 app.import('vendor/pnotify/pnotify.js');
 app.import('vendor/jquery-cookie/jquery.cookie.js');
-app.import('vendor/d3/d3.js');
-app.import('vendor/crossfilter/crossfilter.js');
-app.import('vendor/dcjs/dc.js');
+app.import('vendor/jquery-idletimer/dist/idle-timer.js');
+//app.import('vendor/d3/d3.js');
+//app.import('vendor/crossfilter/crossfilter.js');
+//app.import('vendor/dcjs/dc.js');
 
 trees.push(pickFiles('vendor', {
   srcDir: '/fontawesome/fonts',
