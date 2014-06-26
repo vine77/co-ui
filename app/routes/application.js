@@ -53,7 +53,9 @@ export default Ember.Route.extend({
       this.controllerFor('login').set('model', this.store.createRecord('session', {id: 'current_session'}));
       Ember.$.ajax(apiDomain() + '/api/v1/sessions/current_session.json', {type: 'DELETE'}).always(function() {
         self.removeCookies();
-        self.transitionTo('login');
+        self.transitionTo('login').then(function() {
+          window.location.reload();
+        });
       });
     }
   }

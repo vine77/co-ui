@@ -9,7 +9,9 @@ export default Ember.ObjectController.extend({
   init: function () {
     this._super();
     this.refreshSession();
+    Ember.$.idleTimer(this.get('idleTimeout'));
   },
+  idleTimeout: 15 * 60 * 1000,  // log out after 15 idle minutes
   isLoggedIn: false,
   isActionPending: false,
   tenantType: 'default',
@@ -29,18 +31,22 @@ export default Ember.ObjectController.extend({
     var self = this;
     Ember.run.later(this, 'refreshSession', 20000);  // Refresh every 20 seconds
     if (this.get('isLoggedIn')) {
-      Ember.$.ajax(apiDomain() + '/api/v1/sessions.json', {
-        type: 'POST',
-        data: JSON.stringify({
-          session: {
-            request: 'refresh_ticket'
-          }
-        }),
-        contentType: 'application/json',
-        dataType: 'json'
-      }).then(function() {}, function() {
-        self.send('logout');
-      });
+      if (Ember.$.idleTimer('isIdle')) {
+        this.send('logout');
+      } else {
+        Ember.$.ajax(apiDomain() + '/api/v1/sessions.json', {
+          type: 'POST',
+          data: JSON.stringify({
+            session: {
+              request: 'refresh_ticket'
+            }
+          }),
+          contentType: 'application/json',
+          dataType: 'json'
+        }).then(function() {}, function() {
+          self.send('logout');
+        });
+      }
     }
   },
   transitionToAttempted: function () {
