@@ -2,6 +2,7 @@ import health from '../utils/mappings/health';
 import priorityToType from '../utils/priority-to-type';
 
 export default function(message, type, notifyTitle, sticky) {
+  if (message.length > 600) message = message.substring(0, 600) + '... [truncated]';
   if (typeof type === 'undefined') type = health.WARNING;
   type = priorityToType(type);
   if (typeof message === 'undefined') {
