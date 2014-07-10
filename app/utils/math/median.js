@@ -1,3 +1,5 @@
+import Ember from 'ember';
+
 export default function(values) {
   if (!Ember.isArray(values)) return NaN;
   values.sort(function(a, b) {
