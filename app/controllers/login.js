@@ -19,13 +19,11 @@ export default Ember.ObjectController.extend({
   tenantName: '',
   setHeaders: function () {
     var csrfToken = this.get('csrfToken');
-    //Ember.$.cookie('token', csrfToken);
     Ember.$.ajaxSetup({
       headers: {
         "X-CSRF-Token": csrfToken
       }
     });
-    window.sessionStorage.csrfToken = csrfToken;
   }.observes('csrfToken'),
   refreshSession: function () {
     var self = this;

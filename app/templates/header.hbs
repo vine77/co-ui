@@ -19,7 +19,7 @@
           {{/if}}
           <li>{{#link-to "app.orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
           <li class="dropdown">
-            <a {{action "goToIngredient" "dashboard"}} href="#/app/ingredient"><i class="fa fa-shield"></i> Assurance</a>
+            {{#link-to "app.ingredient"}}<i class="fa fa-shield"></i> Assurance{{/link-to}}
             <ul class="dropdown-menu">
               <li><a {{action "goToIngredient" "dashboard"}}>Dashboard</a></li>
               <li><a {{action "goToIngredient" "nodes"}}>Nodes</a></li>

@@ -1,14 +1,14 @@
-<div class="wrapper skin-blue">
+<div id="horizon" class="wrapper skin-blue" {{bind-attr style=horizonStyle}}>
   <aside class="right-side strech">
     {{#if isFrameEnabled}}
-      <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
+      <iframe {{bind-attr src="horizonSrc"}} class="iframe-content"></iframe>
     {{/if}}
     <section class="content-header">
       <h1>
         Horizon
         <small>OpenStack Dashboard</small>
       </h1>
-      <a {{bind-attr href=iframeSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
+      <a {{bind-attr href=horizonSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
         <i class="fa fa-external-link"></i>
       </a>
       <ol class="breadcrumb">
@@ -16,8 +16,8 @@
         <li class="active">Horizon</li>
       </ol>
     </section>
+    {{#unless isFrameEnabled}}
+      {{partial "app/-disabled-app"}}
+    {{/unless}}
   </aside>
 </div>
-{{#unless isFrameEnabled}}
-  {{partial "app/-disabled-app"}}
-{{/unless}}

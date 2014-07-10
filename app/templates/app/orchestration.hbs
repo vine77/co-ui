@@ -1,6 +1,6 @@
-<div class="wrapper skin-blue">
+<div id="orchestration" class="wrapper skin-blue" {{bind-attr style=orchestrationStyle}}>
   <aside class="right-side strech">
-    <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
+    <iframe {{bind-attr src="orchestrationSrc"}} class="iframe-content"></iframe>
     <section class="content-header">
       <h1>
         Orchestration
@@ -8,7 +8,7 @@
           Mirantis Fuel
         </small>
       </h1>
-      <a {{bind-attr href=iframeSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
+      <a {{bind-attr href=orchestrationSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
         <i class="fa fa-external-link"></i>
       </a>
       <ol class="breadcrumb">

@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  iframeSrc: function() {
-    return '/fuel/';
-  }.property('model.@each')
+  needs: ['application'],
+  iframeSrc: Ember.computed.alias('controllers.application.orchestrationSrc')
 });

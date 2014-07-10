@@ -1,10 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  needs: ['app', 'ipms'],
-  iframeSrc: function() {
-    return '/ipm00/horizon/';
-  }.property(),
+  needs: ['application', 'app', 'ipms'],
+  iframeSrc: Ember.computed.alias('controllers.application.horizonSrc'),
   isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning'),
   updateLocation: function() {
     var self = this;

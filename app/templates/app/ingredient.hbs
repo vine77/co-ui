@@ -1,7 +1,7 @@
-<div class="wrapper skin-blue">
+<div id="ingredient" class="wrapper skin-blue" {{bind-attr style=ingredientStyle}}>
   <aside class="right-side strech">
     {{#if isFrameEnabled}}
-      <iframe {{bind-attr src="iframeSrc"}} class="iframe-content"></iframe>
+      <iframe {{bind-attr src="ingredientSrc"}} class="iframe-content"></iframe>
     {{/if}}
     <section class="content-header">
       <h1>
@@ -14,7 +14,7 @@
           {{/if}}
         </small>
       </h1>
-      <a {{bind-attr href=iframeSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
+      <a {{bind-attr href=ingredientSrc}} class="hint--top" data-hint="Open in new window" target="_blank">
         <i class="fa fa-external-link"></i>
       </a>
       <ol class="breadcrumb">
@@ -22,8 +22,8 @@
         <li class="active">SAAappliance</li>
       </ol>
     </section>
+    {{#unless isFrameEnabled}}
+      {{partial "app/-disabled-app"}}
+    {{/unless}}
   </aside>
 </div>
-{{#unless isFrameEnabled}}
-  {{partial "app/-disabled-app"}}
-{{/unless}}

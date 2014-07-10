@@ -35,6 +35,7 @@ export default Ember.Route.extend({
       this.controllerFor('app/control-panel').set('viewName', 'clouds');
     },
     goToIngredient: function(location) {
+      console.log('location: ', location);
       var map = {
         dashboard: '/ipm00/#/app/dashboard',
         nodes: '/ipm00/#/app/data/nodes',

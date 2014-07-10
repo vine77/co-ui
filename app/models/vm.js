@@ -15,8 +15,7 @@ export default DS.Model.extend({
   // Computed properties
   isRunning: Ember.computed.equal('state', 1),
   isResponding: Ember.computed.equal('responding', 1),
-  isSaaAppliance: Ember.computed.equal('description', 'SAAappliance'),
-
+  isSaaAppliance: Ember.computed.gte('id', 1),
   name: Ember.computed.alias('description'),
   route: function() {
     if (this.get('id') === '0') {
