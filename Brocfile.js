@@ -7,7 +7,6 @@ var pickFiles = require('broccoli-static-compiler');
 var mergeTrees = require('broccoli-merge-trees');
 var trees = [];
 
-// Import app-specific dependencies
 app.import('vendor/bootstrap/dist/js/bootstrap.js');
 app.import('vendor/pnotify/pnotify.js');
 app.import('vendor/jquery-cookie/jquery.cookie.js');
