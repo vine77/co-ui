@@ -1,0 +1,88 @@
+<div class="wrapper skin-blue">
+  <aside class="right-side strech">
+    <section class="content-header">
+      <h1>
+        Control Groups
+        <small>VMs and cgroups grouped by node</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li>{{#link-to "application"}}<i class="fa fa-dashboard"></i> Home{{/link-to}}</li>
+        <li class="active">Control Groups</li>
+      </ol>
+    </section>
+    <section class="content">
+      <div class="row space-bottom">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 text-right">
+          <form class="form-inline" role="form">
+            <div class="dropdown inline-block">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                <i class="fa fa-sort-amount-desc"></i> Sort by
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a>Sort 1</a></li>
+                <li><a>Sort 2</a></li>
+                <li><a>Sort 3</a></li>
+              </ul>
+            </div>
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> Filter by <span class="fa fa-caret-down"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a>Filter 1</a></li>
+                  <li><a>Filter 2</a></li>
+                  <li><a>Filter 3</a></li>
+                </ul>
+              </div>
+              <input type="text" class="form-control">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <section class="col-md-6">
+          <div class="box box-solid box-primary server">
+            <div class="box-header">
+              <h3 class="box-title">Server 1</h3>
+              <div class="box-tools pull-right">
+                {{!
+                <div class="dropdown inline-block">
+                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                    Actions
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a>Action 1</a></li>
+                    <li><a>Action 2</a></li>
+                    <li><a>Action 3</a></li>
+                  </ul>
+                </div>
+                }}
+                <button class="btn btn-primary btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+
+              </div>
+            </div>
+            <div class="box-body">
+              <p>OS</p>
+              <p>cgroup</p>
+              <p>VMs</p>
+            </div>
+          </div>
+        </section>
+        <section class="col-md-6">
+          <div class="box box-solid bg-blue-gradient server">
+            <div class="box-header">
+              <h3 class="box-title">Server 2</h3>
+            </div>
+            <div class="box-body">
+              <p>OS</p>
+              <p>cgroup</p>
+              <p>VMs</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </aside>
+</div>

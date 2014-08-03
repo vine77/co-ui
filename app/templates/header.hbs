@@ -14,6 +14,9 @@
           --}}
           <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
           <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
+          {{#if isDevelopment}}
+            <li>{{#link-to "cgroups"}}<i class="fa fa-list-alt"></i> Control Groups{{/link-to}}</li>
+          {{/if}}
           <li>{{#link-to "app.orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
           <li class="dropdown">
             <a {{action "goToIngredient" "dashboard"}} href="#/app/ingredient"><i class="fa fa-shield"></i> Assurance</a>

@@ -22,6 +22,7 @@ Router.map(function() {
   });
   //this.route('profile');
   this.route('profile', {path: '/profiles/:user_id'});
+  this.route('cgroups');
 });
 
 export default Router;

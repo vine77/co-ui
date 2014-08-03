@@ -4,7 +4,7 @@
     "ember-data": "1.0.0-beta.7",
     "ember-json-api": "daliwali/ember-json-api",
     "bootstrap": "^3.1.1",
-    "admin-lte": "vine77/admin-lte#1.2.2",
+    "admin-lte": "vine77/admin-lte#1.3",
     "fontawesome": "^4.0.3",
     "pnotify": "vine77/pnotify#~2.0.0",
     "jquery-cookie": "~1.4.1",
