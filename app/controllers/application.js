@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   needs: ['app/control-panel', 'login'],
+  isDevelopment: CoUiENV.environment === 'development',
   isLoggedIn: Ember.computed.alias('controllers.login.isLoggedIn'),
   username: Ember.computed.alias('controllers.login.username'),
   isInfrastructure: function() {
