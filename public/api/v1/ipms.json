@@ -2,10 +2,11 @@
   "ipms": [
     {
       "status": 3,
-      "cluster": 1,
+      "name": "SAAappliance",
+      "cluster": 2,
       "proxy": "/ipm00",
-      "id": 0,
-      "name": "SAAappliance"
+      "horizon_port": 8002,
+      "id": 0
     }
   ]
 }

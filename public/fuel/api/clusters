@@ -17,7 +17,7 @@
     "release_id": 1,
     "name": "centana2",
     "net_provider": "neutron",
-    "mode": "multinode",
+    "mode": "ha_compact",
     "net_segment_type": "gre",
     "changes": [],
     "id": 2,
