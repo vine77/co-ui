@@ -10,8 +10,7 @@ export default authenticatedRoute.extend({
     return undefined;
   },
   activate: function() {
-    this.controllerFor('app.horizon').set('iframeSrc', '/ipm00/horizon/');
-    //this.controllerFor('app.horizon').set('iframeSrc', 'http://' + window.location.hostname + ':800');
+    //this.controllerFor('app.horizon').set('iframeSrc', 'http://' + window.location.hostname + ':' + this.controllerFor('ipms').findBy('name', 'SAAappliance').get('horizon_port'));
     this.controllerFor('application').set('horizonStyle', 'display:block;');
   },
   deactivate: function() {

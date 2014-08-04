@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   needs: ['application', 'app', 'ipms'],
-  iframeSrc: Ember.computed.alias('controllers.application.horizonSrc'),
-  isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning'),
+  isFrameEnabled: false,
+  //iframeSrc: Ember.computed.alias('controllers.application.horizonSrc'),
+  //isFrameEnabled: Ember.computed.alias('controllers.app.isSaaApplianceAttachedAndRunning')
+  /*
   updateLocation: function() {
     var self = this;
     //Ember.run.later(this, 'updateLocation', 20000);
@@ -18,4 +20,5 @@ export default Ember.ObjectController.extend({
       });
     });
   }
+  */
 });

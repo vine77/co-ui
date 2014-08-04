@@ -4,6 +4,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   status: DS.attr('number'),
   proxy: DS.attr('string'),
+  horizon_port: DS.attr('number'),
 
   // Relationships
   cluster: DS.belongsTo('cluster', {async: true}),
