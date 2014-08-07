@@ -6,16 +6,23 @@
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-right">
       <ul class="nav navbar-nav">
+        {{#if isDevelopment}}
+          <li>
+            {{#link-to "cgroups"}}<i class="fa fa-list-alt"></i> Control Groups{{/link-to}}
+          </li>
+        {{/if}}
         {{#unless isLoggedIn}}
-          <li>{{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}</li>
+          <li>
+            {{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}
+          </li>
         {{else}}
-          <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
-          <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
-          {{#if isDevelopment}}
-            <li>{{#link-to "cgroups"}}<i class="fa fa-list-alt"></i> Control Groups{{/link-to}}</li>
-          {{/if}}
-          <li>{{#link-to "app.orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}</li>
-          <li class="dropdown">
+          <li>
+            <a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a>
+          </li><li>
+            <a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a>
+          </li><li>
+            {{#link-to "app.orchestration"}}<i class="fa fa-music"></i> Orchestration{{/link-to}}
+          </li><li class="dropdown">
             {{#link-to "app.ingredient"}}<i class="fa fa-shield"></i> Assurance{{/link-to}}
             <ul class="dropdown-menu">
               <li><a {{action "goToIngredient" "dashboard"}}>Dashboard</a></li>
@@ -25,18 +32,19 @@
               <li><a {{action "goToIngredient" "trust"}}>Trust</a></li>
               <li><a {{action "goToIngredient" "settings"}}>Settings</a></li>
             </ul>
-          </li>
-          <li>{{#link-to "app.logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}</li>
-          <li><a {{bind-attr href=horizonSrc}} target="horizon"><i class="fa fa-cubes"></i> Horizon <small><i class="fa fa-external-link"></i></small></a></li>
-          <li class="dropdown">
+          </li><li>
+            {{#link-to "app.logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}
+          </li><li>
+            <a {{bind-attr href=horizonSrc}} target="horizon"><i class="fa fa-cubes"></i> Horizon <small><i class="fa fa-external-link"></i></small></a>
+          </li><li class="dropdown">
             {{#link-to "settings"}}<i class="fa fa-cog"></i> {{/link-to}}
             <ul class="dropdown-menu">
               <li>{{#link-to "settings.user"}}User{{/link-to}}</li>
               <li>{{#link-to "settings.mail"}}Mail Server{{/link-to}}</li>
             </ul>
-          </li>
-          <li>{{#link-to "app.about"}}<i class="fa fa-info-circle"></i> {{/link-to}}</li>
-          <li class="user-menu dropdown">
+          </li><li>
+            {{#link-to "app.about"}}<i class="fa fa-info-circle"></i> {{/link-to}}
+          </li><li class="user-menu dropdown">
             <a data-toggle="dropdown">
               <i class="fa fa-user"></i>
               <span>{{username}} <i class="caret"></i></span>
