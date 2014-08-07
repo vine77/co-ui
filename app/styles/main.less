@@ -78,11 +78,7 @@ a.list-group-item {
   .transition(~"width 1s, opacity 1s");
 }
 .infrastructure {
-  .col-md-6:first-child {
-    width: 65%;
-  }
   .col-md-6:last-child {
-    width: 35%;
     opacity: 0.5;
     cursor: pointer;
     .show-when-expanded {
@@ -92,14 +88,28 @@ a.list-group-item {
 }
 .clouds {
   .col-md-6:first-child {
-    width: 35%;
     opacity: 0.5;
     cursor: pointer;
     .show-when-expanded {
       display: none;
     }
   }
-  .col-md-6:last-child {
-    width: 65%;
+}
+@media (min-width: @screen-md-min) {
+  .infrastructure {
+    .col-md-6:first-child {
+      width: 65%;
+    }
+    .col-md-6:last-child {
+      width: 35%;
+    }
+  }
+  .clouds {
+    .col-md-6:first-child {
+      width: 35%;
+    }
+    .col-md-6:last-child {
+      width: 65%;
+    }
   }
 }

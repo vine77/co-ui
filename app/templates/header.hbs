@@ -9,9 +9,6 @@
         {{#unless isLoggedIn}}
           <li>{{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}</li>
         {{else}}
-          {{!--
-          <li>{{#link-to "app.dashboard"}}<i class="fa fa-dashboard"></i> Dashboard{{/link-to}}</li>
-          --}}
           <li><a {{action "goToInfrastructure"}} {{bind-attr class="isInfrastructure:active"}} href="#/app/control-panel"><i class="fa fa-desktop"></i> Infrastructure</a></li>
           <li><a {{action "goToClouds"}} {{bind-attr class="isClouds:active"}} href="#/app/control-panel"><i class="fa fa-cloud"></i> Clouds</a></li>
           {{#if isDevelopment}}

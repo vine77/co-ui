@@ -15,4 +15,7 @@ build:
 server:
 	ember server --watcher=polling
 
+serve:
+	ember serve --watcher=polling
+
 .PHONY: server

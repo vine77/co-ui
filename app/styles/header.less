@@ -42,11 +42,6 @@ ul.navbar-nav {
   }
 }
 .right-side > .content-header {
-  height: 45px;
-  padding: 8px 8px 8px 20px;
-  > .breadcrumb {
-    top: 10px;
-  }
   > h1 {
     display: inline;
     + a {
@@ -54,15 +49,14 @@ ul.navbar-nav {
     }
   }
 }
-.content, .right-side {
-  background-color: transparent;
-}
 .navbar .nav > li > a.active {
   background-color: darken(@light-blue, 5%);
   color: #ffffff;
 }
 .header {
+  max-height: none;
   @logo-width: 200px;
+  background-color: @brand-primary;
   .logo {
     width: @logo-width;
     font-family: "Neo Sans Intel";
@@ -74,8 +68,21 @@ ul.navbar-nav {
       vertical-align: top;
     }
   }
-  .navbar {
-    height: 50px;
+  > .navbar {
     margin-left: @logo-width;
+    height: auto;
+    > .navbar-right {
+      float: none !important;
+      > ul.navbar-nav {
+        float: none;
+        text-align: right;
+        //font-size: 0;
+        > li {
+          //font-size:
+          display: inline-block;
+          float: none;
+        }
+      }
+    }
   }
 }
