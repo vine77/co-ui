@@ -30,6 +30,7 @@
     "ember-cli-ic-ajax": "0.1.1",
     "express": "^4.1.1",
     "glob": "^3.2.9",
+    "moment": "^2.8.1",
     "originate": "0.1.5"
   }
 }
