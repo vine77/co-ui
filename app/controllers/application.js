@@ -20,11 +20,8 @@ export default Ember.ObjectController.extend({
   orchestrationSrc: '',
   ingredientSrc: '',
   horizonSrc: function() {
-    if (!this.get('controllers.ipms').findBy('name', 'SAAappliance')) {
-      return null;
-    } else {
-      return 'http://' + window.location.hostname + ':' + this.get('controllers.ipms').findBy('name', 'SAAappliance').get('horizon_port');
-    }
-  }.property('controllers.ipms.@each'),
+    if (!this.get('controllers.ipms.saaIpm') || !this.get('controllers.ipms.saaIpm.horizon_port')) return null;
+    return 'http://' + window.location.hostname + ':' + this.get('controllers.ipms.saaIpm.horizon_port');
+  }.property('controllers.ipms.saaIpm.horizon_port'),
   logsSrc: ''
 });

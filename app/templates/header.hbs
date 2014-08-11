@@ -35,7 +35,11 @@
           </li><li>
             {{#link-to "app.logs"}}<i class="fa fa-file-text-o"></i> Logs{{/link-to}}
           </li><li>
-            <a {{bind-attr href=horizonSrc}} target="horizon"><i class="fa fa-cubes"></i> Horizon <small><i class="fa fa-external-link"></i></small></a>
+            {{#if horizonSrc}}
+              <a {{bind-attr href=horizonSrc}} target="horizon"><i class="fa fa-cubes"></i> Horizon <small><i class="fa fa-external-link"></i></small></a>
+            {{else}}
+              <a disabled="disabled"><i class="fa fa-cubes"></i> Horizon <small><i class="fa fa-external-link"></i></small></a>
+            {{/if}}
           </li><li class="dropdown">
             {{#link-to "settings"}}<i class="fa fa-cog"></i> {{/link-to}}
             <ul class="dropdown-menu">

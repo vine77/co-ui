@@ -6,6 +6,9 @@ import health from '../utils/mappings/health';
 export default Ember.ArrayController.extend({
   needs: ['clusters'],
   itemController: 'ipm',
+  saaIpm: function() {
+    return this.findBy('name', 'SAAappliance');
+  }.property('@each'),
   actions: {
     detach: function(ipm) {
       var cluster = ipm.get('cluster');
