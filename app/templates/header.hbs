@@ -6,11 +6,6 @@
   <nav class="navbar navbar-static-top" role="navigation">
     <div class="navbar-right">
       <ul class="nav navbar-nav">
-        {{#if isDevelopment}}
-          <li>
-            {{#link-to "cgroups"}}<i class="fa fa-list-alt"></i> Control Groups{{/link-to}}
-          </li>
-        {{/if}}
         {{#unless isLoggedIn}}
           <li>
             {{#link-to "login"}}<i class="fa fa-user"></i> Sign in{{/link-to}}
